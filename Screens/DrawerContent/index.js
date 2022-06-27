@@ -4,6 +4,10 @@ import styles from '../DrawerContent/style'
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler'
 import images from '../../Components/images'
 import LinearGradient from 'react-native-linear-gradient'
+import MyTicktes from '../myTickets'
+import OrderStatus from '../OrderStatus'
+import StockManage from '../StockManage'
+import Customers from '../Customers'
 
 
 export default function DrawerContent({navigation}) {
@@ -53,7 +57,7 @@ export default function DrawerContent({navigation}) {
 
 
       {/* <StockManage /> */}
-      <TouchableOpacity onPress={()=>navigation.navigate('StockManage')}>
+      <TouchableOpacity onPress={()=>navigation.navigate(StockManage)}>
       <View style={styles.categoryView}>
       <Image resizeMode='contain'
       style={{height:27,width:27,}}
@@ -64,7 +68,7 @@ export default function DrawerContent({navigation}) {
     </TouchableOpacity>
 
       {/* <OrderStatus /> */}
-      <TouchableOpacity onPress={()=>navigation.navigate('OrderStatus')}>
+      <TouchableOpacity onPress={()=>navigation.navigate(OrderStatus)}>
       <View style={styles.categoryView}>   
        <Image resizeMode='contain'
       style={{height:27,width:27,}}
@@ -79,7 +83,7 @@ export default function DrawerContent({navigation}) {
     <View style={{margin:3}}>
 
        {/* <Tickets/> */}
-       <TouchableOpacity onPress={()=>navigation.navigate('Tickets')}>
+       <TouchableOpacity onPress={()=>navigation.navigate(MyTicktes)}>
        <View style={styles.categoryView}>
         <Image resizeMode='contain'
       style={{height:27,width:27,}}
@@ -101,7 +105,7 @@ export default function DrawerContent({navigation}) {
     </TouchableOpacity>
     
       {/* <Customers /> */}
-      <TouchableOpacity onPress={()=>navigation.navigate('Customers')}>
+      <TouchableOpacity onPress={()=>navigation.navigate(Customers)}>
       <View style={styles.categoryView}>
      <Image resizeMode='contain'
       style={{height:25,width:32,}}

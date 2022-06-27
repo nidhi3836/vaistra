@@ -49,11 +49,15 @@ const Header = ({
           <View style={{ flex: 0.9,
              flexDirection: 'row',
              height: UseOrientation.height / 12,
+             alignItems:'center',
+             
           }}>
 
           <View style={{ flex:0.1, 
             justifyContent:'center',
-            marginLeft: 5,alignItems:'center',flexDirection:'row', }}>
+            marginLeft: 10,alignItems:'center',flexDirection:'row', 
+           
+            }}>
 
             <TouchableOpacity onPress={onPress}>
               <Image
@@ -64,23 +68,28 @@ const Header = ({
                 source={image}              
                 />
             </TouchableOpacity>
+
+
             </View>
 
             {/* <View style={{ marginLeft: 5, flex:0.03, }}>
             
           </View>  */}
-           <View style={{ marginLeft : 5, flex:0.4,
+           <View style={{  flex:0.35,
           //  marginRight : 50,
-          justifyContent:'center'
+          justifyContent:'center',
+          // alignItems:'center'
           }}>
-            <Text style={{ fontSize: 19, color: 'white', fontWeight: '600'}}>
+            <Text style={{ fontSize: 20, color: 'white', fontWeight: '600',
+          
+          }}>
               {title}
             </Text>
             <TouchableOpacity  
              onPress={onPress2}>
               <Image
                 resizeMode='contain'
-                style={{ marginBottom:10,
+                style={{ 
                   // height: UseOrientation.height /9,
                    width: UseOrientation.width / 5,                 
                   }}

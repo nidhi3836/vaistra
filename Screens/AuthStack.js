@@ -24,13 +24,16 @@ import Product from './YourProduct/product'
 import Notification from './Notification'
 import HomeOnBoarding from './Home/onBoarding'
 import ActivePage from './TopScreens/ActivePage'
+import MyTicktes from './myTickets'
+import Customers from './Customers'
+import CustomerDetails from './Customers/customerdetails'
 
 
 const Stack = createStackNavigator();
 function AuthStack() {
 
     return (
-        <Stack.Navigator initialRouteName='AppStack' >  
+        <Stack.Navigator initialRouteName='CustomerDetails' >  
 
              <Stack.Screen name='Splash' component={Splash} options={{ header: () => null }} />
               <Stack.Screen name='Fourth' component={Fourth}options={{header: () => null }} />
@@ -68,6 +71,9 @@ function AuthStack() {
             <Stack.Screen name='Notification' component={Notification} options={{ header: () => null }} /> 
             <Stack.Screen name='HomeOnBoarding' component={HomeOnBoarding} options={{ header: () => null }} /> 
             <Stack.Screen name='ActivePage' component={ActivePage} options={{ header: () => null }} /> 
+            <Stack.Screen name='MyTicktes' component={MyTicktes} options={{ header: () => null }} /> 
+            <Stack.Screen name='Customers' component={Customers} options={{ header: () => null }} /> 
+            <Stack.Screen name='CustomerDetails' component={CustomerDetails} options={{ header: () => null }} /> 
         </Stack.Navigator>
 
     )

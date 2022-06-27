@@ -246,7 +246,6 @@ export default function Home({ navigation }) {
         borderRadius: 6, marginBottom: 5
 
       }}>
-        
         <View key={index.toString()}
         // onChangeText={(text)=>handleChangeText(text, index)}
         //  value={view[index]}
