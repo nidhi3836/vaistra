@@ -24,11 +24,12 @@ export default function TopTab() {
         tabBarShowLabel : true,
         tabBarLabelStyle: { fontSize: 12 },
           // tabBarItemStyle: { width: 100 },      
-        tabBarActiveTintColor :"red",
+        tabBarActiveTintColor :"#fff",
         tabBarInactiveTintColor:'#000',
         tabBarStyle: {
           backgroundColor: '#fff' ,
          height:45,
+
         //  borderRightWidth:2,
           //  flex:0.1,
       },

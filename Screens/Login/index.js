@@ -7,6 +7,7 @@ import styles from './style'
 import LinearGradient from 'react-native-linear-gradient';
 import UseOrientation from '../UseOrientation'
 import { heightToDp, widthToDp } from '../../variable';
+import ForgotPass from '../ForgotPass'
 
 function Login({ navigation }) {
 
@@ -75,7 +76,9 @@ const [password, setPassword] = useState(false)
                 </View>
             </View>
 
-        <TouchableOpacity style={{marginBottom:15,}}>
+        <TouchableOpacity 
+        onPress={()=> navigation.navigate(ForgotPass)}
+        style={{marginBottom:15,}}>
             <View style={{alignItems:'flex-end', marginRight:25}}>
                 <Text style={{color:"red",fontSize:14,fontWeight:"600"}}>
                     Forgot Password?

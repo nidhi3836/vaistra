@@ -13,6 +13,7 @@ import Ripple from 'react-native-material-ripple'
 import YourProduct from '../YourProduct'
 import TopTab from '../TopTab'
 import Analytics from '../Analytics'
+import DrawerContent from '../DrawerContent'
 
 export default function Home({ navigation }) {
 
@@ -35,6 +36,7 @@ export default function Home({ navigation }) {
     <View style={{flex: 1,height:'100%',backgroundColor: '#fff', }}>
       <Header
         image={images.Group355}
+        onPress={()=> navigation.navigate(DrawerContent)}
         image1={images.Vaistralogo}
         image2={images.notification}
         onPress3={() => navigation.navigate('Notification')}
@@ -134,7 +136,7 @@ export default function Home({ navigation }) {
                 flex: 0.2,
                 borderWidth: 1, width: 185, margin: 15, borderColor:'#b7b7b7',borderRadius: 5,
               }}>
-                <View style={{ flex: 0.1,backgroundColor:"#fff", }}>
+                <View style={{ flex: 0.15,backgroundColor:"#fff", }}>
 
                   <View style={{
                     alignSelf: 'flex-end', width: 60, margin: 5,
@@ -182,7 +184,7 @@ export default function Home({ navigation }) {
                 flex: 0.2,
                 borderWidth: 1, width: 185, margin: 15, borderColor:'#b7b7b7',borderRadius: 5,
               }}>
-                <View style={{ flex: 0.1,backgroundColor:"#fff", }}>
+                <View style={{ flex: 0.15,backgroundColor:"#fff", }}>
 
                   <View style={{
                     alignSelf: 'flex-end', width: 60, margin: 5,

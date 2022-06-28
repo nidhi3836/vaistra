@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
                     alignSelf:'center',
                     borderRadius:6,
                     borderColor:'#FF5C5C',
-                    borderWidth:1.5,
+                    borderWidth:1,
                     width:"90%",
                     height:30,
                      alignItems:'center'
@@ -30,8 +30,8 @@ const styles = StyleSheet.create({
             },
             LogOut : {
                 color:'#FF5C5C',
-                fontSize:15,
-                fontWeight:"bold",
+                fontSize:13,
+                fontWeight:"500",
             },
             TextStyle : {
                 marginLeft:20,

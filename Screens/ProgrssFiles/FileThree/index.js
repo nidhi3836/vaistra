@@ -14,7 +14,6 @@ import { heightToDp } from '../../../variable';
 import { width } from 'react-native-dimension';
 
 
-
 let states = [
   {
     id: 1,
@@ -225,7 +224,7 @@ const ThirdFile = ({ navigation }) => {
 
           </View> 
 
-          {/* <View style={{ marginTop: 20, height:50, }}>
+           <View style={{ marginTop: 20, height:50, }}>
             <DropDown style={[styles.InputText, { marginRight: 100, position:'absolute',}]}
               title={'select State *'}
               subTitle={'Search Selected Brand'}
@@ -249,7 +248,7 @@ const ThirdFile = ({ navigation }) => {
             //  onBlur={() => focus}
             />
 
-          </View> */}
+          </View> 
 
 <Dropdown
            style={[styles.InputText, ]}

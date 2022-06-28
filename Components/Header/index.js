@@ -6,8 +6,6 @@ import LinearGradient from 'react-native-linear-gradient';
 import { heightToDp } from '../../variable';
 
 
-
-
 const Header = ({
   title,
   backgroundColor,
@@ -80,7 +78,7 @@ const Header = ({
           justifyContent:'center',
           // alignItems:'center'
           }}>
-            <Text style={{ fontSize: 20, color: 'white', fontWeight: '600',
+            <Text style={{ fontSize: 18, color: 'white', fontWeight: 'bold',
           
           }}>
               {title}

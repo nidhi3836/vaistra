@@ -8,11 +8,16 @@ import MyTicktes from '../myTickets'
 import OrderStatus from '../OrderStatus'
 import StockManage from '../StockManage'
 import Customers from '../Customers'
+import ThirdFile from '../ProgrssFiles/FileThree'
+import ChangePassword from '../ChanePassword'
+import EditBank from '../EditBank'
+import BankDetails from '../BankDetails'
+import EditAddress from '../EditAddress'
 
 
 export default function DrawerContent({navigation}) {
   return (
-    <ScrollView>
+    <ScrollView style={{}}>
     <View style={{backgroundColor:'white'}}>
        <TouchableOpacity onPress={()=>navigation.navigate('EditProfile')}>
     <LinearGradient
@@ -33,7 +38,7 @@ export default function DrawerContent({navigation}) {
     </LinearGradient>
     </TouchableOpacity>
     <View style={{marginTop:3}}>
-    <TouchableOpacity onPress={()=>navigation.navigate('YourProduct')}>
+    <TouchableOpacity onPress={()=>navigation.navigate(YourProduct)}>
     <View style={styles.categoryView}>
       <Image resizeMode='contain'
       style={{height:27,width:27,}}
@@ -94,7 +99,7 @@ export default function DrawerContent({navigation}) {
     </TouchableOpacity>
 
        {/* <Reviews /> */}
-       <TouchableOpacity onPress={()=>navigation.navigate('Reviews')}>
+       <TouchableOpacity onPress={()=>navigation.navigate(Reviews)}>
        <View style={styles.categoryView}>
       <Image 
       style={{height:27,width:27,}}
@@ -116,7 +121,7 @@ export default function DrawerContent({navigation}) {
     </TouchableOpacity>
 
       {/* <Analytics/> */}
-      <TouchableOpacity onPress={()=>navigation.navigate('Analytics')}>
+      <TouchableOpacity onPress={()=>navigation.navigate(Analytics)}>
       <View style={styles.categoryView}>    
         <Image 
       style={{height:25,width:32,}}
@@ -127,7 +132,7 @@ export default function DrawerContent({navigation}) {
     </TouchableOpacity>
 
       {/* <Payments /> */}
-      <TouchableOpacity onPress={()=>navigation.navigate('Payments')}>
+      <TouchableOpacity onPress={()=>navigation.navigate(Payments)}>
       <View style={styles.categoryView}>
       <Image 
       style={{height:27,width:27,}}
@@ -141,7 +146,7 @@ export default function DrawerContent({navigation}) {
     <View style={{margin:3}}>
 
       {/* Change Password */}
-    <TouchableOpacity onPress={()=>navigation.navigate('ChangePassword')}>
+    <TouchableOpacity onPress={()=>navigation.navigate(ChangePassword)}>
     <View style={styles.categoryView}>
        <Image 
        style={{height:30,width:30,}}
@@ -152,7 +157,7 @@ export default function DrawerContent({navigation}) {
     </TouchableOpacity>
       
        {/* <EditAddress /> */}
-       <TouchableOpacity onPress={()=>navigation.navigate('ThirdFile')}>
+       <TouchableOpacity onPress={()=>navigation.navigate(EditAddress)}>
        <View style={styles.categoryView}>
       <Image 
       style={{height:30,width:30,}}
@@ -163,7 +168,7 @@ export default function DrawerContent({navigation}) {
     </TouchableOpacity>
     
       {/* <BankDetails /> */}
-      <TouchableOpacity onPress={()=>navigation.navigate('Fourth')}>
+      <TouchableOpacity onPress={()=>navigation.navigate(BankDetails)}>
       <View style={styles.categoryView}>
 
       <Image resizeMode='contain'

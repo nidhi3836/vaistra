@@ -15,7 +15,6 @@ import ThirdFile from './ProgrssFiles/FileThree'
 import Fourth from './ProgrssFiles/FileFour'
 import Home from './Home';
 import AppStack from './AppStack'
-import SecondFile from './ChanePassword/SecondFile'
 import SelectBrand from './SelectBrand'
 import BlurBackground from './BlurBackground'
 import DrawerFile from './Drawer'
@@ -27,13 +26,21 @@ import ActivePage from './TopScreens/ActivePage'
 import MyTicktes from './myTickets'
 import Customers from './Customers'
 import CustomerDetails from './Customers/customerdetails'
+import OrderDetails from './Customers/OrderDetails'
+import Payments from './Payments'
+import ChangePassword from './ChanePassword'
+import EditAddress from './EditAddress'
+import BankDetails from './BankDetails'
+import EditBank from './EditBank'
+import DrawerContent from './DrawerContent'
+import Reviews from './Reviews'
 
 
 const Stack = createStackNavigator();
 function AuthStack() {
 
     return (
-        <Stack.Navigator initialRouteName='CustomerDetails' >  
+        <Stack.Navigator initialRouteName='Reviews' >  
 
              <Stack.Screen name='Splash' component={Splash} options={{ header: () => null }} />
               <Stack.Screen name='Fourth' component={Fourth}options={{header: () => null }} />
@@ -50,7 +57,7 @@ function AuthStack() {
             <Stack.Screen name='CodeVerification' component={CodeVerification}
                 options={{ header: () => null }}               
             />
-        <Stack.Screen name='EditProfile' component={EditProfile}
+         <Stack.Screen name='EditProfile' component={EditProfile}
                 options={{header: () => null }} />
                
             <Stack.Screen name='Analytics' component={Analytics}/> 
@@ -66,7 +73,6 @@ function AuthStack() {
 
            <Stack.Screen name='Home' component={Home}/>  
 
-            <Stack.Screen name='SecondFile' component={SecondFile} options={{ header: () => null }} /> 
             <Stack.Screen name='Product' component={Product} options={{ header: () => null }} /> 
             <Stack.Screen name='Notification' component={Notification} options={{ header: () => null }} /> 
             <Stack.Screen name='HomeOnBoarding' component={HomeOnBoarding} options={{ header: () => null }} /> 
@@ -74,6 +80,15 @@ function AuthStack() {
             <Stack.Screen name='MyTicktes' component={MyTicktes} options={{ header: () => null }} /> 
             <Stack.Screen name='Customers' component={Customers} options={{ header: () => null }} /> 
             <Stack.Screen name='CustomerDetails' component={CustomerDetails} options={{ header: () => null }} /> 
+            <Stack.Screen name='OrderDetails' component={OrderDetails} options={{ header: () => null }} /> 
+            <Stack.Screen name='Payments' component={Payments} options={{ header: () => null }} /> 
+            <Stack.Screen name='ChangePassword' component={ChangePassword} options={{ header: () => null }} />
+            <Stack.Screen name='EditAddress' component={EditAddress} options={{ header: () => null }} />
+            <Stack.Screen name='BankDetails' component={BankDetails} options={{ header: () => null }} />
+            <Stack.Screen name='EditBank' component={EditBank} options={{ header: () => null }} />
+            <Stack.Screen name='DrawerContent' component={DrawerContent} options={{ header: () => null }} />
+            <Stack.Screen name='Reviews' component={Reviews} options={{ header: () => null }} />
+
         </Stack.Navigator>
 
     )

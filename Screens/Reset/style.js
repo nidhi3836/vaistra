@@ -13,6 +13,7 @@ const style = StyleSheet.create({
         backgroundColor: '#fff',         
          width: '100%', 
          top: "15%", 
+         height:'100%',
          borderTopStartRadius: 50, 
          borderTopEndRadius: 50 ,
         

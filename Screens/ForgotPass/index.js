@@ -50,7 +50,7 @@ import styles from './style'
 
       <Text style={styles.forgot}>Forgot Password?</Text>
      
-      <Text style={{marginLeft:20,marginTop:10,color:'black',marginRight:20,fontSize:13}}>Enter your registerd email address or phone number and will send you a link to reset your password.</Text>
+      <Text style={{marginLeft:20,marginTop:10,color:'#707070',marginRight:20,fontSize:13}}>Enter your registerd email address or phone number and will send you a link to reset your password.</Text>
 
       <View style={styles.InputView}>
                     <InputText
