@@ -34,13 +34,22 @@ import BankDetails from './BankDetails'
 import EditBank from './EditBank'
 import DrawerContent from './DrawerContent'
 import Reviews from './Reviews'
-
+import Filters from './Filters'
+import { BlurView } from '@react-native-community/blur'
+import Unsigned from './myTickets/topScreens/unsigned'
+import Open from './myTickets/topScreens/Open'
+import Resolved from './myTickets/topScreens/Resolved'
+import SecondTicket from './myTickets/SecondTicket'
+import Reply from './myTickets/reply'
+import ResponsTicket from './myTickets/responsTicket'
+import EditProduct from './YourProduct/EditProduct'
+import ProductDetails from './ProductDetails'
 
 const Stack = createStackNavigator();
 function AuthStack() {
 
     return (
-        <Stack.Navigator initialRouteName='Reviews' >  
+        <Stack.Navigator initialRouteName='ProductDetails' >  
 
              <Stack.Screen name='Splash' component={Splash} options={{ header: () => null }} />
               <Stack.Screen name='Fourth' component={Fourth}options={{header: () => null }} />
@@ -57,7 +66,7 @@ function AuthStack() {
             <Stack.Screen name='CodeVerification' component={CodeVerification}
                 options={{ header: () => null }}               
             />
-         <Stack.Screen name='EditProfile' component={EditProfile}
+            <Stack.Screen name='EditProfile' component={EditProfile}
                 options={{header: () => null }} />
                
             <Stack.Screen name='Analytics' component={Analytics}/> 
@@ -76,8 +85,7 @@ function AuthStack() {
             <Stack.Screen name='Product' component={Product} options={{ header: () => null }} /> 
             <Stack.Screen name='Notification' component={Notification} options={{ header: () => null }} /> 
             <Stack.Screen name='HomeOnBoarding' component={HomeOnBoarding} options={{ header: () => null }} /> 
-            <Stack.Screen name='ActivePage' component={ActivePage} options={{ header: () => null }} /> 
-            <Stack.Screen name='MyTicktes' component={MyTicktes} options={{ header: () => null }} /> 
+            <Stack.Screen name='ActivePage' component={ActivePage} options={{ header: () => null }} />           
             <Stack.Screen name='Customers' component={Customers} options={{ header: () => null }} /> 
             <Stack.Screen name='CustomerDetails' component={CustomerDetails} options={{ header: () => null }} /> 
             <Stack.Screen name='OrderDetails' component={OrderDetails} options={{ header: () => null }} /> 
@@ -88,7 +96,17 @@ function AuthStack() {
             <Stack.Screen name='EditBank' component={EditBank} options={{ header: () => null }} />
             <Stack.Screen name='DrawerContent' component={DrawerContent} options={{ header: () => null }} />
             <Stack.Screen name='Reviews' component={Reviews} options={{ header: () => null }} />
-
+            <Stack.Screen name='Filters' component={Filters} options={{ header: () => null }} />
+            <Stack.Screen name='DrawerFile' component={DrawerFile} options={{ header: () => null }} />
+            <Stack.Screen name='MyTicktes' component={MyTicktes} options={{ header: () => null }} />
+            <Stack.Screen name='Unsigned' component={Unsigned} options={{ header: () => null }} />
+            <Stack.Screen name='Open' component={Open} options={{ header: () => null }} />
+            <Stack.Screen name='Resolved' component={Resolved} options={{ header: () => null }} />
+            <Stack.Screen name='SecondTicket' component={SecondTicket} options={{ header: () => null }} />
+            <Stack.Screen name='Reply' component={Reply} options={{ header: () => null }} />
+            <Stack.Screen name='ResponsTicket' component={ResponsTicket} options={{ header: () => null }} />
+            <Stack.Screen name='EditProduct' component={EditProduct} options={{ header: () => null }} />
+            <Stack.Screen name='ProductDetails' component={ProductDetails} options={{ header: () => null }} />
         </Stack.Navigator>
 
     )

@@ -1,10 +1,12 @@
-import { View, Text, Dimensions, ScrollView , Image, StyleSheet, ImageBackground} from 'react-native'
+import { View, Text, Dimensions, ScrollView , Image, StyleSheet, ImageBackground, TouchableOpacity} from 'react-native'
 import React, { useEffect, useState } from 'react'
 import Header from '../../../Components/Header'
 import images from '../../../Components/images'
 import UseOrientation from '../../UseOrientation'
 import { Table, TableWrapper, Row, Rows, Col } from 'react-native-table-component';
 import { heightToDp, widthToDp } from '../../../variable'
+import LinearGradient from 'react-native-linear-gradient'
+import EditProduct from '../EditProduct'
 
 
 export default function Product({navigation}) {
@@ -13,10 +15,10 @@ export default function Product({navigation}) {
     tableHead: ['', 'Months', 'Interests', 'Monthly EMI', 'Overall Cost'],
     tableTitle: ['HDFC', 'HDFC', 'HDFC', 'HDFC'],
     tableData: [
-      ['3', '13%pa(rs.25)', '3','4'],
-      ['a', 'b', 'c','d'],
-      ['1', '2', '3'],
-      ['a', 'b', 'c'],
+      ['3', '13%pa(rs.25)', '408','1224'],
+      ['3', '13%pa(rs.25)', '408','1224'],
+      ['3', '13%pa(rs.25)', '408','1224'],
+      ['3', '13%pa(rs.25)', '408','1224'],
      
     ],
   };
@@ -46,9 +48,10 @@ export default function Product({navigation}) {
         onPress={()=> navigation.navigate('YourProduct')}
      />
      
-    <ScrollView style={{}}>
-
-    <View style={{    
+    <ScrollView >
+<View style={{
+  height:orientations !='landscape' ? UseOrientation.height * 3.060:  UseOrientation.height * 3.8 ,}}>
+    <View style={{ 
       }} >
         <ImageBackground source={images.girl}
     
@@ -119,7 +122,7 @@ export default function Product({navigation}) {
         </View>
         
     </View>
-    {/* <View style={{ backgroundColor:'#fff', padding:15,marginTop : 5, }}>
+    <View style={{ backgroundColor:'#fff', padding:15,marginTop : 5, }}>
           <Text style={{fontSize:22,fontWeight:'500',
         color:'#000'
         }}>Size</Text>
@@ -151,10 +154,10 @@ export default function Product({navigation}) {
         </View> 
         </View>
        
-        </View> */}
+        </View> 
     
 
-    {/* <View style={{ marginTop : 5, backgroundColor:'#fff',padding:15}}>
+     <View style={{ marginTop : 5, backgroundColor:'#fff',padding:15}}>
           <Text style={{fontSize:22,fontWeight:'500',
         color:'#000'
         }}>Offers Available</Text>
@@ -177,9 +180,9 @@ export default function Product({navigation}) {
           </Text>
           <Text style={{ fontSize:12,fontWeight:'500'}}> Sign up for free and get gift card worth &#8377;100 </Text>
         </View>
-    </View> */}
+    </View>
 
-    {/* <View style={{ marginTop : 5, backgroundColor:'#fff',padding:15}}>
+    <View style={{ marginTop : 5, backgroundColor:'#fff',padding:15}}>
           <Text style={{fontSize:22,fontWeight:'500',
         color:'#000'
         }}>Addition Details</Text>
@@ -216,7 +219,7 @@ export default function Product({navigation}) {
         
         <Row 
           data={CONTENT.tableHead}
-          // flexArr={[1, 2, 1, 1]}
+          flexArr={[0, 1, 1.2, 1]}
           style={styles.head}
           textStyle={styles.text}
         />
@@ -224,12 +227,12 @@ export default function Product({navigation}) {
           <Col
             data={CONTENT.tableTitle}
             style={styles.title}
-            heightArr={[28, 28]}
+            heightArr={[25, 25]}
             textStyle={styles.text}
           />
           <Rows
             data={CONTENT.tableData}
-            flexArr={[2, 1, 1]}
+            flexArr={[2, 2, 2]}
             style={styles.row}
             textStyle={styles.text}
           />
@@ -268,12 +271,57 @@ export default function Product({navigation}) {
         </View>
         
     </View>
-    <View style={{ marginTop : 5, backgroundColor:'#fff',padding:15}}>
+    <View style={{ marginTop : 5, backgroundColor:'#fff',padding:15,justifyContent : 'space-between', flexDirection : 'row'}}>
           <Text style={{fontSize:22,fontWeight:'500',
-        color:'#000'
+        color:'#000', 
         }}>Minimum Order Value</Text>
+        <Text style={{fontSize:17,fontWeight:'500',
+        }}>2</Text>
         
-    </View> */}
+    </View> 
+    <View style={{ marginTop : 5, backgroundColor:'#fff',padding:15,justifyContent : 'space-between', flexDirection : 'row'}}>
+          <Text style={{fontSize:22,fontWeight:'500',
+        color:'#000', 
+        }}>Minimum Order Value</Text>
+        <Text style={{fontSize:17,fontWeight:'500',
+        }}>12</Text>
+        
+    </View> 
+    <View style={{ marginTop : 5, backgroundColor:'#fff',padding:15,}}>
+          <Text style={{fontSize:22,fontWeight:'500',
+        color:'#000', 
+        }}>Manufacturer Details</Text>
+        <Text style={{fontSize:14,fontWeight:'500',
+        }}>Falcon Apparels, MIN Ground Floor, Kapashera, New Delhi-110037</Text>
+        
+    </View> 
+    <View style={{ marginTop : 5, backgroundColor:'#fff',padding:15,}}>
+          <Text style={{fontSize:22,fontWeight:'500',
+        color:'#000', 
+        }}>Picker Details</Text>
+        <Text style={{fontSize:14,fontWeight:'500',
+        }}>Falcon Apparels, MIN Ground Floor, Kapashera, New Delhi-110037</Text>        
+    </View> 
+    <TouchableOpacity onPress={()=>       
+                navigation.navigate(EditProduct) 
+                
+              }
+       >
+    <View style={styles.change}>
+                  <LinearGradient
+                    style={{ borderRadius: 5 }}
+                    colors={['#ED4343', '#A52021']} >
+                   <View style={styles.changeView}>
+                        <Text style={{ color: '#ffffff', fontWeight: "bold", fontSize: 19 }}>
+                          Edit Product
+                        </Text>
+                      </View>
+                  
+                  </LinearGradient>
+                </View>
+                </TouchableOpacity>
+
+</View>
     </ScrollView>
       
      </View>
@@ -281,10 +329,26 @@ export default function Product({navigation}) {
   )
 }
 const styles = StyleSheet.create({
-  container: { padding: 10, paddingTop: 30, backgroundColor: '#fff' ,},
-  head: { height: 40, borderWidth: 1 },
+  container: {  paddingTop: 30, backgroundColor: '#fff' ,},
+  head: { height: 40, borderWidth: 0.3 },
   wrapper: { flexDirection: 'row',  },
-  title: {borderWidth :1},
-  row: { height: 27 ,},
+  title: {borderWidth :0.3},
+  row: { height: 27 ,borderWidth :0.3},
   text: { textAlign: 'center', },
+  change : {
+    height: 55,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 10,
+     marginBottom : 10
+},
+changeView : {
+  width: UseOrientation.width/ 1.1,
+  height: 45,
+  alignItems: 'center',
+  justifyContent: 'center',
+  borderRadius: 7,
+  marginLeft: 10,
+  marginRight: 10,
+}
 });

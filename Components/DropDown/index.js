@@ -50,7 +50,7 @@ const DropDown = ({
                         <TouchableOpacity 
                         onChange={item => {
                             setValue(item.value);
-                            setIsFocus(false);
+                            setIsFocus(true);
                           }}
                         onFocus={onFocus}                        
                             onPress={()=> onSelectedItem(val)}                           

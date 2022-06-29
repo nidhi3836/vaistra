@@ -36,7 +36,7 @@ const Header = ({
   console.log('title',title)
   return ( 
       <LinearGradient
-        style={{ height: heightToDp('9%')}}
+        style={{ height: heightToDp('7%')}}
         colors={['#ED4343', '#A52021']} >
 
         <View style={{flex: 1,
@@ -46,7 +46,7 @@ const Header = ({
         }}>
           <View style={{ flex: 0.9,
              flexDirection: 'row',
-             height: UseOrientation.height / 12,
+             height: UseOrientation.height / 14,
              alignItems:'center',
              
           }}>
@@ -106,8 +106,8 @@ const Header = ({
               <Image
                 resizeMode='contain'
                 style={{ 
-                  height: UseOrientation.height /10,
-                   width: UseOrientation.width / 12,
+                  height: UseOrientation.height /11,
+                   width: UseOrientation.width / 13,
                   //  alignSelf:'flex-end'
                   }}
                 source={image2}

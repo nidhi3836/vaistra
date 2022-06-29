@@ -9,6 +9,7 @@ import Home from './Home';
 import Return from './TopScreens/Return';
 import Cancel from './TopScreens/Cancel';
 import UseOrientation from './UseOrientation';
+
 const Tab = createMaterialTopTabNavigator();
 export default function TopTab() {  
 
@@ -16,11 +17,9 @@ export default function TopTab() {
   //  <View style={{backgroundColor:'red', height:50}}>
 
   //  </View>
-      <Tab.Navigator
-     
+      <Tab.Navigator     
       initialRouteName='ActivePage'    
-      screenOptions={{
-      
+      screenOptions={{      
         tabBarShowLabel : true,
         tabBarLabelStyle: { fontSize: 12 },
           // tabBarItemStyle: { width: 100 },      

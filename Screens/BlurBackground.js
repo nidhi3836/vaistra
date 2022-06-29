@@ -1,3 +1,4 @@
+// import { BlurView } from '@react-native-community/blur'
 import React from 'react'
 import { View,Image, StyleSheet,ImageBackground,Text } from 'react-native'
 import images from '../Components/images'
@@ -7,19 +8,17 @@ import images from '../Components/images'
     <>
       
  <View style={{flex : 1, backgroundColor : '#000'}}>
+  <View>
+    {/* <BlurView>
+      <Text>Hii</Text>
+    </BlurView> */}
+  </View>
       <ImageBackground 
       // blurRadius={5}
     
-        style={{height:"100%",width:"100%",}}
-                source={images.blurBg}
-                > 
-               <View 
-               blurRadius={5}
-                style={{ alignSelf:'center',backgroundColor:'#fff',height:"90%",width:"60%",
-                marginTop:150,
-
-              }}>
-                </View> 
+        style={{height:"100%",width:"100%",position:'absolute'}}
+                source={images.blurBg}>               
+              
       </ImageBackground> 
       </View>
       

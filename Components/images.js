@@ -63,8 +63,8 @@ export const Group431 = require('../images/Group431.png')
 export const Path84 = require('../images/Path84.png')
 export const starfull = require('../images/starfull.png')
 export const Path85 = require('../images/Path85.png')
-
 export const g2 = require('../images/g2.png')
+export const camera = require('../images/camera.png')
 
 
 export default  {
@@ -134,6 +134,7 @@ export default  {
     Path84,
     starfull,
     g2,
-    Path85
+    Path85,
+    camera
 
 }
