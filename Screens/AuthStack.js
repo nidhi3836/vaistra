@@ -44,13 +44,17 @@ import Reply from './myTickets/reply'
 import ResponsTicket from './myTickets/responsTicket'
 import EditProduct from './YourProduct/EditProduct'
 import ProductDetails from './ProductDetails'
+import AddVarient from './ProductDetails/AddVarient'
+import AdditionalDetail from './ProductDetails/AdditionalDetail'
+import EMIProduct from './ProductDetails/EMIProduct'
+import StockManage from './StockManage'
+import AddImage from './ProductDetails/AddImage'
 
 const Stack = createStackNavigator();
 function AuthStack() {
 
     return (
-        <Stack.Navigator initialRouteName='ProductDetails' >  
-
+        <Stack.Navigator initialRouteName='AddImage' >  
              <Stack.Screen name='Splash' component={Splash} options={{ header: () => null }} />
               <Stack.Screen name='Fourth' component={Fourth}options={{header: () => null }} />
              <Stack.Screen name='AppStack' component={AppStack} options={{ header: () => null }} /> 
@@ -107,6 +111,12 @@ function AuthStack() {
             <Stack.Screen name='ResponsTicket' component={ResponsTicket} options={{ header: () => null }} />
             <Stack.Screen name='EditProduct' component={EditProduct} options={{ header: () => null }} />
             <Stack.Screen name='ProductDetails' component={ProductDetails} options={{ header: () => null }} />
+            <Stack.Screen name='AddVarient' component={AddVarient} options={{ header: () => null }} />
+            <Stack.Screen name='AdditionalDetail' component={AdditionalDetail} options={{ header: () => null }} />
+            <Stack.Screen name='EMIProduct' component={EMIProduct} options={{ header: () => null }} />
+
+            <Stack.Screen name='StockManage' component={StockManage} options={{ header: () => null }} />
+            <Stack.Screen name='AddImage' component={AddImage} options={{ header: () => null }} />
         </Stack.Navigator>
 
     )

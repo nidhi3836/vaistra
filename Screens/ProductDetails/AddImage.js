@@ -3,10 +3,10 @@ import { Text, View, TextInput,  Image, TouchableOpacity,ImageBackground,Dimensi
 import images from '../../Components/images'
 import LinearGradient from 'react-native-linear-gradient';
 import UseOrientation from '../UseOrientation'
-import SecondTicket from './SecondTicket'
-import ResponsTicket from './responsTicket';
+import ProductDetails from '.';
 
-export default function Reply({navigation}) {
+
+export default function AddImage({navigation}){
     console.log('UseOrientation', UseOrientation.height, UseOrientation.width)
     const [screenWidths, setScreenWidths] = useState('')
     const [screenHeight, setScreenHeight] = useState('')
@@ -36,7 +36,7 @@ export default function Reply({navigation}) {
                      width:  orientations !='landscape' ? UseOrientation.width : screenWidths  ,
                      }}
            source={images.bg}>
-            <TouchableOpacity onPress={()=>navigation.navigate(SecondTicket)}>
+            <TouchableOpacity onPress={()=>navigation.navigate(ProductDetails)}>
             <Image
               style={{ height: 19, width: 26, margin: 10 }}
               source={images.leftArrow} />
@@ -46,36 +46,52 @@ export default function Reply({navigation}) {
 
             <View style={style.view}>
                
-               <View style={{flex : 0.28, backgroundColor :'#fff', margin :25, borderRadius : 10, borderWidth : 1, borderColor : '#d5d5d5'}}>
-               <TextInput 
-               placeholder='Message'
-               maxLength={9}
+            <View style={{ flex: 0.1, backgroundColor : '#fff', marginLeft :20, marginRight : 10, padding : 10, flexDirection:'row',justifyContent :'space-around', marginTop : 20}}>
                
-               >
-                     
-               </TextInput>
+               <View style={{flex:0.15, justifyContent : 'center',alignItems:'center',borderWidth : 1,
+                    borderColor : '#d5d5d5'
+                    }}>
+                            <Image 
+                            source={images.camera}                     
+                            />
+                            <Text style={{fontSize : 8,textAlign :'center'}}>AddProduct Image *</Text>
+                        </View>
+                        <View style={{flex:0.15, justifyContent : 'center',alignItems:'center',borderWidth : 1,
+                    borderColor : '#d5d5d5'
+                    }}>
+                            <Image 
+                            source={images.camera}                     
+                            />
+                            <Text style={{fontSize : 8,textAlign :'center'}}>AddProduct Image *</Text>
+                        </View>
+                        <View style={{flex:0.15, justifyContent : 'center',alignItems:'center',borderWidth : 1,
+                    borderColor : '#d5d5d5'
+                    }}>
+                            <Image 
+                            source={images.camera}                     
+                            />
+                            <Text style={{fontSize : 8,textAlign :'center'}}>AddProduct Image *</Text>
+                        </View>
+                        <View style={{flex:0.15, justifyContent : 'center',alignItems:'center',borderWidth : 1,
+                    borderColor : '#d5d5d5'
+                    }}>
+                            <Image 
+                            source={images.camera}                     
+                            />
+                            <Text style={{fontSize : 8,textAlign :'center'}}>AddProduct Image *</Text>
+                        </View>
+                        <View style={{flex:0.15, justifyContent : 'center',alignItems:'center',borderWidth : 1,
+                    borderColor : '#d5d5d5'
+                    }}>
+                            <Image 
+                            source={images.camera}                     
+                            />
+                            <Text style={{fontSize : 8,textAlign :'center'}}>AddProduct Image *</Text>
+                        </View>
 
                </View>
 
-                
-                <TouchableOpacity onPress={()=>       
-                navigation.navigate(ResponsTicket) 
-                
-              }
-       >
-         <View style={style.change}>
-                  <LinearGradient
-                    style={{ borderRadius: 5 }}
-                    colors={['#ED4343', '#A52021']} >
-                   <View style={style.changeView}>
-                        <Text style={{ color: '#ffffff', fontWeight: "bold", fontSize: 19 }}>
-                          Send Message
-                        </Text>
-                      </View>
-                  
-                  </LinearGradient>
-                </View>
-        </TouchableOpacity> 
+            
             </View>
         </ScrollView>
     )
@@ -91,7 +107,7 @@ export default function Reply({navigation}) {
         position: 'absolute', 
         backgroundColor: '#fff',         
          width: '100%', 
-         top: "60%", 
+         top: "80%", 
          height:'100%',
          borderTopStartRadius: 40, 
          borderTopEndRadius: 40 ,
@@ -113,19 +129,5 @@ export default function Reply({navigation}) {
         justifyContent:'center',
         borderRadius:7
     },
-    change : {
-        height: 55,
-        alignItems: 'center',
-        justifyContent: 'center',
-        marginTop: 10,
-    },
-    changeView : {
-        width: UseOrientation.width/ 1.1,
-        height: 45,
-        alignItems: 'center',
-        justifyContent: 'center',
-        borderRadius: 7,
-        marginLeft: 10,
-        marginRight: 10,
-    }
+   
 })

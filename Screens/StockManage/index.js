@@ -71,8 +71,7 @@ export default function StockManage({navigation}) {
       <StatusBar backgroundColor="#FFF" barStyle="dark-content" />
       <View style={styles.viewContainer}>
       
-        <View
-        
+        <View        
           contentContainerStyle={styles.scrollViewContainer}>
           <View style={styles.dropdownsRow}>
             <SelectDropdown

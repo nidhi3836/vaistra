@@ -6,8 +6,11 @@ import UseOrientation from '../UseOrientation'
 import InputText from '../../Components/InputText'
 import DropDown from '../../Components/DropDown'
 import LinearGradient from 'react-native-linear-gradient'
+import AddVarient from './AddVarient'
+import { RadioButtonInput } from 'react-native-simple-radio-button'
+import AddImage from './AddImage'
 
-export default function ProductDetails() {
+export default function ProductDetails({navigation}) {
 
 let data = [
 
@@ -47,8 +50,8 @@ let data = [
                 image={images.left}
             />
             <ScrollView>
-                <View style={{ height: orientations != 'landscape' ? UseOrientation.height * 3.060: UseOrientation.height * 3, }}>
-                    <View style={{ flex: 0.013, marginLeft :20, marginRight : 10, padding : 10, marginBottom : 10}}>
+                <View style={{ height: orientations != 'landscape' ? UseOrientation.height * 2 : UseOrientation.height * 3, }}>
+                    <View style={{ flex: 0.025, marginLeft :20, marginRight : 10, padding : 10, marginBottom : 10}}>
                       <Text style ={{fontSize : 19, color : '#000',fontWeight : '500'}}>Add Product Details *</Text>  
                     </View>
 
@@ -83,7 +86,7 @@ let data = [
                     </View>
 
                     <View style={[styles.textInput,
-                    {flex : 0.05}]}>
+                    {flex : 0.09}]}>
                         <InputText
                             
                             value={jeans}
@@ -122,10 +125,12 @@ let data = [
                             placeholderTextColor="#505050" />
                        
                     </View>
-                    <View style={{ flex: 0.011, backgroundColor : '#d5d5d5', marginLeft :20, marginRight : 10, padding : 10}}>
+                    <View style={{ flex: 0.025, backgroundColor : '#fff', marginLeft :20, marginRight : 10, padding : 10}}>
                       <Text style ={{fontSize : 19, color : '#000',fontWeight : '500'}}>Media (0/5)</Text>  
                     </View>
-                    <View style={{ flex: 0.03, backgroundColor : '#fff', marginLeft :20, marginRight : 10, padding : 10, flexDirection:'row',justifyContent :'space-around', marginTop : 20}}>
+                    
+                        
+                        <View style={{ flex: 0.055, backgroundColor : '#fff', marginLeft :20, marginRight : 10, padding : 10, flexDirection:'row',justifyContent :'space-around', marginTop : 20}}>
                         <View style={{flex:0.22, justifyContent : 'center',alignItems:'center',borderWidth : 1,
                     borderColor : '#d5d5d5'
                     }}>
@@ -156,8 +161,11 @@ let data = [
                             <Text style={{fontSize : 8,textAlign :'center'}}>AddProduct Image *</Text>
                         </View>
                     </View>
-                    < View style={[styles.textInput,
-                    {}]}>
+                       <TouchableOpacity 
+                       onPress={ ()=> navigation.navigate(AddImage)}
+                       style={[styles.textInput,
+                    {marginTop :5}]}>
+                    < View>
                         <InputText
                             value={video}
                             onChangeText={(text) => {setVideo(text) }}
@@ -165,7 +173,8 @@ let data = [
                             placeholderTextColor="#505050" />
                        
                     </View>
-                    <View style={{ flex: 0.011, backgroundColor : '#d5d5d5', marginLeft :20, marginRight : 10, padding : 10}}>
+                    </TouchableOpacity>
+                    <View style={{ flex: 0.028,  marginLeft :20, marginRight : 10, padding : 10}}>
                       <Text style ={{fontSize : 19, color : '#000',fontWeight : '500'}}>Product Price, Discount etc</Text>  
                     </View>
 
@@ -236,7 +245,7 @@ let data = [
                        
                     </View>
                     <TouchableOpacity onPress={()=>       
-                navigation.navigate(EditProduct) 
+                navigation.navigate(AddVarient) 
                 
               }
        >
@@ -246,7 +255,7 @@ let data = [
                     colors={['#ED4343', '#A52021']} >
                    <View style={styles.changeView}>
                         <Text style={{ color: '#ffffff', fontWeight: "bold", fontSize: 19 }}>
-                          Edit Product
+                          Next
                         </Text>
                       </View>
                   
@@ -270,7 +279,7 @@ const styles = StyleSheet.create({
         borderColor: '#B7B7B7',
         marginBottom: 16,
         // height: 43,
-         flex:0.022,
+         flex:0.0383,
         // justifyContent:'center',
         paddingLeft: 20, 
         // marginTop : 10

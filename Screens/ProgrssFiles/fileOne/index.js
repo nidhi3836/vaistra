@@ -169,7 +169,7 @@ export default function FileOne({ navigation }) {
                   <LinearGradient
                     style={{ borderRadius: 5 }}
                     colors={['#ED4343', '#A52021']} >
-                    <TouchableOpacity onPress={() => navigation.navigate('Second')}>
+                    <TouchableOpacity onPress={() => navigation.navigate(Second)}>
                       <View style={styles.changeView}>
                         <Text style={{ color: '#ffffff', fontWeight: "bold", fontSize: 19 }}>
                           Save Details
