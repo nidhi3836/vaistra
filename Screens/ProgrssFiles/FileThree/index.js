@@ -328,14 +328,15 @@ export default ThirdFile
 
 const styles = StyleSheet.create({
   InputText: {   
-   marginTop: 15,
-    borderWidth: 1,
-    borderRadius: 8,
-    height: 40,
-    width:"90%",
-    paddingLeft: 20,
-    borderColor: "#B7B7B7",
-    alignSelf: "center",
+    marginTop :15,
+    borderWidth : 1,
+    borderRadius : 8,
+    height : 40,
+   //  width : "90%",
+    paddingLeft : 20,
+    marginHorizontal : 20,
+    borderColor:"#B7B7B7",
+    // paddingRight:37,
   },
   text: {
     backgroundColor: "#EFECEC",

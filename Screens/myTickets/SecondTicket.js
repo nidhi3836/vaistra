@@ -49,7 +49,7 @@ export default function SecondTicket({navigation}) {
     <View>
      <Header 
      image={images.left}
-     onPress = {()=>navigation.navigate(MyTicktes)}
+     onPress = {()=>navigation.navigate('MyTicktes')}
      title={'My Tickets'}
      />
     </View>
@@ -108,7 +108,7 @@ export default function SecondTicket({navigation}) {
                 <Image style={{marginLeft : 10}}source={images.Group3583}/>
                 <Image style={{marginLeft : 10}}source={images.Group3583}/>
             </View>
-<Ripple onPress={()=>navigation.navigate(Reply)}>
+<Ripple onPress={()=>navigation.navigate('Reply')}>
 
             <Text style={{alignSelf : 'flex-end', color : '#ED4343',fontWeight : '500', top : 5 ,marginRight : 10}}>Reply</Text>
 </Ripple>

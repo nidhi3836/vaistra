@@ -97,7 +97,7 @@ export default function EditProduct({navigation}) {
        
       <Header 
       image={ images.left}
-      onPress ={()=> navigation.navigate(Product)}
+      onPress ={()=> navigation.navigate('Product')}
       title={'Edit Product'}
       image2={images.trash}
       />
@@ -586,7 +586,7 @@ marginBottom : 5,
 </View>
 
 <View  style={{flex : 0.2,justifyContent : 'center', alignItems : 'center'}}>
-  <Ripple onPress={() => navigation.navigate(EditVarients)}>
+  <Ripple onPress={() => navigation.navigate('EditVarients')}>
 
                 <Image source={images.plus}/>
   </Ripple>
@@ -605,7 +605,7 @@ marginBottom : 5,
                     marginTop:20,
                 }} 
                     colors={['#ED4343', '#A52021']} >
- <TouchableOpacity onPress={()=>navigation.navigate(Product )}
+ <TouchableOpacity onPress={()=>navigation.navigate('Product' )}
                   
             >
                 <Text style={{color:"#ffffff",

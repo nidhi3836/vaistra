@@ -50,7 +50,7 @@ export default function ResponsTicket({navigation}) {
     <View>
      <Header 
      image={images.left}
-     onPress = {()=>navigation.navigate(SecondTicket)}
+     onPress = {()=>navigation.navigate('SecondTicket')}
      title={'My Tickets'}
      />
     </View>

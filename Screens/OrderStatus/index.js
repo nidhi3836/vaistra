@@ -8,6 +8,7 @@ import TopTab from '../TopTab';
 import ActivePage from '../TopScreens/ActivePage';
 import Header from '../../Components/Header';
 import images from '../../Components/images';
+import Home from '../Home';
 
 const Tab = createMaterialTopTabNavigator();
 export default function OrderStatus({navigation}) {
@@ -17,6 +18,7 @@ export default function OrderStatus({navigation}) {
     <View style={{ height:"100%"}}>
       <Header
       image={images.Group355}
+      onPress={()=> navigation.navigate('Home')}
       image2={images.notification}
       onPress3={()=> navigation.navigate('Notification')}
       />

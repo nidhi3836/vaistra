@@ -6,6 +6,7 @@ const {width} = Dimensions.get('window');
 import SelectDropdown from 'react-native-select-dropdown';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import UseOrientation from '../UseOrientation';
+import Home from '../Home';
 
 export default function StockManage({navigation}) {
   const [isEnabled, setIsEnabled] = useState(false);
@@ -35,6 +36,7 @@ export default function StockManage({navigation}) {
     <>
     <Header 
     image={images.Group355}
+    onPress={()=> navigation.navigate('Home')}
     image2={images.notification}
     onPress3={()=> navigation.navigate('Notification')}
     />

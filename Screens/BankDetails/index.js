@@ -16,7 +16,7 @@ const  BankDetails=({navigation})=>
 <>
 <Header 
  image={images.leftArrow}
- onPress={()=>navigation.navigate(AppStack)}
+ onPress={()=>navigation.navigate('AppStack')}
 />
 <ScrollView style={{backgroundColor:'#000',}}>
     <View style={{height:heightToDp('100%')}}>    

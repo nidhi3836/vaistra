@@ -16,7 +16,7 @@ export default function Payments({navigation}) {
        <>
        <Header 
        image={images.left}
-       onPress={()=> navigation.navigate(AppStack)}
+       onPress={()=> navigation.navigate('AppStack')}
        title={'Payments'}
        />
     <ScrollView >

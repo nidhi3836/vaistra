@@ -36,7 +36,7 @@ export default function Home({ navigation }) {
     <View style={{flex: 1,height:'100%',backgroundColor: '#fff', }}>
       <Header
         image={images.Group355}
-        onPress={()=> navigation.navigate(DrawerContent)}
+        onPress={()=> navigation.navigate('DrawerContent')}
         image1={images.Vaistralogo}
         image2={images.notification}
         onPress3={() => navigation.navigate('Notification')}
@@ -58,7 +58,7 @@ export default function Home({ navigation }) {
                 borderWidth: 1, flex: 0.45,
                 borderColor: '#000', borderRadius: 7, padding: 7, borderColor: '#b7b7b7',
               }}
-              onPress={()=>navigation.navigate(YourProduct)}
+              onPress={()=>navigation.navigate('YourProduct')}
               >
               <View >
                 <Text >Total Products
@@ -68,7 +68,7 @@ export default function Home({ navigation }) {
               </View>
               </Ripple>
               <Ripple
-                onPress={()=>navigation.navigate(TopTab)}
+                onPress={()=>navigation.navigate('TopTab')}
               style={{
                 borderWidth: 1, flex: 0.45,
                 borderColor: '#000', borderRadius: 7, padding: 10, borderColor: '#b7b7b7'
@@ -99,7 +99,7 @@ export default function Home({ navigation }) {
               </Ripple>
 
               <Ripple 
-                onPress={()=>navigation.navigate(Analytics)}
+                onPress={()=>navigation.navigate('Analytics')}
               style={{
                 borderWidth: 1, flex: 0.45,
                 borderColor: '#000', borderRadius: 7, padding: 10, borderColor: '#b7b7b7'
@@ -122,7 +122,7 @@ export default function Home({ navigation }) {
                marginBottom: 12, 
               height:heightToDp('38%')
             }}
-            onPress={()=> navigation.navigate(Product)}
+            onPress={()=> navigation.navigate('Product')}
             >
           <ScrollView
             horizontal={true}
@@ -287,14 +287,12 @@ export default function Home({ navigation }) {
                   <Text style={{ fontSize: 11, fontWeight: '500' }}>Men Printed SweatShirt</Text>
                   <Text  style={{ fontSize: 11, fontWeight: '500' }}>Price : &#8377; 400.00 </Text>
               </View>
-              <View style={{flex:0.25,flexDirection:'row',
-          
-            }}>
+              <View style={{flex:0.2,flexDirection:'row',}}>
               <View style={{
                     borderWidth: 1,
                     justifyContent: 'center',
                     alignItems: 'center',
-                    width: 50,
+                    width: 70,
                     borderColor: '#d5d5d5', borderRadius: 4,
                   }}>
                     <Text style={{
@@ -317,11 +315,11 @@ export default function Home({ navigation }) {
                     justifyContent: 'center',
                     alignItems: 'center',
                     width: 70,
-                    borderRadius: 4,backgroundColor:'#ed4343',
+                    borderRadius: 4,backgroundColor:'#ED4343',
                   }}>
                     <Text style={{
                       fontSize: 10, fontWeight: '500',color : '#fff'
-                    }}>Up-Coming</Text>
+                    }}>Up Coming</Text>
 
                   
               </View>

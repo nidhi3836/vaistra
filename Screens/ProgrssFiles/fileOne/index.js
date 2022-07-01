@@ -9,6 +9,7 @@ import images from '../../../Components/images';
 import UseOrientation from '../../UseOrientation';
 import { heightToDp } from '../../../variable';
 import Second from '../fileTwo';
+import Login from '../../Login';
 
 
 const labels = [
@@ -64,10 +65,8 @@ export default function FileOne({ navigation }) {
               currentPosition={0}
               labels={labels}
               stepCount={4}
-            />
-         
+            />         
           </View>
-
       <ScrollView style={{ flex: 1, backgroundColor: "#ffffff",marginTop:5, }}>
           <View style={{ borderTopColor: "black",  height:heightToDp('80%') }}>
             <Text style={{ marginLeft: 20, fontSize: 22, fontWeight: "700", color: 'black' }}>Create your seller account</Text>
@@ -164,25 +163,23 @@ export default function FileOne({ navigation }) {
                   style={style.InputText}>
                 </InputText>
 
-
                 <View style={styles.change}>
-
+                <TouchableOpacity onPress={() => navigation.navigate('Second')}>
                   <LinearGradient
                     style={{ borderRadius: 5 }}
                     colors={['#ED4343', '#A52021']} >
-                    <TouchableOpacity onPress={() => navigation.navigate(Second)}>
+                   
                       <View style={styles.changeView}>
                         <Text style={{ color: '#ffffff', fontWeight: "bold", fontSize: 19 }}>
                           Save Details
                         </Text>
                       </View>
-                    </TouchableOpacity>
                   </LinearGradient>
+                    </TouchableOpacity>
                 </View>
 
               </View>
               :
-
               <View style={{justifyContent:'center', }}>
 
                 <View style={style.InputText}>
@@ -200,7 +197,8 @@ export default function FileOne({ navigation }) {
                   />
                   <View style={{ position: 'absolute', right: 20, top: 8 }}>
                     <TouchableOpacity onPress={() => setVisible(!visible)}>
-                      <Text style={{ color: 'red', fontWeight: "bold" }}>Send OTP</Text>
+                      <Text style={{ color: 'red', fontWeight: "bold" }}>
+                        Send OTP</Text>
                     </TouchableOpacity>
 
                   </View>

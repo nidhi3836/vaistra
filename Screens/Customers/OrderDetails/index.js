@@ -5,7 +5,7 @@ import images from '../../../Components/images'
 import { heightToDp } from '../../../variable'
 import UseOrientation from '../../UseOrientation'
 
-export default function OrderDetails() {
+export default function OrderDetails({navigation}) {
 
     const inputs = Array(5).fill('');
     const [day, setDay] = useState(null);
@@ -32,6 +32,7 @@ export default function OrderDetails() {
             <Header
                 image={images.left}
                 title={'Order Details'}
+                onPress={()=>navigation.navigate('AppStack')}
             />
 
             <ScrollView

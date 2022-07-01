@@ -8,6 +8,7 @@ import Product from './product'
 import Home from '../Home'
 import FileOne from '../ProgrssFiles/fileOne'
 import { heightToDp } from '../../variable'
+import AppStack from '../AppStack'
 
 export default function YourProduct({navigation}) {
   
@@ -32,12 +33,13 @@ export default function YourProduct({navigation}) {
     <View style={{ flex:1}}>
     <Header 
     image={images.Group355}
+    onPress={()=> navigation.navigate('Home')}
     image2={images.notification}
     onPress3={()=> navigation.navigate('Notification')}
     />
       <ScrollView style={{backgroundColor:'#fff', }}>
      
-<TouchableOpacity onPress={()=> navigation.navigate(Product)}>
+<TouchableOpacity onPress={()=> navigation.navigate('Product')}>
           <View style={{flexDirection:'row', alignContent:'center',
           width:80,justifyContent:'center',
           margin:15,alignItems:'center',

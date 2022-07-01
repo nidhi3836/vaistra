@@ -28,7 +28,7 @@ export default function Reviews({navigation}) {
     <View >
       <Header 
       image={images.left}
-      onPress={()=>navigation.navigate(AppStack)}
+      onPress={()=>navigation.navigate('AppStack')}
       title={'Reviews'}
       />
       <ScrollView>

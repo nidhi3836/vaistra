@@ -18,7 +18,7 @@ export default function MyTicktes({navigation}) {
 <View>
     <Header 
     image={images.left}
-    onPress = {()=>navigation.navigate(AppStack)}
+    onPress = {()=>navigation.navigate('AppStack')}
     title={'My Tickets'}
     />
     </View>

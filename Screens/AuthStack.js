@@ -35,7 +35,6 @@ import EditBank from './EditBank'
 import DrawerContent from './DrawerContent'
 import Reviews from './Reviews'
 import Filters from './Filters'
-import { BlurView } from '@react-native-community/blur'
 import Unsigned from './myTickets/topScreens/unsigned'
 import Open from './myTickets/topScreens/Open'
 import Resolved from './myTickets/topScreens/Resolved'
@@ -51,51 +50,54 @@ import StockManage from './StockManage'
 import AddImage from './ProductDetails/AddImage'
 import YourProduct from './YourProduct'
 import EditVarients from './ProductDetails/EditVarients'
+import Total from './Analytics/topFiles/Total'
+import Cancel from './Analytics/topFiles/Cancel'
 
 const Stack = createStackNavigator();
 function AuthStack() {
 
     return (
-        <Stack.Navigator initialRouteName='Splash' >  
-             <Stack.Screen name='Splash' component={Splash} options={{ header: () => null }} />
-              <Stack.Screen name='Fourth' component={Fourth}options={{header: () => null }} />
-             <Stack.Screen name='AppStack' component={AppStack} options={{ header: () => null }} /> 
-             <Stack.Screen name='ForgotPass' component={ForgotPass} options={{ header: () => null }} />
+        <Stack.Navigator initialRouteName='BlurBackground' >
+            <Stack.Screen name='Splash' component={Splash} options={{ header: () => null }} />
+            <Stack.Screen name='Fourth' component={Fourth} options={{ header: () => null }} />
+            <Stack.Screen name='AppStack' component={AppStack} options={{ header: () => null }} />
+            <Stack.Screen name='ForgotPass' component={ForgotPass} options={{ header: () => null }} />
             <Stack.Screen name='FileOne' component={FileOne}
                 options={{
-                    header: () => null }}
-                 />
-              <Stack.Screen name='Second' component={Second} 
-            options={{header: () => null }}
+                    header: () => null
+                }}
+            />
+            <Stack.Screen name='Second' component={Second}
+                options={{ header: () => null }}
             />
             <Stack.Screen name='Login' component={Login} options={{ header: () => null }} />
             <Stack.Screen name='CodeVerification' component={CodeVerification}
-                options={{ header: () => null }}               
+                options={{ header: () => null }}
             />
             <Stack.Screen name='EditProfile' component={EditProfile}
-                options={{header: () => null }} />
-               
-            <Stack.Screen name='Analytics' component={Analytics}/> 
-            <Stack.Screen name='SelectBrand' component={SelectBrand} 
-            options={{
-                    header: () => null }} />
+                options={{ header: () => null }} />
+
+            <Stack.Screen name='Analytics' component={Analytics}
+                options={{ header: () => null }} />
+            <Stack.Screen name='SelectBrand' component={SelectBrand}
+                options={{
+                    header: () => null
+                }} />
             <Stack.Screen name='BlurBackground' component={BlurBackground} options={{ header: () => null }} />
 
             <Stack.Screen name='OnBoarding' component={OnBoarding} options={{ header: () => null }} />
-            <Stack.Screen name='ThirdFile' component={ThirdFile}  options={{header: () => null }}/>          
-           
+            <Stack.Screen name='ThirdFile' component={ThirdFile} options={{ header: () => null }} />
+
             <Stack.Screen name='ResetFile' component={ResetFile} options={{ header: () => null }} />
-
-           <Stack.Screen name='Home' component={Home}/>  
-
-            <Stack.Screen name='Product' component={Product} options={{ header: () => null }} /> 
-            <Stack.Screen name='Notification' component={Notification} options={{ header: () => null }} /> 
-            <Stack.Screen name='HomeOnBoarding' component={HomeOnBoarding} options={{ header: () => null }} /> 
-            <Stack.Screen name='ActivePage' component={ActivePage} options={{ header: () => null }} />           
-            <Stack.Screen name='Customers' component={Customers} options={{ header: () => null }} /> 
-            <Stack.Screen name='CustomerDetails' component={CustomerDetails} options={{ header: () => null }} /> 
-            <Stack.Screen name='OrderDetails' component={OrderDetails} options={{ header: () => null }} /> 
-            <Stack.Screen name='Payments' component={Payments} options={{ header: () => null }} /> 
+            <Stack.Screen name='Home' component={Home} options={{header: () => null }} />
+            <Stack.Screen name='Product' component={Product} options={{ header: () => null }} />
+            <Stack.Screen name='Notification' component={Notification} options={{ header: () => null }} />
+            <Stack.Screen name='HomeOnBoarding' component={HomeOnBoarding} options={{ header: () => null }} />
+            <Stack.Screen name='ActivePage' component={ActivePage} options={{ header: () => null }} />
+            <Stack.Screen name='Customers' component={Customers} options={{ header: () => null }} />
+            <Stack.Screen name='CustomerDetails' component={CustomerDetails} options={{ header: () => null }} />
+            <Stack.Screen name='OrderDetails' component={OrderDetails} options={{ header: () => null }} />
+            <Stack.Screen name='Payments' component={Payments} options={{ header: () => null }} />
             <Stack.Screen name='ChangePassword' component={ChangePassword} options={{ header: () => null }} />
             <Stack.Screen name='EditAddress' component={EditAddress} options={{ header: () => null }} />
             <Stack.Screen name='BankDetails' component={BankDetails} options={{ header: () => null }} />
@@ -116,16 +118,14 @@ function AuthStack() {
             <Stack.Screen name='AddVarient' component={AddVarient} options={{ header: () => null }} />
             <Stack.Screen name='AdditionalDetail' component={AdditionalDetail} options={{ header: () => null }} />
             <Stack.Screen name='EMIProduct' component={EMIProduct} options={{ header: () => null }} />
-
             <Stack.Screen name='StockManage' component={StockManage} options={{ header: () => null }} />
             <Stack.Screen name='AddImage' component={AddImage} options={{ header: () => null }} />
-
             <Stack.Screen name='YourProduct' component={YourProduct} options={{ header: () => null }} />
-
             <Stack.Screen name='EditVarients' component={EditVarients} options={{ header: () => null }} />
+            <Stack.Screen name='Total' component={Total} options={{ header: () => null }} />
+            <Stack.Screen name='Cancel' component={Cancel} options={{ header: () => null }} />
 
         </Stack.Navigator>
-
     )
 }
 

@@ -120,7 +120,7 @@ const  Fourth=({navigation}) => {
             </View>
               <View style={{alignItems:'center'}}>  
           <TouchableOpacity 
-          onPress={()=> toggleCheckBox  ?   navigation.navigate(AppStack): 
+          onPress={()=> toggleCheckBox  ?   navigation.navigate('AppStack'): 
             setVisible(visible)
           }
               style={{                 

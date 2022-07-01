@@ -21,7 +21,7 @@ export default function AdditionalDetail({navigation}) {
     <View>
      <Header 
      image={images.left}
-     onPress={()=> navigation.navigate(AddVarient)}
+     onPress={()=> navigation.navigate('AddVarient')}
      />
      <ScrollView>
         <View  style={{height : heightToDp('100%'), backgroundColor : '#fff'}}>
@@ -78,7 +78,7 @@ export default function AdditionalDetail({navigation}) {
             </View>
 
             <TouchableOpacity onPress={()=>       
-                navigation.navigate(EMIProduct)                 
+                navigation.navigate('EMIProduct')                 
               }
        >
     <View style={styles.change}>

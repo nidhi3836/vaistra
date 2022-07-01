@@ -19,7 +19,7 @@ export default function AddVarient({navigation}) {
     <View>
      <Header 
      image={images.left}
-     onPress={()=> navigation.navigate(ProductDetails)}
+     onPress={()=> navigation.navigate('ProductDetails')}
      />
      <View style={{height : heightToDp('100%'), backgroundColor : '#fff'}}>
         <View style={{flex : 0.05, marginLeft : 20, margin: 20,marginRight : 20 }}>
@@ -109,7 +109,7 @@ export default function AddVarient({navigation}) {
                 }  
                 
                 <TouchableOpacity onPress={()=>       
-                navigation.navigate(AdditionalDetail) 
+                navigation.navigate('AdditionalDetail') 
                 
               }
        >

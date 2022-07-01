@@ -36,7 +36,7 @@ export default function AddImage({navigation}){
                      width:  orientations !='landscape' ? UseOrientation.width : screenWidths  ,
                      }}
            source={images.bg}>
-            <TouchableOpacity onPress={()=>navigation.navigate(ProductDetails)}>
+            <TouchableOpacity onPress={()=>navigation.navigate('ProductDetails')}>
             <Image
               style={{ height: 19, width: 26, margin: 10 }}
               source={images.leftArrow} />

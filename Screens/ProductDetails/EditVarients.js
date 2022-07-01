@@ -100,7 +100,7 @@ export default function EditVarients({navigation}) {
                
             </View>
 
-            <TouchableOpacity onPress={ () => navigation.navigate (EditProduct)}
+            <TouchableOpacity onPress={ () => navigation.navigate ('EditProduct')}
         
         >
      <View style={[styles.change,{marginTop : 30}]}>

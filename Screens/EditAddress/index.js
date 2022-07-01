@@ -16,7 +16,7 @@ export default function EditAddress({navigation}) {
 <Header 
  image={images.leftArrow}
  title={'Edit Address'}
- onPress={()=>navigation.navigate(AppStack)}
+ onPress={()=>navigation.navigate('AppStack')}
 />
 <ScrollView style={{}}>
     <View style={{height:heightToDp('100%')}}>    
@@ -105,7 +105,7 @@ export default function EditAddress({navigation}) {
                     marginTop:20,
                 }} 
                     colors={['#ED4343', '#A52021']} >
- <TouchableOpacity onPress={()=>navigation.navigate(ForgotPass)}
+ <TouchableOpacity onPress={()=>navigation.navigate('ForgotPass')}
                   
             >
                 <Text style={{color:"#ffffff",

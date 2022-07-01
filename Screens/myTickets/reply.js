@@ -36,7 +36,7 @@ export default function Reply({navigation}) {
                      width:  orientations !='landscape' ? UseOrientation.width : screenWidths  ,
                      }}
            source={images.bg}>
-            <TouchableOpacity onPress={()=>navigation.navigate(SecondTicket)}>
+            <TouchableOpacity onPress={()=>navigation.navigate('SecondTicket')}>
             <Image
               style={{ height: 19, width: 26, margin: 10 }}
               source={images.leftArrow} />
@@ -59,7 +59,7 @@ export default function Reply({navigation}) {
 
                 
                 <TouchableOpacity onPress={()=>       
-                navigation.navigate(ResponsTicket) 
+                navigation.navigate('ResponsTicket') 
                 
               }
        >

@@ -18,12 +18,12 @@ export default function Customers({navigation}) {
     <Header 
     image={images.left}
     title = {'Customrs'}
-    onPress={()=> navigation.navigate(AppStack)}
+    onPress={()=> navigation.navigate('AppStack')}
 
     />
     <ScrollView style={{backgroundColor:'#fff'}}>
     <Ripple
-    onPress={() => navigation.navigate(CustomerDetails)}
+    onPress={() => navigation.navigate('CustomerDetails')}
     style={{height:heightToDp('100%')}}>
      
 

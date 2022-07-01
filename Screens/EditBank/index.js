@@ -34,7 +34,7 @@ export default function EditBank({navigation}) {
                    width:  orientations !='landscape' ? UseOrientation.width : screenWidths  ,
                    }}
          source={images.SamsungGalaxyS10}>
-          <TouchableOpacity onPress={()=>navigation.navigate(AppStack)}>
+          <TouchableOpacity onPress={()=>navigation.navigate('AppStack')}>
           <Image
             style={{ height: 19, width: 26, margin: 10 }}
             source={images.leftArrow} />

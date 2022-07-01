@@ -78,7 +78,7 @@ export default function EMIProduct({navigation}) {
     <View>
         <Header
         image={images.left}
-        onPress={()=> navigation.navigate(AdditionalDetail) }
+        onPress={()=> navigation.navigate('AdditionalDetail') }
         />
         <ScrollView>
       <View style={{ height:orientations !='landscape' ? UseOrientation.height * 1.2:  UseOrientation.height * 2 ,
@@ -89,7 +89,7 @@ export default function EMIProduct({navigation}) {
             <Text style={{color:'#000', fontSize : 20, fontWeight : '500', }}>
                 Additional Details
             </Text>
-            <Ripple onPress={ () => navigation.navigate (AppStack)}>
+            <Ripple onPress={ () => navigation.navigate ('AppStack')}>
             <Text style={{color:'#000', fontSize : 20, fontWeight : 'bold', color : '#ed4343'}}>
                 SKIP
             </Text>
@@ -209,7 +209,7 @@ marginTop : -30}}>
             </View>
 
             <TouchableOpacity onPress={()=>       
-                navigation.navigate(EMIProduct) 
+                navigation.navigate('EMIProduct') 
                 
               }
        >
@@ -258,7 +258,7 @@ marginTop : -30}}>
         </TableWrapper>
       </Table>
     </View>
-    <TouchableOpacity onPress={ () => navigation.navigate (AppStack)}
+    <TouchableOpacity onPress={ () => navigation.navigate ('AppStack')}
         
        >
     <View style={[styles.change,{marginTop : 30}]}>

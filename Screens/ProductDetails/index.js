@@ -48,6 +48,7 @@ let data = [
         <View>
             <Header
                 image={images.left}
+                onPress={()=>navigation.navigate('AppStack')}
             />
             <ScrollView>
                 <View style={{ height: orientations != 'landscape' ? UseOrientation.height * 2 : UseOrientation.height * 3, }}>
@@ -162,7 +163,7 @@ let data = [
                         </View>
                     </View>
                        <TouchableOpacity 
-                       onPress={ ()=> navigation.navigate(AddImage)}
+                       onPress={ ()=> navigation.navigate('AddImage')}
                        style={[styles.textInput,
                     {marginTop :5}]}>
                     < View>
@@ -245,7 +246,7 @@ let data = [
                        
                     </View>
                     <TouchableOpacity onPress={()=>       
-                navigation.navigate(AddVarient) 
+                navigation.navigate('AddVarient') 
                 
               }
        >
