@@ -48,7 +48,7 @@ export default function Notification({navigation}) {
     onPress={()=>navigation.navigate('AppStack')}
     />
     <ScrollView>
-    <Text style={{alignSelf : 'flex-end',fontSize:17,padding:10}}>Marks all as read</Text>
+    <Text style={{alignSelf : 'flex-end',fontSize:19,padding:10, fontWeight : '500', color:'#444'}}>Marks all as read</Text>
     {inputs.map((inp, index)=> {
           return(
     <View style={{

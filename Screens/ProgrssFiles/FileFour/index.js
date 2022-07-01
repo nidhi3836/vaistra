@@ -7,6 +7,7 @@ import StepIndicator from "react-native-step-indicator";
 import images from '../../../Components/images';
 import Header from '../../../Components/Header';
 import UseOrientation from '../../UseOrientation';
+import AppStack from '../../AppStack';
 
 const labels = [
   "Seller detail",
@@ -119,7 +120,7 @@ const  Fourth=({navigation}) => {
             </View>
               <View style={{alignItems:'center'}}>  
           <TouchableOpacity 
-          onPress={()=> toggleCheckBox  ?   navigation.navigate('Home'): 
+          onPress={()=> toggleCheckBox  ?   navigation.navigate(AppStack): 
             setVisible(visible)
           }
               style={{                 

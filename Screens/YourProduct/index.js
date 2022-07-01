@@ -81,7 +81,7 @@ export default function YourProduct({navigation}) {
                 </View>
                < View style={{flex:0.48,marginTop:5}}>
 
-                <View style={{
+            <View style={{
             justifyContent:'center',
               //  height:UseOrientation.height / 5, 
              alignItems:'center',

@@ -49,12 +49,14 @@ import AdditionalDetail from './ProductDetails/AdditionalDetail'
 import EMIProduct from './ProductDetails/EMIProduct'
 import StockManage from './StockManage'
 import AddImage from './ProductDetails/AddImage'
+import YourProduct from './YourProduct'
+import EditVarients from './ProductDetails/EditVarients'
 
 const Stack = createStackNavigator();
 function AuthStack() {
 
     return (
-        <Stack.Navigator initialRouteName='AddImage' >  
+        <Stack.Navigator initialRouteName='Splash' >  
              <Stack.Screen name='Splash' component={Splash} options={{ header: () => null }} />
               <Stack.Screen name='Fourth' component={Fourth}options={{header: () => null }} />
              <Stack.Screen name='AppStack' component={AppStack} options={{ header: () => null }} /> 
@@ -117,6 +119,11 @@ function AuthStack() {
 
             <Stack.Screen name='StockManage' component={StockManage} options={{ header: () => null }} />
             <Stack.Screen name='AddImage' component={AddImage} options={{ header: () => null }} />
+
+            <Stack.Screen name='YourProduct' component={YourProduct} options={{ header: () => null }} />
+
+            <Stack.Screen name='EditVarients' component={EditVarients} options={{ header: () => null }} />
+
         </Stack.Navigator>
 
     )

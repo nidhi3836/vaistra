@@ -8,6 +8,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import images from '../../../Components/images';
 import UseOrientation from '../../UseOrientation';
 import { heightToDp } from '../../../variable';
+import Second from '../fileTwo';
 
 
 const labels = [

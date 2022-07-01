@@ -21,6 +21,7 @@ const Drawer = createDrawerNavigator();
          {/* <Drawer.Screen name='Home' component={Home}  /> */}
            {/* <Drawer.Screen name='DrawerFile' component={DrawerFile}  /> */}
            <Drawer.Screen name='BottomTag' component={BottomTag} options={{headerShown:false}}/>
+           {/* <Drawer.Screen name='Home' component={Home} options={{headerShown:false}}/> */}
            <Drawer.Screen name='TopTab' component={TopTab} />    
            <Drawer.Screen name='AddProduct' component={AddProduct}  
            options={{headerShown:false}}

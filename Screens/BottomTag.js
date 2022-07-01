@@ -28,7 +28,8 @@ const BottomTag = () => {
    }}     
     >        
        <Tab.Screen name="Home" component={Home} 
-        options={{             
+        options={{       
+          headerShown : false,      
           // tabBarLabel:'',
         tabBarIcon: ({focused}) => (
         <View style={{   alignItems:'center', height:40   

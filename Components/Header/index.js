@@ -106,8 +106,8 @@ const Header = ({
               <Image
                 resizeMode='contain'
                 style={{ 
-                  height: UseOrientation.height /11,
-                   width: UseOrientation.width / 13,
+                  height: UseOrientation.height /12,
+                   width: UseOrientation.width / 15,
                   //  alignSelf:'flex-end'
                   }}
                 source={image2}

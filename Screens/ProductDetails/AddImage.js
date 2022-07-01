@@ -46,42 +46,42 @@ export default function AddImage({navigation}){
 
             <View style={style.view}>
                
-            <View style={{ flex: 0.1, backgroundColor : '#fff', marginLeft :20, marginRight : 10, padding : 10, flexDirection:'row',justifyContent :'space-around', marginTop : 20}}>
+            <View style={{ flex: 0.075, backgroundColor : '#fff', marginLeft :20, marginRight : 10, padding : 10, flexDirection:'row',justifyContent :'space-around', marginTop : 30}}>
                
-               <View style={{flex:0.15, justifyContent : 'center',alignItems:'center',borderWidth : 1,
-                    borderColor : '#d5d5d5'
+               <View style={{flex:0.16, justifyContent : 'center',alignItems:'center',borderWidth : 1,
+                    borderColor : '#d5d5d5',
                     }}>
                             <Image 
                             source={images.camera}                     
                             />
                             <Text style={{fontSize : 8,textAlign :'center'}}>AddProduct Image *</Text>
                         </View>
-                        <View style={{flex:0.15, justifyContent : 'center',alignItems:'center',borderWidth : 1,
-                    borderColor : '#d5d5d5'
+                        <View style={{flex:0.16, justifyContent : 'center',alignItems:'center',borderWidth : 1,
+                    borderColor : '#d5d5d5',
                     }}>
                             <Image 
                             source={images.camera}                     
                             />
                             <Text style={{fontSize : 8,textAlign :'center'}}>AddProduct Image *</Text>
                         </View>
-                        <View style={{flex:0.15, justifyContent : 'center',alignItems:'center',borderWidth : 1,
-                    borderColor : '#d5d5d5'
+                        <View style={{flex:0.16, justifyContent : 'center',alignItems:'center',borderWidth : 1,
+                    borderColor : '#d5d5d5',
                     }}>
                             <Image 
                             source={images.camera}                     
                             />
                             <Text style={{fontSize : 8,textAlign :'center'}}>AddProduct Image *</Text>
                         </View>
-                        <View style={{flex:0.15, justifyContent : 'center',alignItems:'center',borderWidth : 1,
-                    borderColor : '#d5d5d5'
+                        <View style={{flex:0.16, justifyContent : 'center',alignItems:'center',borderWidth : 1,
+                    borderColor : '#d5d5d5',
                     }}>
                             <Image 
                             source={images.camera}                     
                             />
-                            <Text style={{fontSize : 8,textAlign :'center'}}>AddProduct Image *</Text>
+                            <Text style={{fontSize : 8,textAlign :'center'}}>Add Product Image *</Text>
                         </View>
-                        <View style={{flex:0.15, justifyContent : 'center',alignItems:'center',borderWidth : 1,
-                    borderColor : '#d5d5d5'
+                        <View style={{flex:0.16, justifyContent : 'center',alignItems:'center',borderWidth : 1,
+                    borderColor : '#d5d5d5', 
                     }}>
                             <Image 
                             source={images.camera}                     
@@ -107,7 +107,7 @@ export default function AddImage({navigation}){
         position: 'absolute', 
         backgroundColor: '#fff',         
          width: '100%', 
-         top: "80%", 
+         top: "85%", 
          height:'100%',
          borderTopStartRadius: 40, 
          borderTopEndRadius: 40 ,
@@ -115,19 +115,7 @@ export default function AddImage({navigation}){
         //  justifyContent:'center'
         
     },
-    resetText : {
-        marginTop: 50,
-         marginLeft: 20,
-          fontSize: 20, 
-          fontWeight: "bold", 
-          color: 'black'
-    },
-    inputView : {
-     borderColor:'#B7B7B7',
-        borderWidth:1,
-        margin: 10,
-        justifyContent:'center',
-        borderRadius:7
-    },
+   
+   
    
 })

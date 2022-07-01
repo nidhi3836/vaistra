@@ -5,8 +5,9 @@ import Header from '../../Components/Header'
 import images from '../../Components/images'
 import { heightToDp } from '../../variable'
 import UseOrientation from '../UseOrientation'
+import AppStack from '../AppStack'
 
-export default function Reviews() {
+export default function Reviews({navigation}) {
   
   const inputs = Array(4).fill('');
   const [day, setDay] = useState(null);
@@ -27,6 +28,7 @@ export default function Reviews() {
     <View >
       <Header 
       image={images.left}
+      onPress={()=>navigation.navigate(AppStack)}
       title={'Reviews'}
       />
       <ScrollView>

@@ -34,11 +34,12 @@ const [password, setPassword] = useState(false)
             <ScrollView style={{height:heightToDp('136%')}} >
                 
             <View style={{ position:'absolute',
+            
                }}>
                 <Image
                     source={images.Two}
                     style={{ 
-                           height:orientations !='landscape' ? UseOrientation.height / 0.82:  UseOrientation.height * 2 ,                     
+                           height:orientations !='landscape' ? UseOrientation.height / 0.835:  UseOrientation.height * 2 ,                     
                          width:  orientations !='landscape' ? UseOrientation.width  : screenWidths ,   
                          
                      }}

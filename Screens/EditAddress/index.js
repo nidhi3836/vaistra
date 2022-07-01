@@ -9,6 +9,8 @@ import { heightToDp } from '../../variable';
 import AppStack from '../AppStack';
 
 export default function EditAddress({navigation}) {  
+
+
   return (
 <>
 <Header 
@@ -16,10 +18,11 @@ export default function EditAddress({navigation}) {
  title={'Edit Address'}
  onPress={()=>navigation.navigate(AppStack)}
 />
-<ScrollView style={{backgroundColor:'#000',}}>
+<ScrollView style={{}}>
     <View style={{height:heightToDp('100%')}}>    
  
     <View style={{backgroundColor:"#fff",flex:0.9,}}>
+
             <View style={{ marginTop:20,borderStartColor:'#000'}}>
                 <Text style={{marginLeft:20,fontSize:22,fontWeight:"700",color:'black',margin:5,}}>Pick Up Address</Text>
              
@@ -52,7 +55,7 @@ export default function EditAddress({navigation}) {
               placeholderTextColor="#505050"
             />
             <View style={styles.TextInputView}>
-              <Text style={[styles.TextInputLabel,{width:45,}]} >Address</Text>
+              <Text style={[styles.TextInputLabel,{width:48,}]} >Address</Text>
             </View>
           </View>   
           
@@ -64,9 +67,11 @@ export default function EditAddress({navigation}) {
               placeholderTextColor="#505050"
             />
             <View style={styles.TextInputView}>
-              <Text style={[styles.TextInputLabel,{ width: 73, }]}>Locality/Town</Text>
+              <Text style={[styles.TextInputLabel,{ width: 80, }]}>Locality/Town</Text>
             </View>
           </View>   
+          
+              
           <View style={styles.InputText}>
               <InputText
               onChangeText={(text) => { console.log('text', text) }}
@@ -74,9 +79,10 @@ export default function EditAddress({navigation}) {
               placeholderTextColor="#505050"
             />
             <View style={styles.TextInputView}>
-              <Text style={[styles.TextInputLabel,{ width: 112, }]} >Near by Famous Place</Text>
+              <Text style={[styles.TextInputLabel,{ width: 120, }]} >Near by famous Place</Text>
             </View>
-          </View> 
+          </View>
+ 
           <View style={styles.InputText}>
               <InputText
               onChangeText={(text) => { console.log('text', text) }}
@@ -87,8 +93,6 @@ export default function EditAddress({navigation}) {
               <Text style={[styles.TextInputLabel,{ width: 55, }]} >Pin Code</Text>
             </View>
           </View> 
-
-
               
           <LinearGradient
                    style={{
@@ -101,7 +105,7 @@ export default function EditAddress({navigation}) {
                     marginTop:20,
                 }} 
                     colors={['#ED4343', '#A52021']} >
- <TouchableOpacity onPress={()=>navigation.navigate('ForgotPass')}
+ <TouchableOpacity onPress={()=>navigation.navigate(ForgotPass)}
                   
             >
                 <Text style={{color:"#ffffff",

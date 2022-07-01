@@ -13,11 +13,16 @@ import ChangePassword from '../ChanePassword'
 import EditBank from '../EditBank'
 import BankDetails from '../BankDetails'
 import EditAddress from '../EditAddress'
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import YourProduct from '../YourProduct'
+import AddProduct from '../AddProduct'
+import Reviews from '../Reviews'
+import Payments from '../Payments'
 
 
 export default function DrawerContent({navigation}) {
   return (
-    <ScrollView style={{}}>
+    <ScrollView style={{flex : 1}}>
     <View style={{backgroundColor:'white'}}>
        <TouchableOpacity onPress={()=>navigation.navigate('EditProfile')}>
     <LinearGradient
@@ -50,7 +55,7 @@ export default function DrawerContent({navigation}) {
 
        {/* <AddProduct /> */}
        <TouchableOpacity 
-       onPress={()=>navigation.navigate('AddProduct')}>
+       onPress={()=>navigation.navigate(AddProduct)}>
     <View style={styles.categoryView}>
       <Image resizeMode='contain'
       style={{height:27,width:27,}}

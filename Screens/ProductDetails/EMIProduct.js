@@ -52,8 +52,7 @@ export default function EMIProduct({navigation}) {
     const [countries, setCountries] = useState([]);
     const [month, setMonth] = useState([]);
     // const citiesDropdownRef = useRef();
-  
-    useEffect(() => {
+      useEffect(() => {
       setTimeout(() => {
         setCountries([
           {title: 'HDFC', countries: [{title: 'HDFC'}, ]},
