@@ -83,8 +83,8 @@ const Header = ({
           }}>
               {title}
             </Text>
-            <TouchableOpacity  
-             onPress={onPress2}>
+            {/* <TouchableOpacity  
+             onPress={onPress2}> */}
               <Image
                 resizeMode='contain'
                 style={{ 
@@ -93,7 +93,7 @@ const Header = ({
                   }}
                 source={image1}
                 />
-            </TouchableOpacity> 
+            {/* </TouchableOpacity>  */}
            </View>
           </View>
 

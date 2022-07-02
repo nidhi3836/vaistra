@@ -67,8 +67,8 @@ export const g2 = require('../images/g2.png')
 export const camera = require('../images/camera.png')
 export const trash = require('../images/trash.png')
 export const Group3689 = require('../images/Group3689.png')
-
 export const Group3699 = require('../images/Group3699.png')
+export const greenTick = require('../images/greenTick.png')
 
 
 export default  {
@@ -142,6 +142,7 @@ export default  {
     camera,
     trash,
     Group3689,
-    Group3699
+    Group3699,
+    greenTick
 
 }

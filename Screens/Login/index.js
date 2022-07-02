@@ -29,20 +29,15 @@ const [password, setPassword] = useState(false)
     }, [orientations]);
 
     return (
-        <View style={{ justifyContent:'center',       
-        }}>
+        <View style={{ justifyContent:'center', }}>
             <ScrollView style={{height:heightToDp('136%')}} >
                 
-            <View style={{ position:'absolute',
-            
-               }}>
+            <View style={{ position:'absolute',}}>
                 <Image
                     source={images.Two}
                     style={{ 
                            height:orientations !='landscape' ? UseOrientation.height / 0.835:  UseOrientation.height * 2 ,                     
-                         width:  orientations !='landscape' ? UseOrientation.width  : screenWidths ,   
-                         
-                     }}
+                         width:  orientations !='landscape' ? UseOrientation.width  : screenWidths ,  }}
                />
             </View>
 

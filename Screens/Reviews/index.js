@@ -127,9 +127,9 @@ export default function Reviews({navigation}) {
               source={ images.Path84}/>
               <Image     style={{margin : 2}}
               source={ images.Path84}/>
-              <Image    style={{margin : 2}}source={ images.Path84}/>
-              <Image   style={{margin : 2}}source={ images.Path84}/>
-              <Image    style={{margin : 2}} source={ images.Path85}/>
+              <Image style={{margin : 2}}source={ images.Path84}/>
+              <Image style={{margin : 2}}source={ images.Path84}/>
+              <Image style={{margin : 2}} source={ images.Path85}/>
           </View>
           </View>
     </View>

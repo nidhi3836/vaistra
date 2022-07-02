@@ -25,11 +25,9 @@ function ResetFile({ navigation }) {
     const [visible, setVisible] = useState(true)
     console.log('newPass', newPass)
     return (
-
         <ScrollView style={{flex:1,position:'relative'}}>
 
-<View style={{height:"50%",width: '100%',}}>    
-        
+    <View style={{height:"50%",width: '100%',}}>         
            <ImageBackground  style={{ 
                         height:orientations !='landscape' ? UseOrientation.height :  UseOrientation.height * 2,
                      width:  orientations !='landscape' ? UseOrientation.width : screenWidths  ,

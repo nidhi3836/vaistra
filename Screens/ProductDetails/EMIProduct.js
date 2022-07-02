@@ -258,9 +258,7 @@ marginTop : -30}}>
         </TableWrapper>
       </Table>
     </View>
-    <TouchableOpacity onPress={ () => navigation.navigate ('AppStack')}
-        
-       >
+    <TouchableOpacity onPress={ () => navigation.navigate ('AppStack')}>
     <View style={[styles.change,{marginTop : 30}]}>
                   <LinearGradient
                     style={{ borderRadius: 5 }}
@@ -274,9 +272,7 @@ marginTop : -30}}>
                   </LinearGradient>
                 </View>
                 </TouchableOpacity>
-
-    </View>
-   
+    </View> 
 
       </View>
       </ScrollView>

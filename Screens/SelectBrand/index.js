@@ -4,7 +4,6 @@ import DropDown from '../../Components/DropDown'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import InputText from '../../Components/InputText'
 import styles from './styles'
-import UseOrientation from '../UseOrientation'
 import { heightToDp } from '../../variable'
 import Header from '../../Components/Header'
 import images from '../../Components/images'
@@ -34,28 +33,24 @@ const OnSelect = (item) => {
     <>
     <Header 
     image={images.left}
-    onPress={()=>navigation.navigate('AppStack')}
-    />
-    <ScrollView style={{flex:1,backgroundColor:'gray',
-   }}>
+    onPress={()=>navigation.navigate('AppStack')}/>
+    <ScrollView style={{flex:1,backgroundColor:'gray',}}>
     <View style={{backgroundColor:'white', height:heightToDp('95%')}}>
-{select ?
+   {select ?
       <View>
-       <Text style={styles.label}>Add Another 
+       <Text style={styles.label}>Add Another
        brand you want</Text>
        <InputText
-                 placeholder='Enter Brand name'
-                 style={styles.InputText}/>
+          placeholder='Enter Brand name'
+          style={styles.InputText}/>
 
       <TouchableOpacity style={styles.Touchable} 
        onPress={() => setSelect(!select)}>
                     <Text style={styles.AddBrandText}>Add Brand</Text>    
 
      </TouchableOpacity>      
-      </View>
-      
+      </View>      
       :
-
       <View>
       <Text style={styles.label}>Select the Band you want to sell or add new Brand</Text>
       <DropDown 

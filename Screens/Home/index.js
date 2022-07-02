@@ -236,7 +236,7 @@ export default function Home({ navigation }) {
           </TouchableOpacity>
 
           <View style={{ marginLeft : 15, backgroundColor:'#fff' }}>
-            <Text  style={{ fontSize: 19, color: "#000", marginLeft:10,fontWeight:'500' }}>Letest Product</Text>
+            <Text  style={{ fontSize: 19, color: "#000", marginLeft:10,fontWeight:'500' }}>Latest Product</Text>
           </View>
 
           {inputs.map((inp, index)=> {
@@ -319,9 +319,7 @@ export default function Home({ navigation }) {
                   }}>
                     <Text style={{
                       fontSize: 10, fontWeight: '500',color : '#fff'
-                    }}>Up Coming</Text>
-
-                  
+                    }}>Up Coming</Text>                  
               </View>
             </View>
         </View>

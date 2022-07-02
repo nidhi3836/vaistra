@@ -23,7 +23,7 @@ export default function EditVarients({navigation}) {
         });
     }, [orientations]);
     const [newPass, setNewPass] = useState(false)
-    const [visible, setVisible] = useState(true)
+    const [key, setKey] = useState(true)
     console.log('newPass', newPass)
     return   (
         <View style={{ justifyContent:'center',       
@@ -37,9 +37,7 @@ export default function EditVarients({navigation}) {
                     source={images.bg}
                     style={{ 
                            height:orientations !='landscape' ? UseOrientation.height  :  UseOrientation.height * 2 ,                     
-                         width:  orientations !='landscape' ? UseOrientation.width  : screenWidths ,   
-                         
-                     }}
+                         width:  orientations !='landscape' ? UseOrientation.width  : screenWidths ,  }}
                />
             </View>
 
@@ -47,11 +45,10 @@ export default function EditVarients({navigation}) {
              height:orientations !='landscape' ? UseOrientation.height : UseOrientation.height * 2 ,
              borderTopLeftRadius:50,
              borderTopRightRadius:50,
-             bottom : 20
-             }}>
+             bottom : 20 }}>
 
     <View style={{marginHorizontal:20, flex : 0.08,  top : 10, margin : 10, }}>
-     <Text style={styles.LabelView}>Add Varients</Text>
+     <Text style={styles.LabelView}>Add Varients </Text>
        </View>
 
        <View style={{flex : 0.08, backgroundColor : '#000', marginHorizontal : 20,
@@ -66,15 +63,13 @@ export default function EditVarients({navigation}) {
     paddingLeft: 20,    
     }}
             >
-                <InputText
-                    // value={Interest}
-                    // onChangeText={(text) => {setInterest(text) }}
+   <InputText
+                    value={key}
+                    onChangeText={(text) => {setKey(text) }}
                     placeholder="Product Key"
                     placeholderTextColor="#505050" />
                
             </View>
-
-
             <View style={{flex : 0.08, backgroundColor : '#000', marginHorizontal : 20,
     marginTop : 15,
     borderRadius: 5,

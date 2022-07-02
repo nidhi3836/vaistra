@@ -1,6 +1,5 @@
 import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native'
 import React, { useState } from 'react'
-import UseOrientation from '../../Screens/UseOrientation'
 
 
 const DropDown = ({

@@ -7,7 +7,7 @@ const InputText = (props,{keyboardType, value} ) => {
       <>
       <TextInput
     //  value={value}
-    //  keyboardType={keyboardType}
+     keyboardType={keyboardType}
       {...props}/>
           {/* <TextInput
           style={styles.textInput} {...props}/> */}

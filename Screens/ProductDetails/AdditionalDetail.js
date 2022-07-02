@@ -99,8 +99,6 @@ export default function AdditionalDetail({navigation}) {
     </View>
   )
 }
-
-
 const styles = StyleSheet.create({
 
     textInput: {

@@ -27,9 +27,7 @@ export default function DrawerContent({navigation}) {
     <ScrollView >
       
     <View style={{backgroundColor:'white', height:heightToDp('100%')}}>
-      <View style={{flex : 0.3}}>
-
-      </View>
+      <View style={{flex : 1, backgroundColor :'#d5d5d5'}}>
 
        <TouchableOpacity onPress={()=>navigation.navigate('EditProfile')}>
     <LinearGradient
@@ -199,6 +197,7 @@ export default function DrawerContent({navigation}) {
     style={styles.touchable}>
         <Text style={styles.LogOut}>LOG OUT</Text>
     </TouchableOpacity>
+    </View>
     </View>
     </View>
     </ScrollView>

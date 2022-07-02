@@ -51,9 +51,9 @@ let data = [
                 onPress={()=>navigation.navigate('AppStack')}
             />
             <ScrollView>
-                <View style={{ height: orientations != 'landscape' ? UseOrientation.height * 2 : UseOrientation.height * 3, }}>
+                <View style={{ height: orientations != 'landscape' ? UseOrientation.height * 2 : UseOrientation.height * 2, backgroundColor :"#fff"}}>
                     <View style={{ flex: 0.025, marginLeft :20, marginRight : 10, padding : 10, marginBottom : 10}}>
-                      <Text style ={{fontSize : 19, color : '#000',fontWeight : '500'}}>Add Product Details *</Text>  
+                      <Text style ={{fontSize : 22, color : '#000',fontWeight : '700'}}>Add Product Details *</Text>  
                     </View>
 
                     <View style={[styles.textInput,
@@ -99,8 +99,7 @@ let data = [
                     {/* <DropDown 
                     
                     /> */}
-                   < View style={[styles.textInput,
-                    {}]}>
+                   < View style={[styles.textInput, {}]}>
                         <InputText
                             value={Stock}
                             onChangeText={(text) => {setStock(text) }}
@@ -126,41 +125,61 @@ let data = [
                             placeholderTextColor="#505050" />
                        
                     </View>
-                    <View style={{ flex: 0.025, backgroundColor : '#fff', marginLeft :20, marginRight : 10, padding : 10}}>
-                      <Text style ={{fontSize : 19, color : '#000',fontWeight : '500'}}>Media (0/5)</Text>  
+
+                    <View style={{ flex: 0.025, backgroundColor : '#fff', marginLeft :20, marginRight : 10,}}>
+                      <Text style ={{fontSize : 21, color : '#000',fontWeight : '600'}}>Media (0/5)</Text>  
                     </View>
                     
                         
-                        <View style={{ flex: 0.055, backgroundColor : '#fff', marginLeft :20, marginRight : 10, padding : 10, flexDirection:'row',justifyContent :'space-around', marginTop : 20}}>
-                        <View style={{flex:0.22, justifyContent : 'center',alignItems:'center',borderWidth : 1,
+              <View style={{ flex: 0.056, backgroundColor : '#fff', marginLeft :20, marginRight : 20,  flexDirection:'row',justifyContent :'space-around', marginTop : 20}}>
+                <TouchableOpacity 
+                onPress={()=>navigation.navigate('AddImage')}
+                style={{flex:0.22, justifyContent : 'center',alignItems:'center',borderWidth : 1,
                     borderColor : '#d5d5d5'
                     }}>
-                            <Image 
+                     {/* <View > */}
+                        <Image 
                             source={images.camera}                     
                             />
-                            <Text style={{fontSize : 8,textAlign :'center'}}>AddProduct Image *</Text>
-                        </View>
-                        <View style={{flex:0.22, marginLeft : 10, justifyContent : 'center',alignItems:'center',borderWidth : 1,
-                    borderColor : '#d5d5d5'}}>
-                            <Image 
+                            <Text style={{fontSize : 8,textAlign :'center'}}>Add Product {'\n'}Image *</Text>
+                        {/* </View> */}
+                        </TouchableOpacity>
+                        <TouchableOpacity
+                        onPress={()=>navigation.navigate('AddImage')}
+                        style={{flex:0.22, justifyContent : 'center',alignItems:'center',borderWidth : 1,
+                    borderColor : '#d5d5d5'
+                    }}>
+                     {/* <View > */}
+                        <Image 
                             source={images.camera}                     
                             />
-                            <Text style={{fontSize : 8,textAlign :'center'}}>AddProduct Image *</Text>
-                        </View>
-                        <View style={{flex:0.22, marginLeft : 10, justifyContent : 'center',alignItems:'center',borderWidth : 1,
-                    borderColor : '#d5d5d5'}}>
-                            <Image 
+                            <Text style={{fontSize : 8,textAlign :'center'}}>Add Product {'\n'}Image *</Text>
+                        {/* </View> */}
+                        </TouchableOpacity>
+                        <TouchableOpacity 
+                        onPress={()=>navigation.navigate('AddImage')}
+                        style={{flex:0.22, justifyContent : 'center',alignItems:'center',borderWidth : 1,
+                    borderColor : '#d5d5d5'
+                    }}>
+                     {/* <View > */}
+                        <Image 
                             source={images.camera}                     
                             />
-                            <Text style={{fontSize : 8,textAlign :'center'}}>AddProduct Image *</Text>
-                        </View>
-                        <View style={{flex:0.22, marginLeft : 10, justifyContent : 'center',alignItems:'center',borderWidth : 1,
-                    borderColor : '#d5d5d5'}}>
-                            <Image 
+                            <Text style={{fontSize : 8,textAlign :'center'}}>Add Product {'\n'}Image *</Text>
+                        {/* </View> */}
+                        </TouchableOpacity>
+                        <TouchableOpacity 
+                        onPress={()=>navigation.navigate('AddImage')}
+                        style={{flex:0.22, justifyContent : 'center',alignItems:'center',borderWidth : 1,
+                    borderColor : '#d5d5d5'
+                    }}>
+                     {/* <View > */}
+                        <Image 
                             source={images.camera}                     
                             />
-                            <Text style={{fontSize : 8,textAlign :'center'}}>AddProduct Image *</Text>
-                        </View>
+                            <Text style={{fontSize : 8,textAlign :'center'}}>Add Product {'\n'}Image *</Text>
+                        {/* </View> */}
+                        </TouchableOpacity>
                     </View>
                        <TouchableOpacity 
                        onPress={ ()=> navigation.navigate('AddImage')}
@@ -169,14 +188,14 @@ let data = [
                     < View>
                         <InputText
                             value={video}
-                            onChangeText={(text) => {setVideo(text) }}
+                            onChangeText={(text) => {setVideo(text)}}
                             placeholder="Product Video Link"
                             placeholderTextColor="#505050" />
                        
                     </View>
                     </TouchableOpacity>
-                    <View style={{ flex: 0.028,  marginLeft :20, marginRight : 10, padding : 10}}>
-                      <Text style ={{fontSize : 19, color : '#000',fontWeight : '500'}}>Product Price, Discount etc</Text>  
+                    <View style={{ flex: 0.028,  marginLeft :20, marginRight : 10, margin : 10}}>
+                      <Text style ={{fontSize : 21, color : '#000',fontWeight : '600'}}>Product Price, Discount etc</Text>  
                     </View>
 
 
@@ -200,7 +219,7 @@ let data = [
                     </View>
                      {/* <DropDown /> */}
                     
-                     < View style={[styles.textInput,
+                     {/* <View style={[styles.textInput,
                     {}]}>
                         <InputText
                             value={Price}
@@ -208,9 +227,8 @@ let data = [
                             placeholder="Your Selling Price *"
                             placeholderTextColor="#505050" />
                        
-                    </View>
-                    < View style={[styles.textInput,
-                    {}]}>
+                    </View> */}
+                    < View style={[styles.textInput,   {}]}>
                         <InputText
                             value={discount}
                             onChangeText={(text) => {setDiscount(text) }}
@@ -218,8 +236,7 @@ let data = [
                             placeholderTextColor="#505050" />
                        
                     </View>
-                    < View style={[styles.textInput,
-                    {}]}>
+                    < View style={[styles.textInput,{}]}>
                         <InputText
                             value={offerDetail}
                             onChangeText={(text) => {setOfferDetail(text) }}
@@ -227,8 +244,7 @@ let data = [
                             placeholderTextColor="#505050" />
                        
                     </View>
-                    < View style={[styles.textInput,
-                    {}]}>
+                    < View style={[styles.textInput,{}]}>
                         <InputText
                             value={offer}
                             onChangeText={(text) => {setOffer(text) }}
@@ -236,8 +252,7 @@ let data = [
                             placeholderTextColor="#505050" />
                        
                     </View>
-                    < View style={[styles.textInput,
-                    {}]}>
+                    < View style={[styles.textInput,{}]}>
                         <InputText
                             value={tax}
                             onChangeText={(text) => {setTax(text) }}
@@ -253,7 +268,7 @@ let data = [
     <View style={styles.change}>
                   <LinearGradient
                     style={{ borderRadius: 5 }}
-                    colors={['#ED4343', '#A52021']} >
+                    colors={['#ED4343', '#A52021']}>
                    <View style={styles.changeView}>
                         <Text style={{ color: '#ffffff', fontWeight: "bold", fontSize: 19 }}>
                           Next
@@ -293,7 +308,7 @@ const styles = StyleSheet.create({
          marginBottom : 10
     },
     changeView : {
-      width: UseOrientation.width/ 1.1,
+      width: UseOrientation.width/ 1.17,
       height: 45,
       alignItems: 'center',
       justifyContent: 'center',

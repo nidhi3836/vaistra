@@ -59,8 +59,7 @@ let product3 = [
       name: 'Product3'
   },
 ]
-
- const AddProduct=({navigation}) =>{
+  const AddProduct=({navigation}) =>{
   const [selectedItem, setSelectedItem] = useState(null)
   const [productData, setProduct2] = useState(null)
   const [productItem, setProductItem] = useState(null)
@@ -80,7 +79,7 @@ let product3 = [
         image={images.Group355}
         image2={images.notification}
         onPress={()=>navigation.navigate('Home')}
-        onPress2={()=>navigation.navigate('YourProduct')}/> 
+        onPress2={()=>navigation.navigate('YourProduct')} /> 
 
       <ScrollView style={{flex:1,backgroundColor:'white',}}>
           <Text style={styles.ViewStyle}>

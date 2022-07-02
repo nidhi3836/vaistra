@@ -14,7 +14,6 @@ export default function AddVarient({navigation}) {
     const [visible, setVisible] = useState(false)
     const [value, setValue] = useState(false)
     const [key, setKey] = useState(false)
-    const [jeans, setJeans] = useState(false)
   return (
     <View>
      <Header 
@@ -145,7 +144,7 @@ const styles = StyleSheet.create({
         borderColor: '#B7B7B7',
         marginBottom: 16,
         // height: 43,
-         flex:0.065,
+         flex:0.068,
         // justifyContent:'center',
         paddingLeft: 20, 
         // marginTop : 10

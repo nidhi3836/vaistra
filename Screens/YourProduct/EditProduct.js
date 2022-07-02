@@ -14,6 +14,28 @@ import LinearGradient from 'react-native-linear-gradient'
 
 export default function EditProduct({navigation}) {
 
+
+  const [name, setName] = useState(false)
+  const [Description, setDescription] = useState(false)
+  const [Stock, setStock] = useState(false)
+  const [max, setMax] = useState(false)
+  const [min, setMin] = useState(false)
+  const [video, setVideo] = useState(false)
+  const [mrp, setMrp] = useState(false)
+  const [Price, setPrice] = useState(false);
+  const [local, setLocal] = useState(false);
+  const [zonal, setZoanl] = useState(false);
+  const [discount, setDiscount] = useState(false)
+  const [offer, setOffer] = useState(false)
+  const [tax, setTax] = useState(false)
+  const [offer2, setOffer2] = useState(false)
+  const [ProductTax, setProductTax] = useState(false)
+  const [Manufacturer, setManufacturer] = useState(false);
+  const [origin, setOrigin] = useState(false);
+  const [packer, setPacker] = useState(false);
+  const [material, setMaterial] = useState(false);
+  const [size, setSize] = useState(false);
+
   console.log('UseOrientation', UseOrientation.height, UseOrientation.width)
   const [screenWidths, setScreenWidths] = useState('')
   const [screenHeight, setScreenHeight] = useState('')
@@ -249,7 +271,8 @@ marginBottom : 5,
 
     <View style={styles.InputText}>
               <InputText
-              onChangeText={(text) => { console.log('text', text) }}
+              value={name}
+              onChangeText={(text) => { setName(text) }}
               placeholder="Sassaras"
               placeholderTextColor="#a5a3a3"
             />
@@ -260,7 +283,8 @@ marginBottom : 5,
 
           <View style={styles.InputText}>
               <InputText
-              onChangeText={(text) => { console.log('text', text) }}
+               value={Description}
+              onChangeText={(text) => { setDescription(text) }}
               placeholder="Black Blazer Dress"
               placeholderTextColor="#a5a3a3"
             />
@@ -318,8 +342,10 @@ marginBottom : 5,
     </View>
 
     <View style={styles.InputText}>
-              <InputText               
-              onChangeText={(text) => { console.log('text', text) }}
+              <InputText 
+              keyboardType={'numeric'} 
+              value = {Stock}             
+              onChangeText={(text) => { setStock(text) }}
               placeholder="25"
               placeholderTextColor="#a5a3a3"
             />
@@ -329,7 +355,10 @@ marginBottom : 5,
           </View>
           <View style={styles.InputText}>
               <InputText
-              onChangeText={(text) => { console.log('text', text) }}
+
+              keyboardType={'numeric'}
+              value={min}
+              onChangeText={(text) => { setMin(text) }}
               placeholder="2"
               placeholderTextColor="#a5a3a3"
             />
@@ -339,7 +368,9 @@ marginBottom : 5,
           </View>
           <View style={styles.InputText}>
               <InputText
-              onChangeText={(text) => { console.log('text', text) }}
+              keyboardType={'numeric'}
+              value={max}
+              onChangeText={(text) => { setMax(text) }}
               placeholder="9"
               placeholderTextColor="#a5a3a3"
             />
@@ -378,7 +409,9 @@ marginBottom : 5,
 
           <View style={styles.InputText}>
               <InputText
-              onChangeText={(text) => { console.log('text', text) }}
+              keyboardType={'numeric'}
+              value={mrp}
+              onChangeText={(text) => { setMrp(text) }}
               placeholder="&#8377; 800.00"
               placeholderTextColor="#a5a3a3"
             />
@@ -388,7 +421,9 @@ marginBottom : 5,
           </View>
           <View style={styles.InputText}>
               <InputText
-              onChangeText={(text) => { console.log('text', text) }}
+              keyboardType={'numeric'}
+              value={Price}
+              onChangeText={(text) => { setPrice(text) }}
               placeholder="&#8377; 800.00"
               placeholderTextColor="#a5a3a3"
             />
@@ -446,7 +481,9 @@ marginBottom : 5,
 
     <View style={styles.InputText}>
               <InputText
-              onChangeText={(text) => { console.log('text', text) }}
+              keyboardType={'numeric'}
+              value={discount}
+              onChangeText={(text) => { setDiscount(text) }}
               placeholder="20%"
               placeholderTextColor="#a5a3a3"
             />
@@ -457,8 +494,9 @@ marginBottom : 5,
 
           <View style={[styles.InputText,]}>
               <InputText
+               value={offer}
               style={{fontSize : 11,top : -3,}}
-              onChangeText={(text) => { console.log('text', text) }}
+              onChangeText={(text) => { setOffer(text) }}
               placeholder="Bank Offer 5% unlimited cashback on Axis Bank Credit Card"
               placeholderTextColor="#a5a3a3"
             />
@@ -468,8 +506,10 @@ marginBottom : 5,
           </View>
           <View style={[styles.InputText,]}>
               <InputText
+              keyboardType={'numeric'}
+              value={offer2}
               style={{fontSize : 11,top : -3,}}
-              onChangeText={(text) => { console.log('text', text) }}
+              onChangeText={(text) => { setOffer2(text) }}
               placeholder="5% "
               placeholderTextColor="#a5a3a3"
             />
@@ -480,8 +520,10 @@ marginBottom : 5,
 
           <View style={[styles.InputText,]}>
               <InputText
+              keyboardType={'numeric'}
+              value={ProductTax}
               style={{fontSize : 11,top : -3,}}
-              onChangeText={(text) => { console.log('text', text) }}
+              onChangeText={(text) => { setProductTax(text) }}
               placeholder="10 "
               placeholderTextColor="#a5a3a3"
             />
@@ -492,8 +534,10 @@ marginBottom : 5,
 
           <View style={[styles.InputText,]}>
               <InputText
+              keyboardType={'numeric'}
+              value={local}
               style={{fontSize : 11,top : -3,}}
-              onChangeText={(text) => { console.log('text', text) }}
+              onChangeText={(text) => { setLocal(text) }}
               placeholder="10 "
               placeholderTextColor="#a5a3a3"
             />
@@ -504,8 +548,10 @@ marginBottom : 5,
 
           <View style={[styles.InputText,]}>
               <InputText
+              keyboardType={'numeric'}
+              value={zonal}
               style={{fontSize : 11,top : -3,}}
-              onChangeText={(text) => { console.log('text', text) }}
+              onChangeText={(text) => { setZoanl(text) }}
               placeholder="10 "
               placeholderTextColor="#a5a3a3"
             />
@@ -515,8 +561,9 @@ marginBottom : 5,
           </View>
           <View style={[styles.InputText,]}>
               <InputText
+              value={origin}
               style={{fontSize : 11,top : -3,}}
-              onChangeText={(text) => { console.log('text', text) }}
+              onChangeText={(text) => { setOrigin(text) }}
               placeholder="10 "
               placeholderTextColor="#a5a3a3"
             />
@@ -527,19 +574,22 @@ marginBottom : 5,
 
           <View style={[styles.InputText,]}>
               <InputText
+              value={Manufacturer}
               style={{fontSize : 11,top : -3,height : 50,}}
-              onChangeText={(text) => { console.log('text', text) }}
+              onChangeText={(text) => { setManufacturer(text) }}
               placeholder="Falcon Apprels, MIN Ground Floor, Kapashra, New-Delhi - 110037 "
               placeholderTextColor="#a5a3a3"
-            />
+            />            
             <View style={styles.TextInputView}>
               <Text style={[styles.TextInputLabel,{width:105,}]} >Manufacturer Detail</Text>
             </View>
           </View>
+
           <View style={[styles.InputText,]}>
               <InputText
+              value={packer}
               style={{fontSize : 11,top : -3,height : 50,}}
-              onChangeText={(text) => { console.log('text', text) }}
+              onChangeText={(text) => { setPacker( text) }}
               placeholder="Falcon Apprels, MIN Ground Floor, Kapashra, New-Delhi - 110037 "
               placeholderTextColor="#a5a3a3"
             />
@@ -548,11 +598,11 @@ marginBottom : 5,
             </View>
           </View>
 
-
           <View style={[styles.InputText,]}>
               <InputText
+              value={material}
               style={{fontSize : 11,top : -3,}}
-              onChangeText={(text) => { console.log('text', text) }}
+              onChangeText={(text) => { setMaterial(text) }}
               placeholder="Polyster "
               placeholderTextColor="#a5a3a3"
             />
@@ -561,12 +611,12 @@ marginBottom : 5,
             </View>
           </View>
 
-
-
           <View style={[styles.InputText,{top : 20}]}>
               <InputText
+              keyboardType={'numeric'}
+              value={size}
               style={{fontSize : 11,top : -3,}}
-              onChangeText={(text) => { console.log('text', text) }}
+              onChangeText={(text) => { setSize(text) }}
               placeholder="S, M, L, XL, XXl"
               placeholderTextColor="#a5a3a3"
             />
@@ -599,7 +649,7 @@ marginBottom : 5,
                     marginLeft: 20,                  
                     justifyContent:"center",
                     marginRight: 20,
-                    flex : 0.04,
+                    flex : 0.03,
                     borderRadius:8,
                     alignItems:'center',
                     marginTop:20,
@@ -608,8 +658,7 @@ marginBottom : 5,
  <TouchableOpacity onPress={()=>navigation.navigate('Product' )}
                   
             >
-                <Text style={{color:"#ffffff",
-                              fontSize:18,
+  <Text style={{color:"#ffffff",fontSize:18,
                               fontWeight:"500"}}>Update Details</Text>
 
               </TouchableOpacity>
