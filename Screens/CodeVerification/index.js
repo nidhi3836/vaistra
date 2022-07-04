@@ -89,7 +89,7 @@ useEffect(() => {
            <TextInput
             maxLength={1}
             onChangeText={(text)=>handleChangeText(text, index)}
-            keyboardType='numeric'
+            keyboardType="number-pad"
             style={styles.InputText}
             value={otp[index]}
             ref={nextInputIndex === index ? input : null}

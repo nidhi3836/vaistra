@@ -57,7 +57,7 @@ import Slider from './Slider'
 const Stack = createStackNavigator();
 function AuthStack() {
     return (
-        <Stack.Navigator initialRouteName='AppStack' >
+        <Stack.Navigator initialRouteName='OnBoarding' >
             <Stack.Screen name='Splash' component={Splash} options={{ header: () => null }} />
 
             <Stack.Screen name='Fourth' component={Fourth} options={{ header: () => null }} />
@@ -66,12 +66,11 @@ function AuthStack() {
 
             <Stack.Screen name='ForgotPass' component={ForgotPass} options={{ header: () => null }} />
 
-            <Stack.Screen name='FileOne' component={FileOne}              options={{header: () => null }}
-            />
+            <Stack.Screen name='FileOne' component={FileOne} options={{header: () => null }}  />
 
             <Stack.Screen name='Second' component={Second}
                 options={{ header: () => null }} />
-
+                
             <Stack.Screen name='Login' component={Login} options={{ header: () => null }} />
             <Stack.Screen name='CodeVerification' component={CodeVerification}
                 options={{ header: () => null }}

@@ -204,6 +204,7 @@ export default function FileOne({ navigation }) {
                   </View>
                 </View>
                 <InputText
+                
                   value={email}
                   placeholder='Enter Email Address'
                   keyboardType='email-address'

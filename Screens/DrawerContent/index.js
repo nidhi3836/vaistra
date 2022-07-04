@@ -4,30 +4,14 @@ import styles from '../DrawerContent/style'
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler'
 import images from '../../Components/images'
 import LinearGradient from 'react-native-linear-gradient'
-import MyTicktes from '../myTickets'
-import OrderStatus from '../OrderStatus'
-import StockManage from '../StockManage'
-import Customers from '../Customers'
-import ThirdFile from '../ProgrssFiles/FileThree'
-import ChangePassword from '../ChanePassword'
-import EditBank from '../EditBank'
-import BankDetails from '../BankDetails'
-import EditAddress from '../EditAddress'
-import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import YourProduct from '../YourProduct'
-import AddProduct from '../AddProduct'
-import Reviews from '../Reviews'
-import Payments from '../Payments'
 import { heightToDp } from '../../variable'
-import Analytics from '../Analytics'
-
 
 export default function DrawerContent({navigation}) {
   return (
     <ScrollView >
       
-    <View style={{backgroundColor:'white', height:heightToDp('100%')}}>
-      <View style={{flex : 1, backgroundColor :'#d5d5d5'}}>
+    <View style={{backgroundColor:'white', height:heightToDp('100%'), }}>
+      <View style={{flex : 1, backgroundColor :'#fff',}}>
 
        <TouchableOpacity onPress={()=>navigation.navigate('EditProfile')}>
     <LinearGradient
@@ -41,8 +25,7 @@ export default function DrawerContent({navigation}) {
             style={{ marginLeft: 40, marginTop: 30, }}
             source={images.Group564}
              />
-        </ImageBackground>
-       
+        </ImageBackground>       
     <Text style={styles.name}>Jigar Thakrar</Text>
     </View>
     </LinearGradient>

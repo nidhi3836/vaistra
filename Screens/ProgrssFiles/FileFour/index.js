@@ -89,6 +89,7 @@ const  Fourth=({navigation}) => {
           
           <View style={styles.InputText}>
               <InputText
+              keyboardType={'numeric'}
               onChangeText={(text) => { console.log('text', text) }}
               placeholder="Bank Account Number"
               placeholderTextColor="#505050"

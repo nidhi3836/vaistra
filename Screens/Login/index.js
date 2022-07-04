@@ -66,6 +66,7 @@ function Login({ navigation }) {
                             value={password}
                             style={styles.textInput}
                             onChangeText={(text) => { console.log('text', text) }}
+                            keyboardType={'default'}
                             placeholder="Enter Password"
                             placeholderTextColor="black"
                         />
@@ -99,13 +100,13 @@ function Login({ navigation }) {
                                 </Text>
                             </LinearGradient>
                         </View>
+
                     </TouchableOpacity>
                     <View style={{ marginTop: 12, flexDirection: 'row', alignSelf: 'center' }}>
                         <Text style={{ fontSize: 16, color: "#A5A3A3", }}>
                             Don't have an account?
                         </Text>
                         <TouchableOpacity
-
                             onPress={() => navigation.navigate('FileOne')}>
                             <Text style={styles.Text}>Signup</Text>
                         </TouchableOpacity>

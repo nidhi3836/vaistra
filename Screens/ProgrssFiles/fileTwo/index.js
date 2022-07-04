@@ -100,7 +100,7 @@ const Second = ({ navigation }) => {
               >
               </InputText>
               <InputText
-
+               keyboardType='phone-pad'
                 placeholder='Business Phone Number'
                 style={style.InputText}
               >

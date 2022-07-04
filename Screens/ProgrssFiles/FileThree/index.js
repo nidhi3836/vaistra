@@ -12,6 +12,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import { Dropdown } from 'react-native-element-dropdown';
 import { heightToDp } from '../../../variable';
 import { width } from 'react-native-dimension';
+import Geolocation from 'react-native-geolocation-service';
 
 
 let states = [
@@ -82,6 +83,23 @@ const customStyles = {
 };
 const ThirdFile = ({ navigation }) => {
   
+ const componentDidMount = ({}) => 
+  {
+    if (hasLocationPermission) {
+      Geolocation.getCurrentPosition(
+          (position) => {
+            console.log(position);
+          },
+          (error) => {
+            // See error code charts below.
+            console.log(error.code, error.message);
+          },
+          { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }
+      );
+    }
+  }
+
+
   const data = [
     { label: 'Item 1', value: '1' },
     { label: 'Item 2', value: '2' },
@@ -135,6 +153,8 @@ const ThirdFile = ({ navigation }) => {
 
           <Text style={{ marginLeft: 20, fontSize: 22, fontWeight: "700", color: "black", }}>
             Pick up Address</Text>
+
+            <TouchableOpacity onPress={componentDidMount}>
           <View style={[styles.InputText, { paddingLeft: 30 , borderColor:'#Ed4343'}]}>
             <InputText
               style={
@@ -156,6 +176,7 @@ const ThirdFile = ({ navigation }) => {
                 style={{ height: 20, width: 25 }} />
             </View>
           </View>
+            </TouchableOpacity>
 
           <Dropdown
            style={[styles.InputText,{width:UseOrientation.width /1.1, }]}
