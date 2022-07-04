@@ -1,6 +1,5 @@
 
 import React from 'react'
-import { View, Text } from 'react-native'
 import { createStackNavigator } from '@react-navigation/stack'
 import Splash from './Splash'
 import OnBoarding from './OnBoarding'
@@ -53,11 +52,12 @@ import EditVarients from './ProductDetails/EditVarients'
 import Total from './Analytics/topFiles/Total'
 import Cancel from './Analytics/topFiles/Cancel'
 import SecondBlurBg from './SecondBlurBg'
+import Slider from './Slider'
 
 const Stack = createStackNavigator();
 function AuthStack() {
     return (
-        <Stack.Navigator initialRouteName='EditProduct' >
+        <Stack.Navigator initialRouteName='AppStack' >
             <Stack.Screen name='Splash' component={Splash} options={{ header: () => null }} />
 
             <Stack.Screen name='Fourth' component={Fourth} options={{ header: () => null }} />
@@ -162,7 +162,9 @@ function AuthStack() {
 
             <Stack.Screen name='Cancel' component={Cancel} options={{ header: () => null }} />
 
-            <Stack.Screen name='SecondBlurBg' component={SecondBlurBg} options={{ header: () => null }} />           
+            <Stack.Screen name='SecondBlurBg' component={SecondBlurBg} options={{ header: () => null }} />
+
+            <Stack.Screen name='Slider' component={Slider} options={{ header: () => null }} />            
             
         </Stack.Navigator>
     )

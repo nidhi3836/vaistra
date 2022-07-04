@@ -4,10 +4,6 @@ import Header from '../../Components/Header'
 import images from '../../Components/images'
 import { ScrollView } from 'react-native-gesture-handler'
 import UseOrientation from '../UseOrientation'
-import MyTicktes from '.'
-import Ripple from 'react-native-material-ripple'
-import Reply from './reply'
-import SecondTicket from './SecondTicket'
 
 export default function ResponsTicket({navigation}) {
 

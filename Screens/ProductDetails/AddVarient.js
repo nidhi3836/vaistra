@@ -7,8 +7,6 @@ import UseOrientation from '../UseOrientation'
 import InputText from '../../Components/InputText'
 import Ripple from 'react-native-material-ripple'
 import LinearGradient from 'react-native-linear-gradient'
-import AdditionalDetail from './AdditionalDetail'
-import ProductDetails from '.'
 
 export default function AddVarient({navigation}) {
     const [visible, setVisible] = useState(false)
@@ -28,10 +26,7 @@ export default function AddVarient({navigation}) {
         </View>
 
         {visible ?
-        <>
-       
-
-     
+        <>     
        <View style={[styles.textInput,
             {}]}>
                 <InputText

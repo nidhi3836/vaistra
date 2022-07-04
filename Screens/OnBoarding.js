@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { View, Text, Image, StyleSheet, Button } from 'react-native'
 import Ripple from 'react-native-material-ripple';
 import Onboarding from 'react-native-onboarding-swiper'
@@ -6,7 +6,20 @@ import images from '../Components/images';
 
 function OnBoarding ({navigation})  
 {
- 
+  const [sliderState, setSliderState] = useState({ currentPage: 0 });
+
+  const setSliderPage = (event) => {
+    const { currentPage } = sliderState;
+    const { x } = event.nativeEvent.contentOffset;
+    const indexOfNextScreen = Math.floor(x / width);
+    if (indexOfNextScreen !== currentPage) {
+      setSliderState({
+        ...sliderState,
+        currentPage: indexOfNextScreen,
+      });
+    }
+  };
+  const { currentPage: pageIndex } = sliderState;
   const Done = ()=>{
     return(
       <View>

@@ -6,18 +6,14 @@ import OrderStatus from './OrderStatus';
 import StockManage from './StockManage';
 import YourProduct from './YourProduct';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-
 import AddProduct from './AddProduct';
 import Header from '../Components/Header';
 import images from '../Components/images';
-import UseOrientation from './UseOrientation';
-import Product from '../Screens/YourProduct/product'
 
 
 const Tab = createBottomTabNavigator();
 const BottomTag = () => {
   return (
-    
     <Tab.Navigator     
     screenOptions={{
       headerShown : false,
