@@ -18,7 +18,7 @@ const  BankDetails=({navigation})=>
  image={images.leftArrow}
  onPress={()=>navigation.navigate('AppStack')}
 />
-<ScrollView style={{backgroundColor:'#000',}}>
+<ScrollView style={{backgroundColor:'#fff',}}>
     <View style={{height:heightToDp('100%')}}>    
  
     <View style={{backgroundColor:"#fff",flex:0.9,}}>
@@ -79,13 +79,10 @@ const  BankDetails=({navigation})=>
                     marginTop:20,
                 }} 
                     colors={['#ED4343', '#A52021']} >
- <TouchableOpacity onPress={()=>navigation.navigate('ForgotPass')}
-                  
-            >
+ <TouchableOpacity onPress={()=>navigation.navigate('ForgotPass')}>
                 <Text style={{color:"#ffffff",
                               fontSize:18,
                               fontWeight:"500"}}>Save Details</Text>
-
               </TouchableOpacity>
 
 </LinearGradient>
@@ -102,8 +99,7 @@ const styles = StyleSheet.create({
   textInput : {
     borderWidth : 1,
     borderColor:'#707070',
-    marginLeft:20,
-    marginRight : 20,
+    marginHorizontal : 20,
  borderRadius : 5,
  height : 40,
 

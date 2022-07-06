@@ -78,8 +78,8 @@ let product3 = [
 <Header
         image={images.Group355}
         image2={images.notification}
-        onPress={()=>navigation.navigate('Home')}
-        onPress2={()=>navigation.navigate('YourProduct')} /> 
+       onPress={()=>navigation.navigate('AppStack')}
+        onPress3={()=>navigation.navigate('Notification')} /> 
 
       <ScrollView style={{flex:1,backgroundColor:'white',}}>
           <Text style={styles.ViewStyle}>

@@ -33,13 +33,13 @@ export default function YourProduct({navigation}) {
     <View style={{ flex:1}}>
     <Header 
     image={images.Group355}
-    onPress={()=> navigation.navigate('Home')}
+    onPress={()=> navigation.navigate('AppStack')}
     image2={images.notification}
     onPress3={()=> navigation.navigate('Notification')}
     />
       <ScrollView style={{backgroundColor:'#fff', }}>
      
-<TouchableOpacity onPress={()=> navigation.navigate('Product')}>
+<TouchableOpacity onPress={()=> navigation.navigate('Filters')}>
           <View style={{flexDirection:'row', alignContent:'center',
           width:80,justifyContent:'center',
           margin:15,alignItems:'center',
@@ -53,8 +53,10 @@ export default function YourProduct({navigation}) {
     <Text style={{color:'#000',fontWeight:'500',marginLeft:5,}}>Filter</Text>
            
           </View>
+          </TouchableOpacity>
           {inputs.map((inp, index)=> {
           return(
+            <TouchableOpacity onPress={()=> navigation.navigate('Product')}>
 <View style={{flexDirection:'row', justifyContent:'center', marginTop : 10}}>
 
 <View style={{alignContent:'center',
@@ -134,18 +136,19 @@ export default function YourProduct({navigation}) {
           
           }}>           
 
-              <View style={{height:heightToDp("40%"), }}>
-                <View style={{flex:0.09, }}>
+      <View style={{height:heightToDp("40%"), }}>
+         <View style={{flex:0.09, }}>
 
-                <View style={{ alignSelf:'flex-end',width:60,margin:5,
-              justifyContent:'center',
-             alignItems:'center',
+          <View style={{ alignSelf:'flex-end',width:60,margin:5,
+            justifyContent:'center',
+            alignItems:'center',
             borderTopEndRadius:8,
             borderBottomLeftRadius:8,
             backgroundColor:'#f6f6f6', }}>
-            <Text style={{color:'#000', fontWeight:'500',fontSize:8,}}>Cloth</Text>
+            <Text style={{color:'#000', fontWeight:'500',fontSize:8,}}>Cloth
+            </Text>
             </View>
-                </View>
+          </View>
                 <View style={{flex:0.48,marginTop:5}}>
 
                 <View style={{
@@ -185,10 +188,10 @@ export default function YourProduct({navigation}) {
 
           </View>
 </View>
+</TouchableOpacity>
  )
 })}
-
-          </TouchableOpacity>
+          {/* </TouchableOpacity> */}
          
       </ScrollView>
           

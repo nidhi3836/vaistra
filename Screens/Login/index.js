@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { StyleSheet, Text, View, ImageBackground, Image, Dimensions, ScrollView } from 'react-native'
+import { StyleSheet, Text, View, ImageBackground, Image, Dimensions, ScrollView, FlatList } from 'react-native'
 import { TouchableOpacity } from 'react-native'
 import images from '../../Components/images'
 import InputText from '../../Components/InputText'
@@ -10,6 +10,22 @@ import { heightToDp, widthToDp } from '../../variable';
 import ForgotPass from '../ForgotPass'
 
 function Login({ navigation }) {
+const [myUserData, setMyUserData] = useState();
+const [isLoaded, setIsLoaded] = useState(true);
+const GetUserData =async ()=>{
+    try {
+       const response = await fetch("https://vaistra-test.herokuapp.com/users");
+       const data =await response.json();
+       setMyUserData(data)
+       setIsLoaded(false)
+       console.log(data) 
+    } catch (error) {
+        console.log(error)
+    }
+}
+useEffect(() => {
+    GetUserData();
+}, []);
 
     const [emailPhone, setEmailPhone] = useState(false);
     const [password, setPassword] = useState(false)
@@ -48,18 +64,20 @@ function Login({ navigation }) {
                     borderTopLeftRadius: 50,
                     borderTopRightRadius: 50
                 }}>
-
                     <View style={{ marginLeft: 20, }}>
                         <Text style={styles.LabelView}>Login & SignUp</Text>
                     </View>
+                    
                     <View style={styles.View}>
                         <InputText
+                        // data={myUserData}                        
                             value={emailPhone}
                             style={styles.textInput}
                             onChangeText={(text) => { console.log('text', text) }}
                             placeholder="Enter Email address or Phone Number"
                             placeholderTextColor="black"
                         />
+                       
                     </View>
                     <View style={[styles.View,]}>
                         <InputText

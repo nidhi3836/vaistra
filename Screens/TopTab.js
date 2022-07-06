@@ -3,9 +3,6 @@ import React from 'react'
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs'
 import ActivePage from './TopScreens/ActivePage';
 import Complete from './TopScreens/Complete';
-import BlurBackground from './BlurBackground';
-import images from '../Components/images';
-import Home from './Home';
 import Return from './TopScreens/Return';
 import Cancel from './TopScreens/Cancel';
 import UseOrientation from './UseOrientation';

@@ -2,6 +2,7 @@ import { View, Text, Dimensions, ScrollView, Image } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import UseOrientation from '../../UseOrientation'
 import images from '../../../Components/images'
+import { heightToDp } from '../../../variable';
 
 export default function Cancel() {
   const inputs = Array(3).fill('');

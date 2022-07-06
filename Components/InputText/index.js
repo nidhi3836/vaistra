@@ -6,7 +6,7 @@ const InputText = (props,{keyboardType, value} ) => {
     return (
       <>
       <TextInput
-    //  value={value}
+     value={value}
      keyboardType={keyboardType}
       {...props}/>
           {/* <TextInput

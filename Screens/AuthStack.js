@@ -53,11 +53,14 @@ import Total from './Analytics/topFiles/Total'
 import Cancel from './Analytics/topFiles/Cancel'
 import SecondBlurBg from './SecondBlurBg'
 import Slider from './Slider'
+import GetUser from './API/GetUser'
+import OnBoardingScreen from './OnBoardingScreen'
 
 const Stack = createStackNavigator();
 function AuthStack() {
     return (
-        <Stack.Navigator initialRouteName='OnBoarding' >
+        <Stack.Navigator initialRouteName='OnBoardingScreen' >
+            <Stack.Screen name='OnBoardingScreen' component={OnBoardingScreen} options={{ header: () => null }} />
             <Stack.Screen name='Splash' component={Splash} options={{ header: () => null }} />
 
             <Stack.Screen name='Fourth' component={Fourth} options={{ header: () => null }} />
@@ -163,7 +166,10 @@ function AuthStack() {
 
             <Stack.Screen name='SecondBlurBg' component={SecondBlurBg} options={{ header: () => null }} />
 
-            <Stack.Screen name='Slider' component={Slider} options={{ header: () => null }} />            
+            <Stack.Screen name='Slider' component={Slider} options={{ header: () => null }} /> 
+
+            <Stack.Screen name='GetUser' component={GetUser} options={{ header: () => null }} />
+
             
         </Stack.Navigator>
     )

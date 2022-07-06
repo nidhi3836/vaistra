@@ -14,7 +14,7 @@ const Drawer = createDrawerNavigator();
  {
   return (
     <>
-    <Drawer.Navigator
+    <Drawer.Navigator initialRouteName='Home'
     drawerContent={props => <DrawerContent {...props} />} >
          {/* <Drawer.Screen name='Home' component={Home}  /> */}
            {/* <Drawer.Screen name='DrawerFile' component={DrawerFile}  /> */}

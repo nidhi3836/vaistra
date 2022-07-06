@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, StatusBar } from 'react-native'
 import React, { useState, useEffect } from 'react'
 import {Dropdown} from 'react-native-element-dropdown'
 import UseOrientation from '../UseOrientation'
@@ -18,17 +18,18 @@ export default function Filters() {
     
   const [visible, setVisible] = useState(false);
     return (   
-    <View>
+      <View style={{flex:1}}>
+      <StatusBar hidden/>
+      <>
         <Header />
-        <Text>Drop Down Here</Text>
+      </>      
 
-<View style={{height:UseOrientation.height}}>
-<Dropdown
-        
-        style={[styles.InputText,{width:UseOrientation.width /1.1, }]}
+<View style={{height:UseOrientation.height, backgroundColor :'#a5a3a3'}}>
+<Dropdown        
+        style={[styles.InputText,{width:UseOrientation.width /1.1,}]}
          //  placeholderStyle={styles.dropdown}
         selectedTextStyle={styles.selectedTextStyle}
-         inputSearchStyle={styles.inputSearchStyle}         
+        inputSearchStyle={styles.inputSearchStyle}         
         iconStyle={styles.iconStyle}   
         icon = {images.search}        
        data={data}
@@ -43,14 +44,35 @@ export default function Filters() {
        // onBlur={() => setIsFocus(false)}
        onChange={item => {
          setValue(item.value);
-         setIsFocus(true);
-       
+         setIsFocus(true);       
      }}
-      
-       ></Dropdown>
+       ></Dropdown>      
+       
 </View>
-        
-    </View> 
+{/* <Dropdown        
+       style={[styles.InputText,{width:UseOrientation.width /1.1, }]}
+         //  placeholderStyle={styles.dropdown}
+       selectedTextStyle={styles.selectedTextStyle}
+       inputSearchStyle={styles.inputSearchStyle}         
+       iconStyle={styles.iconStyle}   
+       icon = {images.search}        
+       data={data}
+       search
+       maxHeight={200}
+       labelField="value"
+       valueField="value"      
+       placeholder={!isFocus ? 'Sort by revelance' : 'Sort by revelance'}
+       searchPlaceholder="Search..."
+       value={value}
+       onFocus={() => setIsFocus(false)}
+       // onBlur={() => setIsFocus(false)}
+       onChange={item => {
+         setValue(item.value);
+         setIsFocus(true);       
+     }}
+       ></Dropdown> */}
+</View>       
+
   )
 }
 

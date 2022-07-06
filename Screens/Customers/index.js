@@ -50,14 +50,14 @@ export default function Customers({navigation}) {
     
     </View>
 
-    <View style={{flex : 0.45, backgroundColor:'#f6f6f6', flexDirection : 'row',alignItems:'center', justifyContent:'space-between',
+    <View style={{flex : 0.45, backgroundColor:'#f6f6f6', flexDirection : 'row',alignItems:'center', justifyContent:'space-between', display : 'flex',
   margin :5}}>
 
       <View style={{flex:0.5, flexDirection : 'row',
     justifyContent:'center', alignItems:'center'
     }}>
-      <Text>  Total Orders </Text>
-      <Text  style={{  borderRadius : 5, backgroundColor : '#f5e5e5', color : '#000' }}>{''+ '  5  '}</Text>
+      <Text style={{left : 12}}>Total Orders  </Text>
+      <Text  style={{  borderRadius : 5, backgroundColor : '#f5e5e5', color : '#000',left : 8 }}>{''+ '  5  '}</Text>
       </View>
 
       <View style={{ flexDirection : 'row',

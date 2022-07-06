@@ -26,11 +26,38 @@ function OnBoarding ({navigation}){
         <Ripple 
         onPress ={()=> navigation.navigate('Login')}
         >
-        <Text style={{color:'black',marginRight:24}}>Done</Text>
+        <Text style={{color:'#B03B3C',marginRight:24,fontSize : 18,
+      fontWeight :'700',}}>NEXT</Text>
         </Ripple>
       </View>
     )
-  }  
+  } 
+  const next = () => {
+    return(
+      <View>
+       <Ripple 
+        onPress ={()=> navigation.navigate('Login')}
+        >
+        <Text style={{color:'#B03B3C',marginRight:24,fontSize : 18,
+      fontWeight :'700',
+      }}>SKIP</Text>
+        </Ripple>
+      </View>
+    )
+  } 
+  // const Dot = () => {
+  //   return(
+  //     <View>
+  //      <Ripple 
+  //       onPress ={()=> navigation.navigate('Login')}
+  //       >
+  //      <View style={{backgroundColor:'#a5a3a3', height : 15}}>
+
+  //      </View>
+  //       </Ripple>
+  //     </View>
+  //   )
+  // } 
   return (
 
     <Onboarding   
@@ -38,6 +65,9 @@ function OnBoarding ({navigation}){
     showDone={true}
     bottomBarHighlight={false}
     showSkip={false}
+    
+    NextButtonComponent={next}    
+    // DotComponent={Dot}
     do
       pages={[
           {
@@ -76,7 +106,7 @@ export default OnBoarding
 
 const styles = StyleSheet.create({
     title1 : {
-        color : "red",
+        color : "#A52021",
         fontSize : 26,
         fontWeight : '600'
     },

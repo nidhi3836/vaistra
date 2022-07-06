@@ -20,7 +20,6 @@ export default function ActivePage() {
     });
   }, [orientations]);
 
-
   const [view, setView] = useState({ 0: '', 1: '', 2: '', 3: '', 4: '', 5: '' });
   return (
 
@@ -35,7 +34,6 @@ export default function ActivePage() {
         paddingTop: 15,
 
       }}>
-
         {inputs.map((inp, index) => {
           return (
             <>
@@ -43,9 +41,7 @@ export default function ActivePage() {
                 backgroundColor: '#fff', marginTop: 5, borderWidth: 1,
                 marginHorizontal: 20, borderColor: '#d5d5d5',
                 borderRadius: 6, marginBottom: 5
-
               }}>
-
                 <View key={index.toString()}
                   // onChangeText={(text)=>handleChangeText(text, index)}
                   value={view[index]}
@@ -112,7 +108,7 @@ export default function ActivePage() {
 
                       </View>
                       <View style={{
-                        marginLeft: orientations != 'landscape' ? "5%" : "55%",
+                        marginLeft: orientations != 'landscape' ? "5%" : "45%",
                         justifyContent: 'center',
                         alignItems: 'center',
                         width: 70,
@@ -174,7 +170,7 @@ export default function ActivePage() {
 
                       </View>
                       <View style={{
-                        marginLeft: orientations != 'landscape' ? "5%" : "55%",
+                        marginLeft: orientations != 'landscape' ? "5%" : "45%",
                         justifyContent: 'center',
                         alignItems: 'center',
                         width: 70,
@@ -236,7 +232,7 @@ export default function ActivePage() {
 
                       </View>
                       <View style={{
-                        marginLeft: orientations != 'landscape' ? "5%" : "55%",
+                        marginLeft: orientations != 'landscape' ? "5%" : "45%",
                         justifyContent: 'center',
                         alignItems: 'center',
                         width: 70,

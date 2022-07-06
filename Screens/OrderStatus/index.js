@@ -13,7 +13,7 @@ export default function OrderStatus({navigation}) {
     <View style={{ height:"100%"}}>
       <Header
       image={images.Group355}
-      onPress={()=> navigation.navigate('Home')}
+      onPress={()=> navigation.navigate('AppStack')}
       image2={images.notification}
       onPress3={()=> navigation.navigate('Notification')}
       />

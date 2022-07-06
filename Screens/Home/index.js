@@ -239,9 +239,9 @@ export default function Home({ navigation }) {
                           />
                         </View>
                       </View>
-                      <View style={{ backgroundColor: "#fff", margin: 15, flex: 0.15, }}>
-                        <Text style={{ fontSize: 12, fontWeight: '500', color: '#b7b7b7' }}>Kook n Keech ... </Text>
-                        <Text style={{ fontSize: 12, fontWeight: '500', color: '#b7b7b7' }}>Men Printed Sweat- T-Shirt</Text>
+                      <View style={{ backgroundColor: "#fff", margin: 18, flex: 0.15, }}>
+                        <Text style={{ fontSize: 13, fontWeight: '700', color: '#000' }}>TimeWear Watch </Text>
+                        <Text style={{ fontSize: 11, fontWeight: '500', color: '#b7b7b7' }}>Analog Number Dial {'\n'}Leather strap watch</Text>
                         <View style={{ flexDirection: 'row' }}>
 
                           <Text style={{
@@ -290,9 +290,9 @@ export default function Home({ navigation }) {
                           />
                         </View>
                       </View>
-                      <View style={{ backgroundColor: "#fff", margin: 15, flex: 0.15, }}>
-                        <Text style={{ fontSize: 12, fontWeight: '500', color: '#b7b7b7' }}>Kook n Keech ... </Text>
-                        <Text style={{ fontSize: 12, fontWeight: '500', color: '#b7b7b7' }}>Men Printed Sweat- T-Shirt</Text>
+                      <View style={{ backgroundColor: "#fff", margin: 18, flex: 0.15, }}>
+                        <Text style={{ fontSize: 13, fontWeight: '700', color: '#000' }}>Kook n Keech ... </Text>
+                        <Text style={{ fontSize: 12, fontWeight: '500', color: '#b7b7b7' }}>Men Printed Sweat{'\n'}T-Shirt</Text>
                         <View style={{ flexDirection: 'row' }}>
 
                           <Text style={{
