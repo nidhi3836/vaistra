@@ -1,11 +1,16 @@
 import React from 'react'
-import { TextInput } from 'react-native'
+import { TextInput, View } from 'react-native'
 import styles from './style';
 
-const InputText = (props,{keyboardType, value} ) => {
+     
+      const InputText = (props,{keyboardType, value,secureTextEntry,error,onFocus} ) => {
     return (
       <>
+     
       <TextInput
+      error = {error}
+      onFocus = {onFocus}
+     secureTextEntry={secureTextEntry}
      value={value}
      keyboardType={keyboardType}
       {...props}/>

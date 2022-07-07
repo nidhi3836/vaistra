@@ -34,7 +34,7 @@ const FadeInView = (props) => {
   }
 function Splash({navigation}) {
     setTimeout(() => {
-        navigation.navigate('OnBoarding')    
+        navigation.navigate('OnBoardingScreen')    
       }, 2000);
             const styleTypes = ['default','dark-content','light-content']
             const [visibleStatusBar, setvisibleStatusBar] = useState(true);

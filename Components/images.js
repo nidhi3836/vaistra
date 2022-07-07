@@ -72,6 +72,10 @@ export const greenTick = require('../images/greenTick.png')
 export const Group3702 = require('../images/Group3702.png')
 export const Group3701 = require('../images/Group3701.png')
 export const Group3700 = require('../images/Group3700.png')
+export const eye = require('../images/eye.png')
+export const eyeClose = require('../images/eyeClose.png')
+
+
 export default {
     logo,
     Group564,
@@ -148,5 +152,7 @@ export default {
     Group3702,
     Group3701,
     Group3700,
+    eye,
+    eyeClose,
 
 }

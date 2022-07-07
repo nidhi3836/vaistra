@@ -59,7 +59,8 @@ import OnBoardingScreen from './OnBoardingScreen'
 const Stack = createStackNavigator();
 function AuthStack() {
     return (
-        <Stack.Navigator initialRouteName='OnBoardingScreen' >
+        <Stack.Navigator initialRouteName='Login'>
+
             <Stack.Screen name='OnBoardingScreen' component={OnBoardingScreen} options={{ header: () => null }} />
             <Stack.Screen name='Splash' component={Splash} options={{ header: () => null }} />
 

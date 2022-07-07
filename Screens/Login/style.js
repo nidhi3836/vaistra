@@ -5,6 +5,7 @@ import UseOrientation from '../UseOrientation'
 const styles = StyleSheet.create({
     textInput : {
         padding: 10,
+        paddingLeft : 30,
         height:40,
         color : 'black',
         width : UseOrientation.width
@@ -28,6 +29,7 @@ const styles = StyleSheet.create({
 
       },
     ContinueBtn : {
+        opacity : 0.5,
         width:UseOrientation.width / 1.1,
         marginLeft:20,
         height:45,
@@ -51,7 +53,7 @@ const styles = StyleSheet.create({
         borderWidth:1,
         marginTop: 10,
         borderRadius:7, 
-        borderColor:"#B7B7B7",
+        borderColor : '#707070',
         marginLeft:20,
         marginRight:20,
         

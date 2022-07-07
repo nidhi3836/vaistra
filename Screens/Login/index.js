@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { StyleSheet, Text, View, ImageBackground, Image, Dimensions, ScrollView, FlatList } from 'react-native'
+import { StyleSheet, Text, View, ImageBackground, Image, Dimensions, ScrollView, FlatList, Keyboard, KeyboardAvoidingView } from 'react-native'
 import { TouchableOpacity } from 'react-native'
 import images from '../../Components/images'
 import InputText from '../../Components/InputText'
@@ -8,27 +8,40 @@ import LinearGradient from 'react-native-linear-gradient';
 import UseOrientation from '../UseOrientation'
 import { heightToDp, widthToDp } from '../../variable';
 import ForgotPass from '../ForgotPass'
+import Ripple from 'react-native-material-ripple'
 
 function Login({ navigation }) {
-const [myUserData, setMyUserData] = useState();
-const [isLoaded, setIsLoaded] = useState(true);
-const GetUserData =async ()=>{
-    try {
-       const response = await fetch("https://vaistra-test.herokuapp.com/users");
-       const data =await response.json();
-       setMyUserData(data)
-       setIsLoaded(false)
-       console.log(data) 
-    } catch (error) {
-        console.log(error)
-    }
-}
-useEffect(() => {
-    GetUserData();
-}, []);
+    const [input, setInput] = useState({
+        emailPhone: '',
+        pass: '',
+    });
 
+    const go = () => {
+        Keyboard.dismiss();
+        let valid = true ; 
+        if (!input.emailPhone) {
+            handleError('please Enter Email or Phone Number','emailPhone')
+            // handleError('Please Enter Email', 'emailPhone')
+            // valid = false;
+        }else if (!input.emailPhone.match(/\S+@\S+\.\S+/)) 
+         {
+            handleError('please Enter Valiid Email or Phone Number')
+        }
+    }
+    const handleOnChange = (text, input) => {
+        setInput(prevState => ({ ...prevState, [input]: text }))
+    }
+  const [errors, setErrors] = useState();
+  const handleError = (errorMessage, input) => {
+        setErrors(prevState => ({ ...prevState, [input]: errorMessage }))
+  }
+  
+  console.log(input)
+    
+    const [isFocused, setIsFocused] = useState(false);
     const [emailPhone, setEmailPhone] = useState(false);
-    const [password, setPassword] = useState(false)
+    const [pass, setPass] = useState(true);
+    const [password, setPassword] = useState(password)
 
     console.log('UseOrientation', UseOrientation.height, UseOrientation.width)
     const [screenWidths, setScreenWidths] = useState('')
@@ -47,18 +60,19 @@ useEffect(() => {
     return (
         <View style={{ justifyContent: 'center', }}>
             <ScrollView style={{ height: heightToDp('136%') }} >
-
-                <View style={{ position: 'absolute', }}>
+<KeyboardAvoidingView>
+                <View style={{ marginHorizontal : 0,}}>
                     <Image
                         source={images.Two}
                         style={{
-                            height: orientations != 'landscape' ? UseOrientation.height / 0.835 : UseOrientation.height * 2,
+                            height: orientations != 'landscape' ? UseOrientation.height / 0.84 : UseOrientation.height * 2,
                             width: orientations != 'landscape' ? UseOrientation.width : screenWidths,
                         }}
                     />
                 </View>
 
                 <View style={{
+                     position: 'absolute',
                     width: '100%', top: '50%', backgroundColor: '#fff',
                     height: orientations != 'landscape' ? heightToDp('118%') : UseOrientation.height * 2,
                     borderTopLeftRadius: 50,
@@ -67,35 +81,52 @@ useEffect(() => {
                     <View style={{ marginLeft: 20, }}>
                         <Text style={styles.LabelView}>Login & SignUp</Text>
                     </View>
-                    
-                    <View style={styles.View}>
+
+                    <View style={[styles.View, { borderColor:  "#707070" }]}>
+
                         <InputText
-                        // data={myUserData}                        
+                                             
                             value={emailPhone}
                             style={styles.textInput}
-                            onChangeText={(text) => { console.log('text', text) }}
+                            onChangeText={(text) => { handleOnChange(text, emailPhone) }}
                             placeholder="Enter Email address or Phone Number"
-                            placeholderTextColor="black"
+                            placeholderTextColor="#707070"
+                            // setIsFocused={true}
+                            onFocus = {()=>
+                            handleError(null,'emailPhone')
+                            }
+                            onBlur={() =>
+                                setIsFocused(true)
+                            }
+                        //   error = {errors.emailPhone}
                         />
-                       
                     </View>
-                    <View style={[styles.View,]}>
-                        <InputText
-                            value={password}
-                            style={styles.textInput}
-                            onChangeText={(text) => { console.log('text', text) }}
-                            keyboardType={'default'}
-                            placeholder="Enter Password"
-                            placeholderTextColor="black"
-                        />
-                        <View style={{ position: 'absolute', right: 20, top: 15 }}>
-                            <Image source={require('../../images/view.png')}
-                                style={{ height: 12, width: 22 }} />
-                        </View>
-                    </View>
+                    {pass &&
 
+                        <View style={[styles.View,]}>
+                            <InputText
+                                value={pass}
+                                style={styles.textInput}
+                                onChangeText={(text) => { handleOnChange(text, pass) }}
+                                keyboardType={'default'}
+                                placeholder="Enter Password"
+                                placeholderTextColor="#707070"
+                                // error = "Input"
+                                secureTextEntry={password}
+
+                            />
+
+                            <View style={{ position: 'absolute', right: 10, }}>
+                                <Ripple onPress={() => setPassword(!password)}>
+                                    <Image source={password ? images.eye : images.eyeClose}
+                                        style={{ resizeMode: 'contain', height: 30, top: 5 }} />
+                                </Ripple>
+
+                            </View>
+                        </View>
+                    }
                     <TouchableOpacity
-                        onPress={() => navigation.navigate(ForgotPass)}
+                        onPress={() => navigation.navigate('ForgotPass')}
                         style={{ marginBottom: 15, }}>
                         <View style={{ alignItems: 'flex-end', marginRight: 25 }}>
                             <Text style={{ color: "red", fontSize: 14, fontWeight: "600" }}>
@@ -105,7 +136,7 @@ useEffect(() => {
                     </TouchableOpacity>
 
                     <TouchableOpacity
-                        onPress={() => navigation.navigate('CodeVerification')}
+                        onPress={go}
                     >
 
                         <View style={{ alignItems: 'center' }}>
@@ -131,7 +162,7 @@ useEffect(() => {
                     </View>
 
                 </View>
-
+                </KeyboardAvoidingView>
 
             </ScrollView>
         </View>
