@@ -12,6 +12,12 @@ let newInputIndex  = 0
 const inputs = Array(6).fill('');
 
 function CodeVerification  ({ navigation }) {
+ 
+const defaultCountDown = 30;
+  const [countDown, setCountDown ] = useState(defaultCountDown);
+  const [interval, setInterval] = useState("")
+
+  let resendTimerInterval;
 
   const onpress = () => {
     Keyboard.dismiss();
@@ -27,11 +33,12 @@ const  handleChangeText = (text, index) => {
       newOtp[index] = text;
       setOtp(newOtp); 
 
-      const lastInputIndex = inputs.length - 1;
+   const lastInputIndex = inputs.length - 1;
     newInputIndex = index === lastInputIndex ? lastInputIndex : index + 1;
     setNextInputIndex(newInputIndex);
   }
   const [nextInputIndex, setNextInputIndex ] = useState(0);
+
   const [otp, setOtp] = useState({0:'', 1:'', 2:'', 3:'', 4:'', 5:''});
 
  console.log(otp)
@@ -53,6 +60,9 @@ useEffect(() => {
   input.current.focus();
 }, [nextInputIndex])
 
+useEffect (() => {
+  this.clockCall
+},[])
   return (
     < View style={{flex:1, position:'absolute'}}>
   <ScrollView style={{ height:heightToDp('130%')}}>
@@ -93,8 +103,7 @@ useEffect(() => {
             style={styles.InputText}
             value={otp[index]}
             ref={nextInputIndex === index ? input : null}
-          /> 
-        
+          />          
             </View>
           )
         })}
@@ -103,7 +112,7 @@ useEffect(() => {
         </View>
 <View style={{alignSelf:'flex-end',marginRight:20}}>
 
-        <Text style={styles.resendText}>Resend OTP in 0:26</Text>
+        <Text style={styles.resendText}>Resend OTP in ({defaultCountDown})</Text>
 </View>
 
         <View style={styles.verifyView}>

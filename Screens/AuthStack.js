@@ -55,11 +55,14 @@ import SecondBlurBg from './SecondBlurBg'
 import Slider from './Slider'
 import GetUser from './API/GetUser'
 import OnBoardingScreen from './OnBoardingScreen'
+import CodeVerify from './CodeVerify'
 
 const Stack = createStackNavigator();
 function AuthStack() {
     return (
-        <Stack.Navigator initialRouteName='Login'>
+        <Stack.Navigator initialRouteName='CodeVerify'>
+
+<Stack.Screen name='CodeVerify' component={CodeVerify} options={{ header: () => null }} />
 
             <Stack.Screen name='OnBoardingScreen' component={OnBoardingScreen} options={{ header: () => null }} />
             <Stack.Screen name='Splash' component={Splash} options={{ header: () => null }} />

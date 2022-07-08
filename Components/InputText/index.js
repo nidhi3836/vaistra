@@ -8,6 +8,7 @@ import styles from './style';
       <>
      
       <TextInput
+      
       error = {error}
       onFocus = {onFocus}
      secureTextEntry={secureTextEntry}

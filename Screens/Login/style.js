@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
 
       },
     ContinueBtn : {
-        opacity : 0.5,
+        // opacity : 0.5,
         width:UseOrientation.width / 1.1,
         marginLeft:20,
         height:45,

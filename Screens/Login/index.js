@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { StyleSheet, Text, View, ImageBackground, Image, Dimensions, ScrollView, FlatList, Keyboard, KeyboardAvoidingView } from 'react-native'
+import { StyleSheet, Text, View, ImageBackground, Image, Dimensions, ScrollView, FlatList, Keyboard, KeyboardAvoidingView, Alert } from 'react-native'
 import { TouchableOpacity } from 'react-native'
 import images from '../../Components/images'
 import InputText from '../../Components/InputText'
@@ -17,16 +17,22 @@ function Login({ navigation }) {
     });
 
     const go = () => {
-        Keyboard.dismiss();
-        let valid = true ; 
-        if (!input.emailPhone) {
-            handleError('please Enter Email or Phone Number','emailPhone')
-            // handleError('Please Enter Email', 'emailPhone')
-            // valid = false;
-        }else if (!input.emailPhone.match(/\S+@\S+\.\S+/)) 
-         {
-            handleError('please Enter Valiid Email or Phone Number')
-        }
+            Keyboard.dismiss();
+            let valid = true ; 
+           
+            if(emailPhone == '')
+            {
+               alert('please');
+            }
+            // if (!input.emailPhone) {
+            //     alert('Please Enter Email or Phone Number','emailPhone')
+            //     // handleError('Please Enter Email', 'emailPhone')
+            //     // valid = false;
+            // }
+            // else{
+            //     return(()=>navigation.navigate('Home'))
+            // }  
+       
     }
     const handleOnChange = (text, input) => {
         setInput(prevState => ({ ...prevState, [input]: text }))
@@ -59,22 +65,23 @@ function Login({ navigation }) {
 
     return (
         <View style={{ justifyContent: 'center', }}>
-            <ScrollView style={{ height: heightToDp('136%') }} >
+            <ScrollView style={{ }} >
 <KeyboardAvoidingView>
-                <View style={{ marginHorizontal : 0,}}>
+                <View style={{ marginHorizontal : 0, }}>
                     <Image
                         source={images.Two}
                         style={{
                             height: orientations != 'landscape' ? UseOrientation.height / 0.84 : UseOrientation.height * 2,
-                            width: orientations != 'landscape' ? UseOrientation.width : screenWidths,
+                            width: orientations != 'landscape' ? UseOrientation.width   : screenWidths,
                         }}
                     />
                 </View>
 
                 <View style={{
-                     position: 'absolute',
+                    // flex : 0.5,
+                    position: 'absolute',
                     width: '100%', top: '50%', backgroundColor: '#fff',
-                    height: orientations != 'landscape' ? heightToDp('118%') : UseOrientation.height * 2,
+                    height: orientations != 'landscape' ? UseOrientation.height : UseOrientation.height * 2,
                     borderTopLeftRadius: 50,
                     borderTopRightRadius: 50
                 }}>
@@ -85,12 +92,13 @@ function Login({ navigation }) {
                     <View style={[styles.View, { borderColor:  "#707070" }]}>
 
                         <InputText
-                                             
+                                            
                             value={emailPhone}
                             style={styles.textInput}
                             onChangeText={(text) => { handleOnChange(text, emailPhone) }}
                             placeholder="Enter Email address or Phone Number"
                             placeholderTextColor="#707070"
+                            
                             // setIsFocused={true}
                             onFocus = {()=>
                             handleError(null,'emailPhone')
@@ -116,7 +124,8 @@ function Login({ navigation }) {
 
                             />
 
-                            <View style={{ position: 'absolute', right: 10, }}>
+                            <View style={{ position: 'absolute',
+                             right: 10, }}>
                                 <Ripple onPress={() => setPassword(!password)}>
                                     <Image source={password ? images.eye : images.eyeClose}
                                         style={{ resizeMode: 'contain', height: 30, top: 5 }} />
@@ -136,7 +145,10 @@ function Login({ navigation }) {
                     </TouchableOpacity>
 
                     <TouchableOpacity
-                        onPress={go}
+                        onPress={go
+                        //   ()=>navigation.navigate('Home')
+                        }
+
                     >
 
                         <View style={{ alignItems: 'center' }}>

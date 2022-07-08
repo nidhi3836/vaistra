@@ -41,8 +41,6 @@ const styles = StyleSheet.create ({
         marginRight:10,
     },
     resendText : {
-        
-       
         fontSize:13,
         marginTop:10,
         color:"#A5A3A3"
