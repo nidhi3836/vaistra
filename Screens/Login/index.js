@@ -15,15 +15,31 @@ function Login({ navigation }) {
         emailPhone: '',
         pass: '',
     });
+    // constructor(props){
+    //     super(props)
+    //     this.state={
+    //         emailPhone: "",
+    //         pass: "",
+    //     }
+    // }
+const onPress = () => {
+    navigation.navigate('Home')
+}
 
     const go = () => {
             Keyboard.dismiss();
-            let valid = true ; 
-           
+            let valid = true ;            
             if(emailPhone == '')
-            {
-               alert('please');
+            {      
+                onPress()         
+                
+            //    valid = false ;
             }
+            else {
+               return(               
+                alert('please Enter Email or Phone number')
+               )
+            }           
             // if (!input.emailPhone) {
             //     alert('Please Enter Email or Phone Number','emailPhone')
             //     // handleError('Please Enter Email', 'emailPhone')
@@ -66,7 +82,7 @@ function Login({ navigation }) {
     return (
         <View style={{ justifyContent: 'center', }}>
             <ScrollView style={{ }} >
-<KeyboardAvoidingView>
+        <KeyboardAvoidingView>
                 <View style={{ marginHorizontal : 0, }}>
                     <Image
                         source={images.Two}
@@ -106,11 +122,10 @@ function Login({ navigation }) {
                             onBlur={() =>
                                 setIsFocused(true)
                             }
-                        //   error = {errors.emailPhone}
+                          error = {errors.emailPhone}
                         />
                     </View>
                     {pass &&
-
                         <View style={[styles.View,]}>
                             <InputText
                                 value={pass}
@@ -145,12 +160,10 @@ function Login({ navigation }) {
                     </TouchableOpacity>
 
                     <TouchableOpacity
-                        onPress={go
-                        //   ()=>navigation.navigate('Home')
+                        onPress={ go
+                        //   ()=>navigation.navigate('CodeVerify')
                         }
-
                     >
-
                         <View style={{ alignItems: 'center' }}>
                             <LinearGradient
                                 style={styles.ContinueBtn}
@@ -160,8 +173,7 @@ function Login({ navigation }) {
                                     Continue
                                 </Text>
                             </LinearGradient>
-                        </View>
-
+                        </View> 
                     </TouchableOpacity>
                     <View style={{ marginTop: 12, flexDirection: 'row', alignSelf: 'center' }}>
                         <Text style={{ fontSize: 16, color: "#A5A3A3", }}>

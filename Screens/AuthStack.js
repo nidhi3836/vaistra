@@ -60,7 +60,7 @@ import CodeVerify from './CodeVerify'
 const Stack = createStackNavigator();
 function AuthStack() {
     return (
-        <Stack.Navigator initialRouteName='CodeVerify'>
+        <Stack.Navigator initialRouteName='Login'>
 
 <Stack.Screen name='CodeVerify' component={CodeVerify} options={{ header: () => null }} />
 
