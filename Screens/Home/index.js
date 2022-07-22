@@ -41,7 +41,7 @@ export default function Home({ navigation }) {
   const inputs = Array(3).fill('');
   return (
 
-    <View style={{ flex: 1, height: '100%', backgroundColor: '#fff', }}>
+    <View style={{ flex: 1, height: heightToDp('100%'), backgroundColor: '#fff', }}>
       <Header
         image={images.Group355}
         onPress={() => navigation.navigate('DrawerContent')}
@@ -49,12 +49,13 @@ export default function Home({ navigation }) {
         image2={images.notification}
         onPress3={() => navigation.navigate('Notification')}
       />
-      <ScrollView style={{ flex: 1, }}>
-        <SafeAreaView style={{}}>
+      <ScrollView style={{  }}>
+        <SafeAreaView >
           <ScrollView
             style={{
+              flex : 0.2,
               height: orientations != 'landscape' ? heightToDp('35%')
-                : heightToDp('50%'),
+                : heightToDp('32%'),
 
               backgroundColor: '#d5d5d5'
             }}
@@ -68,26 +69,26 @@ export default function Home({ navigation }) {
             }}
           >
             <View style={{
-              width,
+             width,
               height,
-              backgroundColor: "#fff"
+              backgroundColor: "#fff",
+              //  flex : 0.2,
+              // justifyContent : 'center',
+              // alignItems : 'center'
             }}>
-
-
               <Image
-
-                source={images.Group3702}
-                style={[styles.imageStyle, {
+                source={images.Group3702} style={[styles.imageStyle, {
                   width: orientations != 'landscape' ? UseOrientation.width : UseOrientation.width * 2,
-                  height: orientations != 'landscape' ? PixelRatio.getPixelSizeForLayoutSize(100) : PixelRatio.getPixelSizeForLayoutSize(160),
+                  height: orientations != 'landscape' ? PixelRatio.getPixelSizeForLayoutSize(100) : PixelRatio.getPixelSizeForLayoutSize(150),
                   resizeMode: orientations != 'landscape' ? 'contain' : 'cover',
                 }]} />
 
 
             </View>
             <View style={{
-              width,
-              height,
+              // width,
+              // height,
+
               backgroundColor: "#fff"
             }}>
 
@@ -95,7 +96,7 @@ export default function Home({ navigation }) {
               <Image
                 source={images.Group3701} style={[styles.imageStyle, {
                   width: orientations != 'landscape' ? UseOrientation.width : UseOrientation.width * 2,
-                  height: orientations != 'landscape' ? PixelRatio.getPixelSizeForLayoutSize(100) : PixelRatio.getPixelSizeForLayoutSize(160),
+                  height: orientations != 'landscape' ? PixelRatio.getPixelSizeForLayoutSize(100) : PixelRatio.getPixelSizeForLayoutSize(120),
                   resizeMode: orientations != 'landscape' ? 'contain' : 'cover',
                 }]} />
             </View>
@@ -106,13 +107,13 @@ export default function Home({ navigation }) {
               <Image
                 source={images.Group3700} style={[styles.imageStyle, {
                   width: orientations != 'landscape' ? UseOrientation.width : UseOrientation.width * 2,
-                  height: orientations != 'landscape' ? PixelRatio.getPixelSizeForLayoutSize(100) : PixelRatio.getPixelSizeForLayoutSize(160),
+                  height: orientations != 'landscape' ? PixelRatio.getPixelSizeForLayoutSize(100) : PixelRatio.getPixelSizeForLayoutSize(120),
                   resizeMode: orientations != 'landscape' ? 'contain' : 'cover',
                 }]} />
 
-
             </View>
           </ScrollView>
+
           <View style={styles.paginationWrapper}>
             {Array.from(Array(3).keys()).map((key, index) => (
               <View style={[styles.paginationDots, { opacity: pageIndex === index ? 1 : 0.2 }]} key={index} />
@@ -132,7 +133,7 @@ export default function Home({ navigation }) {
               }}
                 onPress={() => navigation.navigate('YourProduct')}
               >
-                <View >
+                <View>
                   <Text >Total Products
                   </Text>
                   <Text style={{ fontSize: 17 }}>30</Text>
@@ -196,8 +197,7 @@ export default function Home({ navigation }) {
           }}
             onPress={() => navigation.navigate('Product')}
           >
-            <ScrollView
-              horizontal={true}
+            <ScrollView  horizontal={true}
             >
 
               {inputs.map((inp, index) => {
@@ -358,7 +358,9 @@ export default function Home({ navigation }) {
                       />
                     </View>
                     <View style={{ flex: 0.75, backgroundColor: '#fff' }}>
-                      <View style={{ flex: 0.333, flexDirection: 'row', justifyContent: 'space-between' }}>
+                      <View style={{ flex: 0.333,
+                        
+                        flexDirection: 'row', justifyContent: 'space-between' }}>
                         <Text style={{ color: '#000', fontWeight: '500' }}>Kook N Keech Marvel</Text>
                         <Text style={{ fontSize: 11, fontWeight: '500' }}>{'Order Id' + ': 123456'} </Text>
                       </View>
@@ -366,12 +368,14 @@ export default function Home({ navigation }) {
                         <Text style={{ fontSize: 11, fontWeight: '500' }}>Men Printed SweatShirt</Text>
                         <Text style={{ fontSize: 11, fontWeight: '500' }}>Price : &#8377; 400.00 </Text>
                       </View>
-                      <View style={{ flex: 0.2, flexDirection: 'row', }}>
+                      <View style={{ flex: 0.22, flexDirection: 'row',  }}>
+                        <View style={{flexDirection : 'row',flex : 0.9}}>
                         <View style={{
                           borderWidth: 1,
                           justifyContent: 'center',
                           alignItems: 'center',
-                          width: 70,
+                          // width: 70,
+                          flex : orientations != 'landscape' ?  0.5 : 0.3,
                           borderColor: '#d5d5d5', borderRadius: 4,
                         }}>
                           <Text style={{
@@ -383,7 +387,8 @@ export default function Home({ navigation }) {
                           borderWidth: 1,
                           justifyContent: 'center',
                           alignItems: 'center',
-                          width: 70,
+                          // width: 70,
+                          flex : orientations != 'landscape' ?  0.5 : 0.3,
                           borderColor: '#d5d5d5', borderRadius: 4,
                         }}>
                           <Text style={{
@@ -391,15 +396,21 @@ export default function Home({ navigation }) {
                           }}>Qty : 1</Text>
 
                         </View>
+
+                        </View>
                         <View style={{
-                          marginLeft: orientations != 'landscape' ? "5%" : "55%",
+                          marginHorizontal : "2%",
+                          // marginLeft: orientations != 'landscape' ? "5%" : "55%",
                           justifyContent: 'center',
                           alignItems: 'center',
-                          width: 70,
+                          alignSelf : 'flex-end',
+                         
+                          // width: 70,
+                          flex : orientations != 'landscape' ?  0.4 : 0.2,
                           borderRadius: 4, backgroundColor: '#ED4343',
                         }}>
                           <Text style={{
-                            fontSize: 10, fontWeight: '500', color: '#fff'
+                            fontSize: 10, fontWeight: '500', color: '#fff', 
                           }}>Up Coming</Text>
                         </View>
                       </View>
@@ -418,7 +429,9 @@ export default function Home({ navigation }) {
                       />
                     </View>
                     <View style={{ flex: 0.75, backgroundColor: '#fff' }}>
-                      <View style={{ flex: 0.333, flexDirection: 'row', justifyContent: 'space-between' }}>
+                      <View style={{ flex: 0.333,
+                        
+                        flexDirection: 'row', justifyContent: 'space-between' }}>
                         <Text style={{ color: '#000', fontWeight: '500' }}>Kook N Keech Marvel</Text>
                         <Text style={{ fontSize: 11, fontWeight: '500' }}>{'Order Id' + ': 123456'} </Text>
                       </View>
@@ -426,12 +439,14 @@ export default function Home({ navigation }) {
                         <Text style={{ fontSize: 11, fontWeight: '500' }}>Men Printed SweatShirt</Text>
                         <Text style={{ fontSize: 11, fontWeight: '500' }}>Price : &#8377; 400.00 </Text>
                       </View>
-                      <View style={{ flex: 0.2, flexDirection: 'row', }}>
+                      <View style={{ flex: 0.22, flexDirection: 'row',  }}>
+                        <View style={{flexDirection : 'row',flex : 0.9}}>
                         <View style={{
                           borderWidth: 1,
                           justifyContent: 'center',
                           alignItems: 'center',
-                          width: 70,
+                          // width: 70,
+                          flex : orientations != 'landscape' ?  0.5 : 0.3,
                           borderColor: '#d5d5d5', borderRadius: 4,
                         }}>
                           <Text style={{
@@ -443,7 +458,8 @@ export default function Home({ navigation }) {
                           borderWidth: 1,
                           justifyContent: 'center',
                           alignItems: 'center',
-                          width: 70,
+                          // width: 70,
+                          flex : orientations != 'landscape' ?  0.5 : 0.3,
                           borderColor: '#d5d5d5', borderRadius: 4,
                         }}>
                           <Text style={{
@@ -451,18 +467,22 @@ export default function Home({ navigation }) {
                           }}>Qty : 1</Text>
 
                         </View>
+
+                        </View>
                         <View style={{
-                          marginLeft: orientations != 'landscape' ? "5%" : "55%",
+                          marginHorizontal : "2%",
+                          // marginLeft: orientations != 'landscape' ? "5%" : "55%",
                           justifyContent: 'center',
                           alignItems: 'center',
-                          width: 70,
-                          borderRadius: 4, backgroundColor: '#f3710f',
+                          alignSelf : 'flex-end',
+                         
+                          // width: 70,
+                          flex : orientations != 'landscape' ?  0.4 : 0.2,
+                          borderRadius: 4, backgroundColor: '#f3710e',
                         }}>
                           <Text style={{
-                            fontSize: 10, fontWeight: '500', color: '#fff'
-                          }}>Padding</Text>
-
-
+                            fontSize: 10, fontWeight: '500', color: '#fff', 
+                          }}>Pending</Text>
                         </View>
                       </View>
                     </View>
@@ -480,7 +500,9 @@ export default function Home({ navigation }) {
                       />
                     </View>
                     <View style={{ flex: 0.75, backgroundColor: '#fff' }}>
-                      <View style={{ flex: 0.333, flexDirection: 'row', justifyContent: 'space-between' }}>
+                      <View style={{ flex: 0.333,
+                        
+                        flexDirection: 'row', justifyContent: 'space-between' }}>
                         <Text style={{ color: '#000', fontWeight: '500' }}>Kook N Keech Marvel</Text>
                         <Text style={{ fontSize: 11, fontWeight: '500' }}>{'Order Id' + ': 123456'} </Text>
                       </View>
@@ -488,12 +510,14 @@ export default function Home({ navigation }) {
                         <Text style={{ fontSize: 11, fontWeight: '500' }}>Men Printed SweatShirt</Text>
                         <Text style={{ fontSize: 11, fontWeight: '500' }}>Price : &#8377; 400.00 </Text>
                       </View>
-                      <View style={{ flex: 0.2, flexDirection: 'row', }}>
+                      <View style={{ flex: 0.22, flexDirection: 'row',  }}>
+                        <View style={{flexDirection : 'row',flex : 0.9}}>
                         <View style={{
                           borderWidth: 1,
                           justifyContent: 'center',
                           alignItems: 'center',
-                          width: 70,
+                          // width: 70,
+                          flex : orientations != 'landscape' ?  0.5 : 0.3,
                           borderColor: '#d5d5d5', borderRadius: 4,
                         }}>
                           <Text style={{
@@ -505,7 +529,8 @@ export default function Home({ navigation }) {
                           borderWidth: 1,
                           justifyContent: 'center',
                           alignItems: 'center',
-                          width: 70,
+                          // width: 70,
+                          flex : orientations != 'landscape' ?  0.5 : 0.3,
                           borderColor: '#d5d5d5', borderRadius: 4,
                         }}>
                           <Text style={{
@@ -513,18 +538,93 @@ export default function Home({ navigation }) {
                           }}>Qty : 1</Text>
 
                         </View>
+
+                        </View>
                         <View style={{
-                          marginLeft: orientations != 'landscape' ? "5%" : "55%",
+                          marginHorizontal : "2%",
+                          // marginLeft: orientations != 'landscape' ? "5%" : "55%",
                           justifyContent: 'center',
                           alignItems: 'center',
-                          width: 70,
-                          borderRadius: 4, backgroundColor: '#1164c2',
+                          alignSelf : 'flex-end',
+                         
+                          // width: 70,
+                          flex : orientations != 'landscape' ?  0.4 : 0.2,
+                          borderRadius: 4, backgroundColor: '#1264c2',
                         }}>
                           <Text style={{
-                            fontSize: 10, fontWeight: '500', color: '#fff'
+                            fontSize: 10, fontWeight: '500', color: '#fff', 
                           }}>Shipping</Text>
+                        </View>
+                      </View>
+                    </View>
+                  </View>
 
+                  <View style={{ height: heightToDp('10%'), flexDirection: 'row' }}>
+                    <View style={{
+                      flex: 0.25, alignItems: 'center',
+                    }}>
 
+                      <Image
+                        resizeMode='cover'
+                        source={images.man}
+                        style={{ height: 60, width: 60, margin: 5 }}
+                      />
+                    </View>
+                    <View style={{ flex: 0.75, backgroundColor: '#fff' }}>
+                      <View style={{ flex: 0.333,
+                        
+                        flexDirection: 'row', justifyContent: 'space-between' }}>
+                        <Text style={{ color: '#000', fontWeight: '500' }}>Kook N Keech Marvel</Text>
+                        <Text style={{ fontSize: 11, fontWeight: '500' }}>{'Order Id' + ': 123456'} </Text>
+                      </View>
+                      <View style={{ flex: 0.333, flexDirection: 'row', justifyContent: 'space-between' }}>
+                        <Text style={{ fontSize: 11, fontWeight: '500' }}>Men Printed SweatShirt</Text>
+                        <Text style={{ fontSize: 11, fontWeight: '500' }}>Price : &#8377; 400.00 </Text>
+                      </View>
+                      <View style={{ flex: 0.22, flexDirection: 'row',  }}>
+                        <View style={{flexDirection : 'row',flex : 0.9}}>
+                        <View style={{
+                          borderWidth: 1,
+                          justifyContent: 'center',
+                          alignItems: 'center',
+                          // width: 70,
+                          flex : orientations != 'landscape' ?  0.5 : 0.3,
+                          borderColor: '#d5d5d5', borderRadius: 4,
+                        }}>
+                          <Text style={{
+                            fontSize: 10,
+                          }}>Size : 30</Text>
+                        </View>
+                        <View style={{
+                          marginRight: 50,
+                          borderWidth: 1,
+                          justifyContent: 'center',
+                          alignItems: 'center',
+                          // width: 70,
+                          flex : orientations != 'landscape' ?  0.5 : 0.3,
+                          borderColor: '#d5d5d5', borderRadius: 4,
+                        }}>
+                          <Text style={{
+                            fontSize: 10,
+                          }}>Qty : 1</Text>
+
+                        </View>
+
+                        </View>
+                        <View style={{
+                          marginHorizontal : "2%",
+                          // marginLeft: orientations != 'landscape' ? "5%" : "55%",
+                          justifyContent: 'center',
+                          alignItems: 'center',
+                          alignSelf : 'flex-end',
+                         
+                          // width: 70,
+                          flex : orientations != 'landscape' ?  0.4 : 0.2,
+                          borderRadius: 4, backgroundColor: '#2a8a08',
+                        }}>
+                          <Text style={{
+                            fontSize: 10, fontWeight: '500', color: '#fff', 
+                          }}>Completed</Text>
                         </View>
                       </View>
                     </View>
@@ -546,6 +646,7 @@ const styles = StyleSheet.create({
     // PixelRatio.getPixelSizeForLayoutSize(170),
 
     //   marginBottom : "90%"
+    // marginHorizontal : '5%'
   },
   wrapper: {
     justifyContent: 'center',
@@ -560,8 +661,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'row',
-    // backgroundColor: '#fff',
+    backgroundColor: '#ffefef',
     height: 30,
+    // flex : 0.3,
   },
   paginationDots: {
     height: 12,

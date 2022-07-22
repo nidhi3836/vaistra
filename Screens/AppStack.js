@@ -16,7 +16,9 @@ const Drawer = createDrawerNavigator();
     <>
     <Drawer.Navigator initialRouteName='Home'
     drawerContent={props => <DrawerContent {...props} />} >
-         {/* <Drawer.Screen name='Home' component={Home}  /> */}
+         {/* <Drawer.Screen name='Home' component={Home} 
+         options={{title : '',}}
+         /> */}
            {/* <Drawer.Screen name='DrawerFile' component={DrawerFile}  /> */}
            <Drawer.Screen name='BottomTag' component={BottomTag} options={{headerShown:false}}/>
            {/* <Drawer.Screen name='Home' component={Home} options={{headerShown:false}}/> */}

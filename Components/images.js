@@ -74,7 +74,14 @@ export const Group3701 = require('../images/Group3701.png')
 export const Group3700 = require('../images/Group3700.png')
 export const eye = require('../images/eye.png')
 export const eyeClose = require('../images/eyeClose.png')
+export const facebook = require('../images/facebook.png')
+export const Google = require('../images/Google.png')
+export const openEye = require('../images/openEye.png')
+export const closeEye = require('../images/closeEye.png')
+export const BackGroundImg = require('../images/BackGroundImg.png')
 
+
+export const vermoLogo = require('../images/vermoLogo.png')
 
 export default {
     logo,
@@ -154,5 +161,12 @@ export default {
     Group3700,
     eye,
     eyeClose,
+    facebook,
+    Google,
+    closeEye,
+    openEye,
+    vermoLogo,
+  BackGroundImg,
 
+    
 }

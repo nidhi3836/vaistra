@@ -63,190 +63,217 @@ export default function ActivePage() {
                   <Text>24 jun, 20:00</Text>
                 </View>
                 <View style={{ height: heightToDp('10%'), flexDirection: 'row' }}>
-                  <View style={{
-                    flex: 0.25, alignItems: 'center',
-                  }}>
+                    <View style={{
+                      flex: 0.25, alignItems: 'center',
+                    }}>
 
-                    <Image
-                      resizeMode='cover'
-                      source={images.man}
-                      style={{ height: 60, width: 60, margin: 5 }}
-                    />
-                  </View>
-                  <View style={{ flex: 0.75, backgroundColor: '#fff' }}>
-                    <View style={{ flex: 0.333, flexDirection: 'row', justifyContent: 'space-between' }}>
-                      <Text style={{ color: '#000', fontWeight: '500' }}>Kook N Keech Marvel</Text>
-                      <Text style={{ fontSize: 11, fontWeight: '500' }}>{'Order Id' + ': 123456'} </Text>
+                      <Image
+                        resizeMode='cover'
+                        source={images.man}
+                        style={{ height: 60, width: 60, margin: 5 }}
+                      />
                     </View>
-                    <View style={{ flex: 0.333, flexDirection: 'row', justifyContent: 'space-between' }}>
-                      <Text style={{ fontSize: 11, fontWeight: '500' }}>Men Printed SweatShirt</Text>
-                      <Text style={{ fontSize: 11, fontWeight: '500' }}>Price : &#8377; 400.00 </Text>
-                    </View>
-                    <View style={{ flex: 0.2, flexDirection: 'row', }}>
-                      <View style={{
-                        borderWidth: 1,
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        width: 70,
-                        borderColor: '#d5d5d5', borderRadius: 4,
-                      }}>
-                        <Text style={{
-                          fontSize: 10,
-                        }}>Size : 30</Text>
+                    <View style={{ flex: 0.75, backgroundColor: '#fff' }}>
+                      <View style={{ flex: 0.333,
+                        
+                        flexDirection: 'row', justifyContent: 'space-between' }}>
+                        <Text style={{ color: '#000', fontWeight: '500' }}>Kook N Keech Marvel</Text>
+                        <Text style={{ fontSize: 11, fontWeight: '500' }}>{'Order Id' + ': 123456'} </Text>
                       </View>
-                      <View style={{
-                        marginRight: 50,
-                        borderWidth: 1,
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        width: 70,
-                        borderColor: '#d5d5d5', borderRadius: 4,
-                      }}>
-                        <Text style={{
-                          fontSize: 10,
-                        }}>Qty : 1</Text>
-
+                      <View style={{ flex: 0.333, flexDirection: 'row', justifyContent: 'space-between' }}>
+                        <Text style={{ fontSize: 11, fontWeight: '500' }}>Men Printed SweatShirt</Text>
+                        <Text style={{ fontSize: 11, fontWeight: '500' }}>Price : &#8377; 400.00 </Text>
                       </View>
-                      <View style={{
-                        marginLeft: orientations != 'landscape' ? "5%" : "45%",
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        width: 70,
-                        borderRadius: 4, backgroundColor: '#ed4343',
-                      }}>
-                        <Text style={{
-                          fontSize: 10, fontWeight: '500', color: '#fff'
-                        }}>Up-Coming</Text>
+                      <View style={{ flex: 0.22, flexDirection: 'row',  }}>
+                        <View style={{flexDirection : 'row',flex : 0.9}}>
+                        <View style={{
+                          borderWidth: 1,
+                          justifyContent: 'center',
+                          alignItems: 'center',
+                          // width: 70,
+                          flex : orientations != 'landscape' ?  0.5 : 0.3,
+                          borderColor: '#d5d5d5', borderRadius: 4,
+                        }}>
+                          <Text style={{
+                            fontSize: 10,
+                          }}>Size : 30</Text>
+                        </View>
+                        <View style={{
+                          marginRight: 50,
+                          borderWidth: 1,
+                          justifyContent: 'center',
+                          alignItems: 'center',
+                          // width: 70,
+                          flex : orientations != 'landscape' ?  0.5 : 0.3,
+                          borderColor: '#d5d5d5', borderRadius: 4,
+                        }}>
+                          <Text style={{
+                            fontSize: 10,
+                          }}>Qty : 1</Text>
 
+                        </View>
 
-                      </View>
-                    </View>
-                  </View>
-                </View>
-
-                <View style={{ height: heightToDp('10%'), flexDirection: 'row' }}>
-                  <View style={{
-                    flex: 0.25, alignItems: 'center',
-                  }}>
-
-                    <Image
-                      resizeMode='cover'
-                      source={images.man}
-                      style={{ height: 60, width: 60, margin: 5 }}
-                    />
-                  </View>
-                  <View style={{ flex: 0.75, backgroundColor: '#fff' }}>
-                    <View style={{ flex: 0.333, flexDirection: 'row', justifyContent: 'space-between' }}>
-                      <Text style={{ color: '#000', fontWeight: '500' }}>Kook N Keech Marvel</Text>
-                      <Text style={{ fontSize: 11, fontWeight: '500' }}>{'Order Id' + ': 123456'} </Text>
-                    </View>
-                    <View style={{ flex: 0.333, flexDirection: 'row', justifyContent: 'space-between' }}>
-                      <Text style={{ fontSize: 11, fontWeight: '500' }}>Men Printed SweatShirt</Text>
-                      <Text style={{ fontSize: 11, fontWeight: '500' }}>Price : &#8377; 400.00 </Text>
-                    </View>
-                    <View style={{ flex: 0.2, flexDirection: 'row', }}>
-                      <View style={{
-                        borderWidth: 1,
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        width: 70,
-                        borderColor: '#d5d5d5', borderRadius: 4,
-                      }}>
-                        <Text style={{
-                          fontSize: 10,
-                        }}>Size : 30</Text>
-                      </View>
-                      <View style={{
-                        marginRight: 50,
-                        borderWidth: 1,
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        width: 70,
-                        borderColor: '#d5d5d5', borderRadius: 4,
-                      }}>
-                        <Text style={{
-                          fontSize: 10,
-                        }}>Qty : 1</Text>
-
-                      </View>
-                      <View style={{
-                        marginLeft: orientations != 'landscape' ? "5%" : "45%",
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        width: 70,
-                        borderRadius: 4, backgroundColor: '#f3710f',
-                      }}>
-                        <Text style={{
-                          fontSize: 10, fontWeight: '500', color: '#fff'
-                        }}>Padding</Text>
-
-
+                        </View>
+                        <View style={{
+                          marginHorizontal : "2%",
+                          // marginLeft: orientations != 'landscape' ? "5%" : "55%",
+                          justifyContent: 'center',
+                          alignItems: 'center',
+                          alignSelf : 'flex-end',
+                         
+                          // width: 70,
+                          flex : orientations != 'landscape' ?  0.4 : 0.2,
+                          borderRadius: 4, backgroundColor: '#ED4343',
+                        }}>
+                          <Text style={{
+                            fontSize: 10, fontWeight: '500', color: '#fff', 
+                          }}>Up Coming</Text>
+                        </View>
                       </View>
                     </View>
                   </View>
-                </View>
 
-                <View style={{ height: heightToDp('10%'), flexDirection: 'row' }}>
-                  <View style={{
-                    flex: 0.25, alignItems: 'center',
-                  }}>
+                  <View style={{ height: heightToDp('10%'), flexDirection: 'row' }}>
+                    <View style={{
+                      flex: 0.25, alignItems: 'center',
+                    }}>
 
-                    <Image
-                      resizeMode='cover'
-                      source={images.man}
-                      style={{ height: 60, width: 60, margin: 5 }}
-                    />
+                      <Image
+                        resizeMode='cover'
+                        source={images.man}
+                        style={{ height: 60, width: 60, margin: 5 }}
+                      />
+                    </View>
+                    <View style={{ flex: 0.75, backgroundColor: '#fff' }}>
+                      <View style={{ flex: 0.333,
+                        
+                        flexDirection: 'row', justifyContent: 'space-between' }}>
+                        <Text style={{ color: '#000', fontWeight: '500' }}>Kook N Keech Marvel</Text>
+                        <Text style={{ fontSize: 11, fontWeight: '500' }}>{'Order Id' + ': 123456'} </Text>
+                      </View>
+                      <View style={{ flex: 0.333, flexDirection: 'row', justifyContent: 'space-between' }}>
+                        <Text style={{ fontSize: 11, fontWeight: '500' }}>Men Printed SweatShirt</Text>
+                        <Text style={{ fontSize: 11, fontWeight: '500' }}>Price : &#8377; 400.00 </Text>
+                      </View>
+                      <View style={{ flex: 0.22, flexDirection: 'row',  }}>
+                        <View style={{flexDirection : 'row',flex : 0.9}}>
+                        <View style={{
+                          borderWidth: 1,
+                          justifyContent: 'center',
+                          alignItems: 'center',
+                          // width: 70,
+                          flex : orientations != 'landscape' ?  0.5 : 0.3,
+                          borderColor: '#d5d5d5', borderRadius: 4,
+                        }}>
+                          <Text style={{
+                            fontSize: 10,
+                          }}>Size : 30</Text>
+                        </View>
+                        <View style={{
+                          marginRight: 50,
+                          borderWidth: 1,
+                          justifyContent: 'center',
+                          alignItems: 'center',
+                          // width: 70,
+                          flex : orientations != 'landscape' ?  0.5 : 0.3,
+                          borderColor: '#d5d5d5', borderRadius: 4,
+                        }}>
+                          <Text style={{
+                            fontSize: 10,
+                          }}>Qty : 1</Text>
+
+                        </View>
+
+                        </View>
+                        <View style={{
+                          marginHorizontal : "2%",
+                          // marginLeft: orientations != 'landscape' ? "5%" : "55%",
+                          justifyContent: 'center',
+                          alignItems: 'center',
+                          alignSelf : 'flex-end',
+                         
+                          // width: 70,
+                          flex : orientations != 'landscape' ?  0.4 : 0.2,
+                          borderRadius: 4, backgroundColor: '#f3710e',
+                        }}>
+                          <Text style={{
+                            fontSize: 10, fontWeight: '500', color: '#fff', 
+                          }}>Pending</Text>
+                        </View>
+                      </View>
+                    </View>
                   </View>
-                  <View style={{ flex: 0.75, backgroundColor: '#fff' }}>
-                    <View style={{ flex: 0.333, flexDirection: 'row', justifyContent: 'space-between' }}>
-                      <Text style={{ color: '#000', fontWeight: '500' }}>Kook N Keech Marvel</Text>
-                      <Text style={{ fontSize: 11, fontWeight: '500' }}>{'Order Id' + ': 123456'} </Text>
+
+                  <View style={{ height: heightToDp('10%'), flexDirection: 'row' }}>
+                    <View style={{
+                      flex: 0.25, alignItems: 'center',
+                    }}>
+
+                      <Image
+                        resizeMode='cover'
+                        source={images.man}
+                        style={{ height: 60, width: 60, margin: 5 }}
+                      />
                     </View>
-                    <View style={{ flex: 0.333, flexDirection: 'row', justifyContent: 'space-between' }}>
-                      <Text style={{ fontSize: 11, fontWeight: '500' }}>Men Printed SweatShirt</Text>
-                      <Text style={{ fontSize: 11, fontWeight: '500' }}>Price : &#8377; 400.00 </Text>
-                    </View>
-                    <View style={{ flex: 0.2, flexDirection: 'row', }}>
-                      <View style={{
-                        borderWidth: 1,
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        width: 70,
-                        borderColor: '#d5d5d5', borderRadius: 4,
-                      }}>
-                        <Text style={{
-                          fontSize: 10,
-                        }}>Size : 30</Text>
+                    <View style={{ flex: 0.75, backgroundColor: '#fff' }}>
+                      <View style={{ flex: 0.333,
+                        
+                        flexDirection: 'row', justifyContent: 'space-between' }}>
+                        <Text style={{ color: '#000', fontWeight: '500' }}>Kook N Keech Marvel</Text>
+                        <Text style={{ fontSize: 11, fontWeight: '500' }}>{'Order Id' + ': 123456'} </Text>
                       </View>
-                      <View style={{
-                        marginRight: 50,
-                        borderWidth: 1,
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        width: 70,
-                        borderColor: '#d5d5d5', borderRadius: 4,
-                      }}>
-                        <Text style={{
-                          fontSize: 10,
-                        }}>Qty : 1</Text>
-
+                      <View style={{ flex: 0.333, flexDirection: 'row', justifyContent: 'space-between' }}>
+                        <Text style={{ fontSize: 11, fontWeight: '500' }}>Men Printed SweatShirt</Text>
+                        <Text style={{ fontSize: 11, fontWeight: '500' }}>Price : &#8377; 400.00 </Text>
                       </View>
-                      <View style={{
-                        marginLeft: orientations != 'landscape' ? "5%" : "45%",
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        width: 70,
-                        borderRadius: 4, backgroundColor: '#1164c2',
-                      }}>
-                        <Text style={{
-                          fontSize: 10, fontWeight: '500', color: '#fff'
-                        }}>Shipping</Text>
+                      <View style={{ flex: 0.22, flexDirection: 'row',  }}>
+                        <View style={{flexDirection : 'row',flex : 0.9}}>
+                        <View style={{
+                          borderWidth: 1,
+                          justifyContent: 'center',
+                          alignItems: 'center',
+                          // width: 70,
+                          flex : orientations != 'landscape' ?  0.5 : 0.3,
+                          borderColor: '#d5d5d5', borderRadius: 4,
+                        }}>
+                          <Text style={{
+                            fontSize: 10,
+                          }}>Size : 30</Text>
+                        </View>
+                        <View style={{
+                          marginRight: 50,
+                          borderWidth: 1,
+                          justifyContent: 'center',
+                          alignItems: 'center',
+                          // width: 70,
+                          flex : orientations != 'landscape' ?  0.5 : 0.3,
+                          borderColor: '#d5d5d5', borderRadius: 4,
+                        }}>
+                          <Text style={{
+                            fontSize: 10,
+                          }}>Qty : 1</Text>
 
+                        </View>
 
+                        </View>
+                        <View style={{
+                          marginHorizontal : "2%",
+                          // marginLeft: orientations != 'landscape' ? "5%" : "55%",
+                          justifyContent: 'center',
+                          alignItems: 'center',
+                          alignSelf : 'flex-end',
+                         
+                          // width: 70,
+                          flex : orientations != 'landscape' ?  0.4 : 0.2,
+                          borderRadius: 4, backgroundColor: '#1264c2',
+                        }}>
+                          <Text style={{
+                            fontSize: 10, fontWeight: '500', color: '#fff', 
+                          }}>Shipping</Text>
+                        </View>
                       </View>
                     </View>
                   </View>
-                </View>
 
 
               </View>

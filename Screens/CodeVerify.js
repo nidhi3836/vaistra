@@ -15,7 +15,7 @@ export default function CodeVerify({navigation}) {
     let defaultCountDown = 30;
 
     const OnChangeText = (val) => {
-        setInterval(val)
+        setInternalVal(val)
     };
     const [countDown, setCountDown] = useState(defaultCountDown);
 
@@ -34,9 +34,8 @@ export default function CodeVerify({navigation}) {
         });
     }, [orientations]);
 
-
     useEffect(() => {
-    clockCall = setInterval(() => 
+ clockCall = setInterval(() => 
     {  decrementClock(); 
     },1000)
    return () => {
@@ -49,8 +48,8 @@ export default function CodeVerify({navigation}) {
         setCountDown(defaultCountDown)
         setEnableResend(false)
         clearInterval(clockCall)
-        clockCall  = setInterval(()=>{
-            decrementClock()},1000)
+        clockCall  = setInterval(
+            ()=>{decrementClock()},1000)
     }
 }
     const decrementClock = () => {
@@ -59,7 +58,7 @@ export default function CodeVerify({navigation}) {
             setCountDown(0)
             clearInterval(clockCall)
         } else {
-            setCountDown(countDown -1);
+            setCountDown(countDown-1);
         }
     }
     useEffect(() => {
@@ -76,7 +75,6 @@ export default function CodeVerify({navigation}) {
                     }}
                         source={images.SamsungGalaxyS10}
                         >
-
                         <TouchableOpacity onPress={ () => navigation.navigate('Login')}>
                             <Image
                                 style={{ height: 19, width: 25, marginLeft: 18, top: 18, }}
@@ -85,26 +83,29 @@ export default function CodeVerify({navigation}) {
                         <Image
                             style={{ alignSelf: 'center', marginLeft: 50 }}
                             source={images.Vaistralogo}
-                        />
-                             
+                        />                           
 
                 <KeyboardAvoidingView 
+                // position = 'absolute'
                 keyboardVerticalOffset={40}
                 behavior='padding'
-                    style={{backgroundColor : '#fff', borderTopLeftRadius : 35,  borderTopRightRadius : 35,flex : 1, top : 50,
+                    style={{backgroundColor : '#fff', borderTopLeftRadius : 35,  borderTopRightRadius : 35,flex : 0.8, top : 20,
                
                 }}
                 >
-
-                    <Text style={{ marginTop: 30, marginLeft: 20, fontSize: 25, fontWeight: "bold", color: 'black' }}>Code Verification</Text>
-                    <Text style={{ marginLeft: 20, marginTop: 10, }}>
+                    <Text style={{ marginTop: 20, marginLeft: 20, fontSize: 25, fontWeight: "bold", color: 'black' }}>Code Verification</Text>
+                    <Text style={{ marginLeft: 20, marginTop: 5, }}>
                         Please enter the OTP sent to your registerd mobile number or email address</Text>
-                    <View style={{ marginTop: 20, justifyContent: "space-between", flexDirection: "row",
-                        paddingLeft: 20, paddingRight: 20
+                    <View style={{ justifyContent: "space-between", flexDirection: "row",
+                        paddingLeft: 20, paddingRight: 20,alignItems : 'center',
+                        // marginHorizontal : orientations != 'landscape' ? 0 : 60,
                     }}>
 
                         {/* {inputs.map((inp, index)=> { */}                        
-                    <View style={{flex : 0.99, }}>
+                    <View style={{flex : orientations != 'landscape' ? 0.99 : 0.8 ,
+                    justifyContent : 'center',
+                   
+                }}>
                         <TextInput
                             returnKeyType='done'
                             maxLength={lengthInput}
@@ -113,6 +114,7 @@ export default function CodeVerify({navigation}) {
                             style={{width : 0, height : 0}}
                             value={internalVal}
                             ref={(input) => textInput = input}
+                            
                         />
                         <View style={styles.container}>
                             {
@@ -133,8 +135,9 @@ export default function CodeVerify({navigation}) {
                        
                     </View>
                     <TouchableOpacity onPress={ResendOtp}>
-                    <View style={{ alignSelf: 'flex-end', marginRight: 20 }}>
-                        <Text style={{color : enableResend ? 'red' : '#707070'}}> Resend OTP in ({countDown}) </Text>
+                    <View style={{backgroundColor : "#ddd", alignSelf: 'flex-end', marginRight: 25 }}>
+                        <Text style={{color : enableResend ? 'red' : '#707070'}}>
+                             Resend OTP in ({countDown}) </Text>
                     </View>
                     </TouchableOpacity>
                    

@@ -56,13 +56,23 @@ import Slider from './Slider'
 import GetUser from './API/GetUser'
 import OnBoardingScreen from './OnBoardingScreen'
 import CodeVerify from './CodeVerify'
+import validation from './validation'
+import SplashScreen from './SplashScreen'
+import LoginPage from './LoginPage'
+import RegisterPage from './RegisterPage'
+import Otp from './Otp'
 
 const Stack = createStackNavigator();
+
 function AuthStack() {
     return (
-        <Stack.Navigator initialRouteName='Login'>
+        <Stack.Navigator initialRouteName='Splash'>
 
-<Stack.Screen name='CodeVerify' component={CodeVerify} options={{ header: () => null }} />
+            <Stack.Screen name='CodeVerify' component={CodeVerify} options={{ header: () => null }} />
+            <Stack.Screen name='Otp' component={Otp} options={{ header: () => null }} />
+            <Stack.Screen name='LoginPage' component={LoginPage} options={{ header: () => null }} />
+
+            <Stack.Screen name='SplashScreen' component={SplashScreen} options={{ header: () => null }} />
 
             <Stack.Screen name='OnBoardingScreen' component={OnBoardingScreen} options={{ header: () => null }} />
             <Stack.Screen name='Splash' component={Splash} options={{ header: () => null }} />
@@ -73,11 +83,13 @@ function AuthStack() {
 
             <Stack.Screen name='ForgotPass' component={ForgotPass} options={{ header: () => null }} />
 
-            <Stack.Screen name='FileOne' component={FileOne} options={{header: () => null }}  />
+            <Stack.Screen name='FileOne' component={FileOne} options={{ header: () => null }} />
+
+            <Stack.Screen name='validation' component={validation} options={{ header: () => null }} />
 
             <Stack.Screen name='Second' component={Second}
                 options={{ header: () => null }} />
-                
+
             <Stack.Screen name='Login' component={Login} options={{ header: () => null }} />
             <Stack.Screen name='CodeVerification' component={CodeVerification}
                 options={{ header: () => null }}
@@ -89,7 +101,7 @@ function AuthStack() {
                 options={{ header: () => null }} />
 
             <Stack.Screen name='SelectBrand' component={SelectBrand}
-                options={{ header: () => null}} />
+                options={{ header: () => null }} />
 
             <Stack.Screen name='BlurBackground' component={BlurBackground} options={{ header: () => null }} />
 
@@ -100,7 +112,7 @@ function AuthStack() {
 
             <Stack.Screen name='ResetFile' component={ResetFile} options={{ header: () => null }} />
 
-            <Stack.Screen name='Home' component={Home} options={{header: () => null }} />
+            <Stack.Screen name='Home' component={Home} options={{ header: () => null }} />
 
             <Stack.Screen name='Product' component={Product} options={{ header: () => null }} />
 
@@ -170,11 +182,13 @@ function AuthStack() {
 
             <Stack.Screen name='SecondBlurBg' component={SecondBlurBg} options={{ header: () => null }} />
 
-            <Stack.Screen name='Slider' component={Slider} options={{ header: () => null }} /> 
+            <Stack.Screen name='Slider' component={Slider} options={{ header: () => null }} />
 
             <Stack.Screen name='GetUser' component={GetUser} options={{ header: () => null }} />
 
-            
+            <Stack.Screen name='RegisterPage' component={RegisterPage} options={{ header: () => null }} />
+
+
         </Stack.Navigator>
     )
 }

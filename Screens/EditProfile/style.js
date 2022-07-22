@@ -10,7 +10,7 @@ const styles =StyleSheet.create({
     },
     textInput : {
             borderRadius:5,
-            backgroundColor:'#F6F6F6',
+            backgroundColor:'#f6f6f6',
             marginHorizontal: 20,
             borderWidth: 1,
             borderColor: '#B7B7B7',
@@ -18,7 +18,8 @@ const styles =StyleSheet.create({
             height:43,
            // flex:0.2,
             // justifyContent:'center',
-            paddingLeft:20
+            
+            paddingHorizontal : 20
     },
     TextInputView :{
       justifyContent:'center',
@@ -72,6 +73,7 @@ const styles =StyleSheet.create({
         justifyContent:'center',
         // marginTop:20,
         // marginBottom:20,
+
         
     },
     changeView : {
@@ -80,6 +82,7 @@ const styles =StyleSheet.create({
         alignItems:'center',
         justifyContent:'center',
         borderRadius:8,
+       
         // marginLeft:10,
         // marginRight:10,
     }

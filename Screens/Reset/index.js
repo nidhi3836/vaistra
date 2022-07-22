@@ -6,6 +6,8 @@ import LinearGradient from 'react-native-linear-gradient';
 import UseOrientation from '../UseOrientation'
 
 import style from './style'
+import Ripple from 'react-native-material-ripple';
+import handleSize from 'react-native-dimension/src/utils';
 
 function ResetFile({ navigation }) {
     console.log('UseOrientation', UseOrientation.height, UseOrientation.width)
@@ -22,7 +24,69 @@ function ResetFile({ navigation }) {
         });
     }, [orientations]);
     const [newPass, setNewPass] = useState(false)
+    const [confirmPass, setConfirmPass] = useState(false)
     const [visible, setVisible] = useState(true)
+    const [visible2, setVisible2] = useState(true)
+
+    const Check = (value) =>{
+       
+
+    }
+
+    const handleLogin = (value) => {
+        const checkPassword = checkPasswordValidity(value)
+
+        if (!checkPassword) {
+            setNewPass(true)
+            // setConfirmPass(true)           
+        }
+        //  else if(!checkPassword.length > 8){
+        //     setPass(false)
+        // }
+
+        else {
+            setNewPass(false)
+            // setConfirmPass(false)
+        //    alert('Password')
+        }
+    };  
+
+    const checkPasswordValidity = value => {        
+
+        const isNonWhiteSpace = /^\S*$/;
+        if (!isNonWhiteSpace.test(value)) {
+            Alert.alert('Something went Wrong','Password must have at least 1 Uppercase ,1 Lowercase , 1 Digit, 1 Special Symbol or must be 8-16 Characters Long');
+
+        }
+
+        const isContainsUppercase = /^(?=.*[A-Z]).*$/;
+        if (!isContainsUppercase.test(value)) {
+        //    alert( 'Password must have at least 1 Uppercase ,1 Lowercase , 1 Digit, 1 Special Symbol or must be 8-16 Characters Long');
+        }
+
+        const isContainsLowercase = /^(?=.*[a-z]).*$/;
+        if (!isContainsLowercase.test(value)) {
+           return ('Password must have at least one Lowercase Character.');
+        }
+
+        const isContainsNumber = /^(?=.*[0-9]).*$/;
+        if (!isContainsNumber.test(value)) {
+            return ('Password must contain at least one Digit.');
+        }
+
+        const isValidLength = /^.{0,7}$/;
+        if (isValidLength.test(value)) {
+          return 'Password must be 8-16 Characters Long.';
+        }
+
+        const isContainsSymbol =
+          /^(?=.*[~`!@#$%^&*()--+={}\[\]|\\:;"'<>,.?/_₹]).*$/;
+        if (!isContainsSymbol.test(value)) {
+          return 'Password must contain at least one Special Symbol.';
+        }
+        return null;
+    };
+
     console.log('newPass', newPass)
     return (
         <ScrollView style={{flex:1,position:'relative'}}>
@@ -40,7 +104,6 @@ function ResetFile({ navigation }) {
           </TouchableOpacity>
            </ImageBackground>
         </View>
-
             <View style={style.view}>
                 <View style={{  justifyContent: 'center' }}>
                     <Text style={style.resetText}>Reset Your Password?</Text>
@@ -48,47 +111,67 @@ function ResetFile({ navigation }) {
                 <View style={style.inputView}>
                     <InputText
                         style={style.textInput}
-                        onChangeText={(text) => { console.log('text', text) }}
+                        onChangeText={(value) =>  setNewPass(value) }
                         value={newPass}
                         placeholder="New Password"
+                        secureTextEntry={visible}
                     />
-                    <View style={{position:'absolute',right:20, top:15}}>
-                        <Image source={images.view}
-                            style={{ height: 12, width: 22 }} />
-                    </View>
+                    <Ripple 
+                    onPress={() => setVisible(!visible)}
+                    style={{position:'absolute',right:20, top:12}}>
+                        <Image  source={ visible ? images.closeEye : images.openEye}
+                            style={{ height: 19, width: 27 }} />
+                    </Ripple>
                 </View>
-
                 <View style={style.inputView}>
                     <InputText
                         style={style.textInput}
-                        onChangeText={(text) => { console.log('text', text) }}
-                        value={newPass}
+                        onChangeText={(text) => {setConfirmPass(text) }}
+                        value={confirmPass}
                         placeholder="Confirm Password"
+                        secureTextEntry={visible2}
                     />
-                    <View style={{position:'absolute',right:20, top:15}}>
-                        <Image source={images.view}
-                            style={{ height: 12, width: 22 }} />
-                    </View>
-                </View>
-                    
-                <TouchableOpacity onPress={()=>       
-                navigation.navigate('AppStack') 
-                
-              }
-       >
-         <View style={style.change}>
-                  <LinearGradient
-                    style={{ borderRadius: 5 }}
+                     <Ripple 
+                    onPress={() => setVisible2(!visible2)}
+                    style={{position:'absolute',right:20, top:12}}>
+                        <Image  source={ visible2 ? images.closeEye : images.openEye}
+                            style={{ height: 19, width: 27 }} />
+                    </Ripple>
+                </View>                    
+{ confirmPass != newPass || confirmPass == '' || newPass == '' ? 
+            <TouchableOpacity          
+            onPress={handleLogin}
+            disabled
+        >
+            <View style={{ alignItems: 'center' }}>
+                <LinearGradient
+                    style={[style.ContinueBtn, { opacity: 0.6, height : orientations !='landscape' ? "39.5%" : "32%"}]}
                     colors={['#ED4343', '#A52021']} >
-                   <View style={style.changeView}>
-                        <Text style={{ color: '#ffffff', fontWeight: "bold", fontSize: 19 }}>
-                          Set Password
-                        </Text>
-                      </View>
-                  
-                  </LinearGradient>
-                </View>
-        </TouchableOpacity> 
+
+                    <Text style={{ color: '#ffffff', fontWeight: "500", fontSize: 18 }}>
+                        Continue
+                    </Text>
+                </LinearGradient>
+            </View>
+        </TouchableOpacity>
+:
+<TouchableOpacity
+
+onPress={() => navigation.navigate('AppStack')}
+>
+<View style={{ alignItems: 'center' }}>
+    <LinearGradient
+        style={[style.ContinueBtn, { height : orientations !='landscape' ? "39.5%" : "32%"}]}
+        colors={['#ED4343', '#A52021']} >
+
+        <Text style={{ color: '#ffffff', fontWeight: "500", fontSize: 18 }}>
+            Continue
+        </Text>
+    </LinearGradient>
+</View>
+</TouchableOpacity> 
+}
+
             </View>
         </ScrollView>
     )

@@ -64,7 +64,7 @@ function OnBoarding ({navigation}){
     DoneButtonComponent={Done}
     showDone={true}
     bottomBarHighlight={false}
-    showSkip={false}
+    // showSkip={true}
     
     NextButtonComponent={next}    
     // DotComponent={Dot}

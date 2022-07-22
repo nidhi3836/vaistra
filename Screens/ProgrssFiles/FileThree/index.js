@@ -1,4 +1,4 @@
-import { Text, View, TextInput, ToastAndroid, Image, StyleSheet, ScrollView } from 'react-native'
+import { Text, View, TextInput, ToastAndroid, Image, StyleSheet, ScrollView, Linking } from 'react-native'
 import React, { useState } from 'react'
 import RadioForm from 'react-native-simple-radio-button'
 import InputText from '../../../Components/InputText';
@@ -98,8 +98,6 @@ const ThirdFile = ({ navigation }) => {
       );
     }
   }
-
-
   const data = [
     { label: 'Item 1', value: '1' },
     { label: 'Item 2', value: '2' },
@@ -154,7 +152,7 @@ const ThirdFile = ({ navigation }) => {
           <Text style={{ marginLeft: 20, fontSize: 22, fontWeight: "700", color: "black", }}>
             Pick up Address</Text>
 
-            <TouchableOpacity onPress={componentDidMount}>
+          <TouchableOpacity onPress={()=> Linking.openURL('https://www.google.com/maps/@21.6407265,69.6099009,15z')}>
           <View style={[styles.InputText, { paddingLeft: 30 , borderColor:'#Ed4343'}]}>
             <InputText
               style={
@@ -223,7 +221,7 @@ const ThirdFile = ({ navigation }) => {
           <View style={styles.InputText}>
             <InputText
               onChangeText={(text) => { console.log('text', text) }}
-              placeholder="Devdarshan Apartment, porbandar"
+              placeholder="Devdarshan Apartment, Porbandar"
               placeholderTextColor="#505050"
             />
 
@@ -272,12 +270,12 @@ const ThirdFile = ({ navigation }) => {
           </View> 
 
 <Dropdown
-           style={[styles.InputText, ]}
-            // placeholderStyle={styles.InputText}
-           selectedTextStyle={styles.selectedTextStyle}
-            inputSearchStyle={styles.inputSearchStyle}            
-           iconStyle={styles.iconStyle}   
-           icon = {images.search}        
+          style={[styles.InputText, ]}
+          // placeholderStyle={styles.InputText}
+          selectedTextStyle={styles.selectedTextStyle}
+          inputSearchStyle={styles.inputSearchStyle}            
+          iconStyle={styles.iconStyle}   
+          icon = {images.search}        
           data={data}
           search         
           maxHeight={100}

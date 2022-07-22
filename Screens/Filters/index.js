@@ -5,7 +5,7 @@ import UseOrientation from '../UseOrientation'
 import images from '../../Components/images'
 import Header from '../../Components/Header'
 
-export default function Filters() {
+export default function Filters({navigation}) {
     const [state, setState] = useState ('')
     const data = [
         { label: 'Item 1', value: '1', name : 'nidhi' },
@@ -21,9 +21,12 @@ export default function Filters() {
       <View style={{flex:1}}>
       <StatusBar hidden/>
       <>
-        <Header />
+        <Header 
+        image={images.left}
+        onPress={()=> navigation.navigate('AppStack')}
+        />
       </>      
-
+{/* 31107220036551 */}
 <View style={{height:UseOrientation.height, backgroundColor :'#a5a3a3'}}>
 <Dropdown        
         style={[styles.InputText,{width:UseOrientation.width /1.1,}]}

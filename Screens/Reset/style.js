@@ -15,14 +15,13 @@ const style = StyleSheet.create({
          top: "15%", 
          height:'100%',
          borderTopStartRadius: 50, 
-         borderTopEndRadius: 50 ,
-        
+         borderTopEndRadius: 50 ,        
         //  justifyContent:'center'
         
     },
     resetText : {
         marginTop: 50,
-         marginLeft: 20,
+         marginLeft: 30,
           fontSize: 20, 
           fontWeight: "bold", 
           color: 'black'
@@ -34,20 +33,14 @@ const style = StyleSheet.create({
         justifyContent:'center',
         borderRadius:7
     },
-    change : {
-        height: 55,
-        alignItems: 'center',
-        justifyContent: 'center',
-        marginTop: 10,
-    },
-    changeView : {
-        width: UseOrientation.width/ 1.1,
-        height: 45,
-        alignItems: 'center',
-        justifyContent: 'center',
-        borderRadius: 7,
-        marginLeft: 10,
-        marginRight: 10,
+   
+    ContinueBtn : {       
+        width:UseOrientation.width  / 1.06,       
+        height: "40%",
+        borderRadius:7,
+        alignItems:'center',      
+        justifyContent:'center',      
+       marginHorizontal : 20,
     }
 })
 

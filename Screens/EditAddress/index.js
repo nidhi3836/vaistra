@@ -7,9 +7,16 @@ import Header from '../../Components/Header';
 import LinearGradient from 'react-native-linear-gradient';
 import { heightToDp } from '../../variable';
 import AppStack from '../AppStack';
+import UseOrientation from '../UseOrientation';
 
 export default function EditAddress({navigation}) {  
 
+  const [address, setAddress] = useState('');
+
+
+  const handleCheckEmail = (text) => {
+    setAddress(text);
+  }
 
   return (
 <>
@@ -35,8 +42,8 @@ export default function EditAddress({navigation}) {
                   marginRight: 40,
                 }
               }
-              onChangeText={(text) => { console.log('text', text) }}
-              // value={newPass}
+              onChangeText={(text) => { setAddress( address) }}
+              value={address}
               placeholder="Use my Current Location"
               placeholderTextColor="red"
 
@@ -51,8 +58,8 @@ export default function EditAddress({navigation}) {
           <View style={styles.InputText}>
               <InputText
               onChangeText={(text) => { console.log('text', text) }}
-              placeholder="VAgheshwari plot, porbandar"
-              placeholderTextColor="#505050"
+              placeholder="Vagheshwari plot, Porbandar"
+              placeholderTextColor="#818181"
             />
             <View style={styles.TextInputView}>
               <Text style={[styles.TextInputLabel,{width:48,}]} >Address</Text>
@@ -63,8 +70,8 @@ export default function EditAddress({navigation}) {
           <View style={styles.InputText}>
               <InputText
               onChangeText={(text) => { console.log('text', text) }}
-              placeholder="Devdarshan Apartment, porbandar"
-              placeholderTextColor="#505050"
+              placeholder="Devdarshan Apartment, Porbandar"
+              placeholderTextColor="#818181"
             />
             <View style={styles.TextInputView}>
               <Text style={[styles.TextInputLabel,{ width: 80, }]}>Locality/Town</Text>
@@ -76,7 +83,7 @@ export default function EditAddress({navigation}) {
               <InputText
               onChangeText={(text) => { console.log('text', text) }}
               placeholder="Near Jay Hospital"
-              placeholderTextColor="#505050"
+              placeholderTextColor="#818181"
             />
             <View style={styles.TextInputView}>
               <Text style={[styles.TextInputLabel,{ width: 120, }]} >Near by famous Place</Text>
@@ -87,14 +94,14 @@ export default function EditAddress({navigation}) {
               <InputText
               onChangeText={(text) => { console.log('text', text) }}
               placeholder="360578"
-              placeholderTextColor="#505050"
+              placeholderTextColor="#818181"
             />
             <View style={styles.TextInputView}>
               <Text style={[styles.TextInputLabel,{ width: 55, }]} >Pin Code</Text>
             </View>
           </View> 
               
-          <LinearGradient
+          {/* <LinearGradient
                    style={{
                     marginLeft: 20,                  
                     justifyContent:"center",
@@ -113,8 +120,42 @@ export default function EditAddress({navigation}) {
                               fontWeight:"500"}}>Save Details</Text>
 
               </TouchableOpacity>
+</LinearGradient> */}
 
-</LinearGradient>
+{ address == "" ? 
+              <View style={[styles.change, { opacity: 0.6,}]}>                  
+                <LinearGradient                  
+                  style={{ borderRadius: 5 }}
+                  colors={['#ED4343', '#A52021']} >
+                  <TouchableOpacity 
+                  disabled
+                  onPress={handleCheckEmail}>
+                    
+                    <View style={[styles.changeView, ]}>
+                      <Text style={{ color: '#ffffff', fontWeight: "bold", fontSize: 19 }}>
+                       Save Details
+                      </Text>
+                    </View>
+                  </TouchableOpacity>
+                </LinearGradient>
+              </View>
+:
+              <View style={styles.change}>
+                <LinearGradient
+                  style={{ borderRadius: 5 }}
+                  colors={['#ED4343', '#A52021']} >
+                  <TouchableOpacity onPress={() => navigation.navigate('ResetFile')}>
+                    <View style={styles.changeView}>
+                      <Text style={{ color: '#ffffff', fontWeight: "bold", fontSize: 19 }}>
+                        Send Link
+                      </Text>
+                    </View>
+                  </TouchableOpacity>
+                </LinearGradient>
+              </View>
+
+                    }
+
              
             </View>
         </View>
@@ -157,6 +198,22 @@ const styles = StyleSheet.create({
      alignContent:'center',
      paddingLeft:5,
      fontWeight:'500'
+  },
+  change: {
+    height: 55,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 10,
+
+  },
+  changeView: {
+    width: UseOrientation.width / 1.1,
+    height: 45,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 8,
+    marginLeft: 10,
+    marginRight: 10,
   },
 
  

@@ -5,7 +5,7 @@ import UseOrientation from '../UseOrientation'
 const styles = StyleSheet.create ({
     input : {
         height: 40,
-        padding: 10,   
+        paddingHorizontal: 30,   
          marginRight:40
     },
     forgot : {

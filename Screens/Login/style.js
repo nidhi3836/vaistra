@@ -1,5 +1,5 @@
-import { View, Text ,StyleSheet} from 'react-native'
 import React from 'react'
+import { View, Text ,StyleSheet} from 'react-native'
 import UseOrientation from '../UseOrientation'
 
 const styles = StyleSheet.create({
@@ -19,28 +19,26 @@ const styles = StyleSheet.create({
        
     },
     LabelView : {
-        fontSize:18,
-        marginTop:30,
-        fontWeight:"bold",
-        color:'black',
+        fontSize:22,
+        marginTop:25,
+        fontWeight:"700",
+        color:'#000',
         marginRight:170,
         //backgroundColor:'gray',
       
 
       },
-    ContinueBtn : {
-        // opacity : 0.5,
-        width:UseOrientation.width / 1.1,
-        marginLeft:20,
+    ContinueBtn : {       
+        width:UseOrientation.width / 1.1,       
         height:45,
         borderRadius:7,
-        alignItems:'center',
-       // marginTop:20,
-        justifyContent:'center',
-        marginRight:20,
-       
+        alignItems:'center',      
+        justifyContent:'center',      
+       marginHorizontal : 20,
     },
-    Text : {
+   
+
+    Text : {        
         color:'red',
         fontWeight:"bold",
         fontSize:16,
@@ -49,7 +47,6 @@ const styles = StyleSheet.create({
        
     },
     View : {
-       // width:UseOrientation.width,
         borderWidth:1,
         marginTop: 10,
         borderRadius:7, 
